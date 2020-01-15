@@ -117,7 +117,7 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="jgf-7V-7YD" kind="presentation" modalPresentationStyle="fullScreen" id="4cg-Fo-tOZ"/>
+                                    <action selector="onNextTapped:" destination="bQs-fC-Cc2" eventType="touchUpInside" id="vWh-Iq-mpv"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="N2C-dY-FQs">
@@ -184,6 +184,9 @@
                         <viewLayoutGuide key="safeArea" id="uen-ZK-DaJ"/>
                     </view>
                     <navigationItem key="navigationItem" id="IMv-db-yXC"/>
+                    <connections>
+                        <segue destination="jgf-7V-7YD" kind="presentation" identifier="skillVCSegue" modalPresentationStyle="fullScreen" id="qcY-th-paP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ITc-nT-Jxp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="vDe-jh-V04" userLabel="Exit" sceneMemberID="exit"/>
