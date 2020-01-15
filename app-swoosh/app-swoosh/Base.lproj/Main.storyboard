@@ -48,6 +48,9 @@
                                 <state key="normal" title="GET STARTED">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="bQs-fC-Cc2" kind="presentation" modalPresentationStyle="fullScreen" id="jjK-GI-cic"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swooshLogo" translatesAutoresizingMaskIntoConstraints="NO" id="xhW-5J-xUg">
                                 <rect key="frame" x="147.5" y="64" width="119" height="20"/>
@@ -172,6 +175,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uen-ZK-DaJ"/>
                     </view>
+                    <navigationItem key="navigationItem" id="IMv-db-yXC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ITc-nT-Jxp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
