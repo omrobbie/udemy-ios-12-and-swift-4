@@ -17,3 +17,8 @@ Learn about custom textfield, input accessory view, unit testing, and custom dra
 <img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/window-shopper/screenshot/preview1.png" width=256/>&nbsp;
 <img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/window-shopper/screenshot/preview2.png" width=256/>&nbsp;
 <img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/window-shopper/screenshot/preview3.png" width=256/>&nbsp;
+
+### 4. Coder Swag
+Learn about table view and collection view<br>
+<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/coder-swag/screenshot/preview1.png" width=256/>&nbsp;
+<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/coder-swag/screenshot/preview2.png" width=256/>&nbsp;
