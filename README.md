@@ -11,3 +11,9 @@ Learn about basic layout, segue with storyboard and programmatically, unwind, an
 Learn about auto layout for iPhone and iPad, and learn about size classes<br>
 <img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/app-dev-profile/screenshot/preview1.png" width=256/>&nbsp;
 <img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/app-dev-profile/screenshot/preview2.png" width=512/>&nbsp;
+
+### 3. Window Shopper
+Learn about custom textfield, input accessory view, unit testing, and custom drawing with draw rect<br>
+<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/window-shopper/screenshot/preview1.png" width=256/>&nbsp;
+<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/window-shopper/screenshot/preview2.png" width=256/>&nbsp;
+<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/window-shopper/screenshot/preview3.png" width=256/>&nbsp;
