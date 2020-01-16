@@ -21,6 +21,10 @@ class CategoriesVC: UIViewController, UITableViewDelegate, UITableViewDataSource
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let productsVC = segue.destination as? ProductsVC {
+            let backBtn = UIBarButtonItem()
+            backBtn.title = ""
+            navigationItem.backBarButtonItem = backBtn
+
             assert(sender as? Category != nil) //inform error when in development mode because using force unwraping
             productsVC.initProducts(category: sender as! Category)
         }
