@@ -19,6 +19,13 @@ class CategoriesVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         categoryTable.dataSource = self
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let productsVC = segue.destination as? ProductsVC {
+            assert(sender as? Category != nil) //inform error when in development mode because using force unwraping
+            productsVC.initProducts(category: sender as! Category)
+        }
+    }
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return DataService.instance.getCategories().count
     }
@@ -32,5 +39,10 @@ class CategoriesVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         } else {
             return CategoryCell()
         }
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let category = DataService.instance.getCategories()[indexPath.row]
+        performSegue(withIdentifier: "ProductsVC", sender: category)
     }
 }
