@@ -25,24 +25,45 @@
                                     <constraint firstAttribute="width" constant="64" id="U5u-Be-M9n"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your hourly wage" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vmr-wb-SAx" customClass="CurrencyTextField" customModule="window_shopper" customModuleProvider="target">
-                                <rect key="frame" x="51" y="205" width="313" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your hourly wage" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vmr-wb-SAx" customClass="CurrencyTextField" customModule="window_shopper" customModuleProvider="target">
+                                <rect key="frame" x="20" y="178" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Cpc-E0-5eq"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Item price" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="naR-7e-rTs" customClass="CurrencyTextField" customModule="window_shopper" customModuleProvider="target">
+                                <rect key="frame" x="20" y="243" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="znB-0c-6qD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vmr-wb-SAx" secondAttribute="trailing" constant="20" id="7cP-T2-lfE"/>
                             <constraint firstItem="svf-16-PBB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="A1q-JH-zGw"/>
                             <constraint firstItem="svf-16-PBB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DTf-Ia-aJN"/>
                             <constraint firstItem="XbL-dQ-Gy3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="EcR-Q3-NQB"/>
+                            <constraint firstItem="naR-7e-rTs" firstAttribute="trailing" secondItem="vmr-wb-SAx" secondAttribute="trailing" id="FLJ-MJ-FAq"/>
+                            <constraint firstItem="naR-7e-rTs" firstAttribute="leading" secondItem="vmr-wb-SAx" secondAttribute="leading" id="JGB-2O-ivD"/>
                             <constraint firstItem="XbL-dQ-Gy3" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="S2D-w2-0T7"/>
                             <constraint firstAttribute="bottom" secondItem="XbL-dQ-Gy3" secondAttribute="bottom" id="WJW-d4-0f5"/>
+                            <constraint firstItem="naR-7e-rTs" firstAttribute="height" secondItem="vmr-wb-SAx" secondAttribute="height" id="a8x-ta-30E"/>
+                            <constraint firstItem="naR-7e-rTs" firstAttribute="top" secondItem="vmr-wb-SAx" secondAttribute="bottom" constant="25" id="fuG-ad-k9D"/>
+                            <constraint firstItem="vmr-wb-SAx" firstAttribute="top" secondItem="svf-16-PBB" secondAttribute="bottom" constant="35" id="jPU-lB-wbB"/>
+                            <constraint firstItem="vmr-wb-SAx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="xRG-sU-l3h"/>
                             <constraint firstItem="XbL-dQ-Gy3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ysg-hr-89G"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="priceTxt" destination="naR-7e-rTs" id="niB-Dc-kuf"/>
+                        <outlet property="wageTxt" destination="vmr-wb-SAx" id="1JZ-vR-NcS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
