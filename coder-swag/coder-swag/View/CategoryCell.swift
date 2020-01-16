@@ -20,4 +20,9 @@ class CategoryCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+
+    func updateViews(category: Category) {
+        categoryImage.image = UIImage(named: category.imageName)
+        categoryTitle.text = category.title
+    }
 }
