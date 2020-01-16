@@ -14,6 +14,7 @@
 		FC38629B23D03D9000AAFB93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC38629A23D03D9000AAFB93 /* Assets.xcassets */; };
 		FC38629E23D03D9000AAFB93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC38629C23D03D9000AAFB93 /* LaunchScreen.storyboard */; };
 		FC3862AA23D0470A00AAFB93 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3862A923D0470A00AAFB93 /* CategoryCell.swift */; };
+		FC3862AC23D0488600AAFB93 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3862AB23D0488600AAFB93 /* Category.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		FC38629D23D03D9000AAFB93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC38629F23D03D9000AAFB93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC3862A923D0470A00AAFB93 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		FC3862AB23D0488600AAFB93 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 		FC3862A823D046A700AAFB93 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FC3862AB23D0488600AAFB93 /* Category.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -166,6 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC38629623D03D8E00AAFB93 /* CategoriesVC.swift in Sources */,
+				FC3862AC23D0488600AAFB93 /* Category.swift in Sources */,
 				FC38629223D03D8E00AAFB93 /* AppDelegate.swift in Sources */,
 				FC38629423D03D8E00AAFB93 /* SceneDelegate.swift in Sources */,
 				FC3862AA23D0470A00AAFB93 /* CategoryCell.swift in Sources */,
