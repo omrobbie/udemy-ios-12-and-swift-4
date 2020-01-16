@@ -15,6 +15,7 @@
 		FC38629E23D03D9000AAFB93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC38629C23D03D9000AAFB93 /* LaunchScreen.storyboard */; };
 		FC3862AA23D0470A00AAFB93 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3862A923D0470A00AAFB93 /* CategoryCell.swift */; };
 		FC3862AC23D0488600AAFB93 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3862AB23D0488600AAFB93 /* Category.swift */; };
+		FC3862AF23D04AE500AAFB93 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3862AE23D04AE500AAFB93 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		FC38629F23D03D9000AAFB93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC3862A923D0470A00AAFB93 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		FC3862AB23D0488600AAFB93 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		FC3862AE23D04AE500AAFB93 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		FC38629023D03D8E00AAFB93 /* coder-swag */ = {
 			isa = PBXGroup;
 			children = (
+				FC3862AD23D04AD100AAFB93 /* Service */,
 				FC3862A823D046A700AAFB93 /* Model */,
 				FC3862A723D046A300AAFB93 /* View */,
 				FC3862A623D0469A00AAFB93 /* Controller */,
@@ -95,6 +98,14 @@
 				FC3862AB23D0488600AAFB93 /* Category.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FC3862AD23D04AD100AAFB93 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				FC3862AE23D04AE500AAFB93 /* DataService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -171,6 +182,7 @@
 				FC38629623D03D8E00AAFB93 /* CategoriesVC.swift in Sources */,
 				FC3862AC23D0488600AAFB93 /* Category.swift in Sources */,
 				FC38629223D03D8E00AAFB93 /* AppDelegate.swift in Sources */,
+				FC3862AF23D04AE500AAFB93 /* DataService.swift in Sources */,
 				FC38629423D03D8E00AAFB93 /* SceneDelegate.swift in Sources */,
 				FC3862AA23D0470A00AAFB93 /* CategoryCell.swift in Sources */,
 			);
