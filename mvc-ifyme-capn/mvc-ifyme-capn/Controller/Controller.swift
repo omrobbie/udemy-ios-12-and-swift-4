@@ -10,6 +10,10 @@ import UIKit
 
 class Controller: UIViewController {
 
+    @IBOutlet weak var iPhoneNameLabel: UILabel!
+    @IBOutlet weak var iPhoneColorLabel: UILabel!
+    @IBOutlet weak var iPhonePriceLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
