@@ -73,6 +73,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="customPrettyView" destination="alz-z6-ORN" id="SKp-hV-0Jc"/>
                         <outlet property="iPhoneColorLabel" destination="qPk-Aq-vcT" id="EuL-FW-az5"/>
                         <outlet property="iPhoneNameLabel" destination="CIO-yg-S5l" id="Sue-fq-vXD"/>
                         <outlet property="iPhonePriceLabel" destination="c7q-hT-Ken" id="RML-xj-Znd"/>
