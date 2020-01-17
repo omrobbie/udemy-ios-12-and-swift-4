@@ -16,6 +16,7 @@
 		FC3862DA23D14FBD00AAFB93 /* AppleProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3862D923D14FBD00AAFB93 /* AppleProduct.swift */; };
 		FC3862DC23D1557700AAFB93 /* CustomPrettyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3862DB23D1557700AAFB93 /* CustomPrettyView.swift */; };
 		FC3862DE23D1A73100AAFB93 /* SamsungProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3862DD23D1A73100AAFB93 /* SamsungProduct.swift */; };
+		FC3862E023D1A94D00AAFB93 /* CustomPrettyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3862DF23D1A94D00AAFB93 /* CustomPrettyLabel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		FC3862D923D14FBD00AAFB93 /* AppleProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleProduct.swift; sourceTree = "<group>"; };
 		FC3862DB23D1557700AAFB93 /* CustomPrettyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPrettyView.swift; sourceTree = "<group>"; };
 		FC3862DD23D1A73100AAFB93 /* SamsungProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamsungProduct.swift; sourceTree = "<group>"; };
+		FC3862DF23D1A94D00AAFB93 /* CustomPrettyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPrettyLabel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				FC3862DB23D1557700AAFB93 /* CustomPrettyView.swift */,
+				FC3862DF23D1A94D00AAFB93 /* CustomPrettyLabel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -173,6 +176,7 @@
 			files = (
 				FC3862DA23D14FBD00AAFB93 /* AppleProduct.swift in Sources */,
 				FC3862C723D14A6200AAFB93 /* Controller.swift in Sources */,
+				FC3862E023D1A94D00AAFB93 /* CustomPrettyLabel.swift in Sources */,
 				FC3862C323D14A6200AAFB93 /* AppDelegate.swift in Sources */,
 				FC3862DC23D1557700AAFB93 /* CustomPrettyView.swift in Sources */,
 				FC3862DE23D1A73100AAFB93 /* SamsungProduct.swift in Sources */,
