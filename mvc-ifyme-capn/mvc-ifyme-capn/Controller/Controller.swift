@@ -13,6 +13,7 @@ class Controller: UIViewController {
     @IBOutlet weak var iPhoneNameLabel: UILabel!
     @IBOutlet weak var iPhoneColorLabel: UILabel!
     @IBOutlet weak var iPhonePriceLabel: UILabel!
+    @IBOutlet weak var customPrettyView: CustomPrettyView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,5 +23,18 @@ class Controller: UIViewController {
         iPhoneNameLabel.text = appleProduct.name
         iPhoneColorLabel.text = "in \(appleProduct.color)"
         iPhonePriceLabel.text = "$\(appleProduct.price)"
+
+        addLabelProgrammatically()
+    }
+
+    func addLabelProgrammatically() {
+        let label = UILabel(frame: CGRect(x: 0, y: customPrettyView.frame.maxY + 50, width: view.frame.width, height: 64))
+        label.backgroundColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
+        label.text = "omrobbie"
+        label.textAlignment = .center
+        label.textColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        label.font = UIFont.boldSystemFont(ofSize: 32.0)
+
+        view.addSubview(label)
     }
 }
