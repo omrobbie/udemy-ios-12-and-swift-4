@@ -8,11 +8,19 @@
 
 import UIKit
 
+@IBDesignable
 class CustomPrettyView: UIView {
 
-    override   func awakeFromNib() {
-        super.awakeFromNib()
+    override func prepareForInterfaceBuilder() {
+        createView()
+    }
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        createView()
+    }
+
+    func createView() {
         layer.cornerRadius = 20
         layer.shadowColor = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)
         layer.shadowRadius = 10
