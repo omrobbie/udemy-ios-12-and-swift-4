@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		FC3862C323D14A6200AAFB93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3862C223D14A6200AAFB93 /* AppDelegate.swift */; };
 		FC3862C523D14A6200AAFB93 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3862C423D14A6200AAFB93 /* SceneDelegate.swift */; };
-		FC3862C723D14A6200AAFB93 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3862C623D14A6200AAFB93 /* ViewController.swift */; };
+		FC3862C723D14A6200AAFB93 /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3862C623D14A6200AAFB93 /* Controller.swift */; };
 		FC3862CA23D14A6200AAFB93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3862C823D14A6200AAFB93 /* Main.storyboard */; };
 		FC3862CC23D14A6300AAFB93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3862CB23D14A6300AAFB93 /* Assets.xcassets */; };
 		FC3862CF23D14A6300AAFB93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3862CD23D14A6300AAFB93 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		FC3862BF23D14A6200AAFB93 /* mvc-ifyme-capn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mvc-ifyme-capn.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3862C223D14A6200AAFB93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC3862C423D14A6200AAFB93 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FC3862C623D14A6200AAFB93 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FC3862C623D14A6200AAFB93 /* Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		FC3862C923D14A6200AAFB93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC3862CB23D14A6300AAFB93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC3862CE23D14A6300AAFB93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +56,39 @@
 		FC3862C123D14A6200AAFB93 /* mvc-ifyme-capn */ = {
 			isa = PBXGroup;
 			children = (
+				FC3862D823D14D8B00AAFB93 /* Model */,
+				FC3862D723D14D8300AAFB93 /* View */,
+				FC3862D623D14D6D00AAFB93 /* Controller */,
 				FC3862C223D14A6200AAFB93 /* AppDelegate.swift */,
 				FC3862C423D14A6200AAFB93 /* SceneDelegate.swift */,
-				FC3862C623D14A6200AAFB93 /* ViewController.swift */,
 				FC3862C823D14A6200AAFB93 /* Main.storyboard */,
 				FC3862CB23D14A6300AAFB93 /* Assets.xcassets */,
 				FC3862CD23D14A6300AAFB93 /* LaunchScreen.storyboard */,
 				FC3862D023D14A6300AAFB93 /* Info.plist */,
 			);
 			path = "mvc-ifyme-capn";
+			sourceTree = "<group>";
+		};
+		FC3862D623D14D6D00AAFB93 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FC3862C623D14A6200AAFB93 /* Controller.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FC3862D723D14D8300AAFB93 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FC3862D823D14D8B00AAFB93 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +162,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FC3862C723D14A6200AAFB93 /* ViewController.swift in Sources */,
+				FC3862C723D14A6200AAFB93 /* Controller.swift in Sources */,
 				FC3862C323D14A6200AAFB93 /* AppDelegate.swift in Sources */,
 				FC3862C523D14A6200AAFB93 /* SceneDelegate.swift in Sources */,
 			);
