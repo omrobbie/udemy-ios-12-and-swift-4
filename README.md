@@ -34,3 +34,7 @@ Learn about accelerometer with core motion<br>
 ### 7. Accelerometron
 Learn to create parallax effect with accelerometer using interpolating motion effect<br>
 <img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/accelerometron/screenshot/preview.gif" width=256/>&nbsp;
+
+### 8. Splits
+<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/Splits/screenshot/preview1.png" width=256/>&nbsp;
+<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/Splits/screenshot/preview2.png" width=512/>&nbsp;
