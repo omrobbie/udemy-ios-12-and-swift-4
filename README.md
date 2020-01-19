@@ -26,3 +26,7 @@ Learn about table view and collection view<br>
 ### 5. MVC Ifyme Capn
 Learn about basic MVC, custom view, and data model<br>
 <img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/mvc-ifyme-capn/screenshot/preview.png" width=256/>&nbsp;
+
+### 6. XYZ Machine
+Learn about accelerometer with core motion<br>
+<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/xyz-machine/screenshot/preview.gif" width=256/>&nbsp;
