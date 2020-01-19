@@ -94,6 +94,9 @@
                                             <fontDescription key="fontDescription" name="AvenirNext-BoldItalic" family="Avenir Next" pointSize="48"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <variation key="heightClass=compact-widthClass=regular">
+                                                <fontDescription key="fontDescription" name="AvenirNext-BoldItalic" family="Avenir Next" pointSize="32"/>
+                                            </variation>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
