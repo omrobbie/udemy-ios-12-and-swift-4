@@ -1,5 +1,5 @@
 //
-//  DetailViewController.swift
+//  ImagePresentationVC.swift
 //  Splits
 //
 //  Created by omrobbie on 20/01/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class ImagePresentationVC: UIViewController {
 
     @IBOutlet weak var ItemImageView: UIImageView!
 
