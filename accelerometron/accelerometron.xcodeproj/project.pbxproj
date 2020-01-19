@@ -58,16 +58,32 @@
 		FC7AAAE223D4B7A700F15CC3 /* accelerometron */ = {
 			isa = PBXGroup;
 			children = (
+				FC7AAAFA23D4BD9200F15CC3 /* View */,
+				FC7AAAF923D4BD8900F15CC3 /* Controller */,
 				FC7AAAE323D4B7A700F15CC3 /* AppDelegate.swift */,
 				FC7AAAE523D4B7A700F15CC3 /* SceneDelegate.swift */,
-				FC7AAAE723D4B7A700F15CC3 /* ListTableViewController.swift */,
 				FC7AAAE923D4B7A700F15CC3 /* Main.storyboard */,
 				FC7AAAEC23D4B7A900F15CC3 /* Assets.xcassets */,
 				FC7AAAEE23D4B7A900F15CC3 /* LaunchScreen.storyboard */,
 				FC7AAAF123D4B7A900F15CC3 /* Info.plist */,
-				FC7AAAF723D4BC2800F15CC3 /* ParallaxCell.swift */,
 			);
 			path = accelerometron;
+			sourceTree = "<group>";
+		};
+		FC7AAAF923D4BD8900F15CC3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FC7AAAE723D4B7A700F15CC3 /* ListTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FC7AAAFA23D4BD9200F15CC3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC7AAAF723D4BC2800F15CC3 /* ParallaxCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
