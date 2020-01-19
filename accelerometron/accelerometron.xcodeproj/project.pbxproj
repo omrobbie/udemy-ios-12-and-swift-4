@@ -14,6 +14,7 @@
 		FC7AAAED23D4B7A900F15CC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC7AAAEC23D4B7A900F15CC3 /* Assets.xcassets */; };
 		FC7AAAF023D4B7A900F15CC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC7AAAEE23D4B7A900F15CC3 /* LaunchScreen.storyboard */; };
 		FC7AAAF823D4BC2800F15CC3 /* ParallaxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7AAAF723D4BC2800F15CC3 /* ParallaxCell.swift */; };
+		FC7AAAFD23D4C02100F15CC3 /* Images+Names.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7AAAFC23D4C02100F15CC3 /* Images+Names.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		FC7AAAEF23D4B7A900F15CC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC7AAAF123D4B7A900F15CC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FC7AAAF723D4BC2800F15CC3 /* ParallaxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxCell.swift; sourceTree = "<group>"; };
+		FC7AAAFC23D4C02100F15CC3 /* Images+Names.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Images+Names.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		FC7AAAE223D4B7A700F15CC3 /* accelerometron */ = {
 			isa = PBXGroup;
 			children = (
+				FC7AAAFB23D4C00700F15CC3 /* Model */,
 				FC7AAAFA23D4BD9200F15CC3 /* View */,
 				FC7AAAF923D4BD8900F15CC3 /* Controller */,
 				FC7AAAE323D4B7A700F15CC3 /* AppDelegate.swift */,
@@ -84,6 +87,14 @@
 				FC7AAAF723D4BC2800F15CC3 /* ParallaxCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		FC7AAAFB23D4C00700F15CC3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FC7AAAFC23D4C02100F15CC3 /* Images+Names.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +171,7 @@
 				FC7AAAE823D4B7A700F15CC3 /* ListTableViewController.swift in Sources */,
 				FC7AAAE423D4B7A700F15CC3 /* AppDelegate.swift in Sources */,
 				FC7AAAF823D4BC2800F15CC3 /* ParallaxCell.swift in Sources */,
+				FC7AAAFD23D4C02100F15CC3 /* Images+Names.swift in Sources */,
 				FC7AAAE623D4B7A700F15CC3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
