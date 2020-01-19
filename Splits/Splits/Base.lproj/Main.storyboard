@@ -47,7 +47,9 @@
                         <viewLayoutGuide key="safeArea" id="VUw-jc-0yf"/>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="mOI-FS-AaM"/>
+                    <navigationItem key="navigationItem" id="mOI-FS-AaM">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="lpl-Aq-FGQ"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="ItemImageView" destination="YC0-gp-aAf" id="FdU-bT-W43"/>
                     </connections>
