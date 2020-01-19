@@ -27,9 +27,13 @@ class ViewController: UIViewController {
     func updateLabels(data: CMAccelerometerData?, error: Error?) {
         guard let accelerometerData = data else {return}
 
-        let x = accelerometerData.acceleration.x
-        let y = accelerometerData.acceleration.y
-        let z = accelerometerData.acceleration.z
+        let formatter = NumberFormatter()
+        formatter.minimumFractionDigits = 1
+        formatter.maximumFractionDigits = 1
+
+        let x = formatter.string(from: NSNumber(value: accelerometerData.acceleration.x))!
+        let y = formatter.string(from: NSNumber(value: accelerometerData.acceleration.y))!
+        let z = formatter.string(from: NSNumber(value: accelerometerData.acceleration.z))!
 
         xLabel.text = "X: \(x)"
         yLabel.text = "Y: \(y)"
