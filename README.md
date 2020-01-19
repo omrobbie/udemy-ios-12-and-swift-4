@@ -30,3 +30,7 @@ Learn about basic MVC, custom view, and data model<br>
 ### 6. XYZ Machine
 Learn about accelerometer with core motion<br>
 <img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/xyz-machine/screenshot/preview.gif" width=256/>&nbsp;
+
+### 7. Accelerometron
+Learn to create parallax effect with accelerometer using interpolating motion effect<br>
+<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/accelerometron/screenshot/preview.gif" width=256/>&nbsp;
