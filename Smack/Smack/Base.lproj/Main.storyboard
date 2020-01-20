@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="139" y="136"/>
         </scene>
-        <!--View Controller-->
+        <!--ChatVC-->
         <scene sceneID="JYt-d2-3Cb">
             <objects>
-                <viewController id="ObO-yc-mEb" sceneMemberID="viewController">
+                <viewController id="ObO-yc-mEb" customClass="ChatVC" customModule="Smack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ydy-dW-UY5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -41,10 +41,10 @@
             </objects>
             <point key="canvasLocation" x="909" y="463"/>
         </scene>
-        <!--View Controller-->
+        <!--ChannelVC-->
         <scene sceneID="ObJ-Z7-L0l">
             <objects>
-                <viewController id="wIz-UJ-wfo" sceneMemberID="viewController">
+                <viewController id="wIz-UJ-wfo" customClass="ChannelVC" customModule="Smack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FRO-YY-ydf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
