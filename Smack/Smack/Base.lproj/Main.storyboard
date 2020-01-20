@@ -17,10 +17,44 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="wIz-UJ-wfo" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSeguePushController" id="2zc-ZI-Er6"/>
+                        <segue destination="ObO-yc-mEb" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSeguePushController" id="L48-tV-tpj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="139" y="136"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="JYt-d2-3Cb">
+            <objects>
+                <viewController id="ObO-yc-mEb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ydy-dW-UY5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="U7U-LQ-q5k"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yb1-7I-BJm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="909" y="463"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ObJ-Z7-L0l">
+            <objects>
+                <viewController id="wIz-UJ-wfo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FRO-YY-ydf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="ubF-cY-Oyv"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0qU-r8-p2R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="909" y="-254"/>
         </scene>
     </scenes>
 </document>
