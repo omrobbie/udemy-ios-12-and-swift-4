@@ -18,7 +18,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <segue destination="wIz-UJ-wfo" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSeguePushController" id="HsF-gB-aRr"/>
+                        <segue destination="wIz-UJ-wfo" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="HsF-gB-aRr"/>
                         <segue destination="ObO-yc-mEb" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="C67-Ww-XjQ"/>
                     </connections>
                 </viewController>
