@@ -17,7 +17,7 @@ class ChatVC: UIViewController {
 
         menuBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
 
-//        self.view.addGestureRecognizer(self.revealViewController).panGestureRecognizer())
-//        self.view.addGestureRecognizer(self.revealViewController).tapGestureRecognizer())
+        self.view.addGestureRecognizer(UIPanGestureRecognizer(target: self.revealViewController(), action: #selector(SWRevealViewController.rightRevealToggle(_:))))
+        self.view.addGestureRecognizer(UITapGestureRecognizer(target: self.revealViewController(), action: #selector(SWRevealViewController.rightRevealToggle(_:))))
     }
 }
