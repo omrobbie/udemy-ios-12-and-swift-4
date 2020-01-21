@@ -270,6 +270,9 @@
                                 <state key="normal" title="Don't have an account? Sign up here!">
                                     <color key="titleColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="createAccountBtnTapped:" destination="HnX-eG-7RY" eventType="touchUpInside" id="1fs-XZ-nZQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -288,10 +291,29 @@
                         <viewLayoutGuide key="safeArea" id="0Ue-YJ-g5L"/>
                     </view>
                     <navigationItem key="navigationItem" id="eEx-RF-e0p"/>
+                    <connections>
+                        <segue destination="GSB-1R-J9r" kind="presentation" identifier="toCreateAccount" modalPresentationStyle="fullScreen" id="gq1-EU-9Ml"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ta-rD-ewX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1724.6376811594205" y="-254.46428571428569"/>
+        </scene>
+        <!--Create AccountVC-->
+        <scene sceneID="uRc-aT-fEO">
+            <objects>
+                <viewController id="GSB-1R-J9r" customClass="CreateAccountVC" customModule="Smack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SaT-Fx-16R">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Bex-qx-nfv"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PqK-52-juj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="48I-DO-rtK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2530" y="-254"/>
         </scene>
     </scenes>
     <resources>
