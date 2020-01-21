@@ -168,7 +168,7 @@
                     </view>
                     <connections>
                         <outlet property="loginBtn" destination="XCN-Fh-dU2" id="hls-T4-bTg"/>
-                        <segue destination="HnX-eG-7RY" kind="presentation" identifier="" modalPresentationStyle="fullScreen" id="NUa-8e-akK"/>
+                        <segue destination="HnX-eG-7RY" kind="presentation" identifier="toLogin" modalPresentationStyle="fullScreen" id="NUa-8e-akK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0qU-r8-p2R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
