@@ -175,10 +175,10 @@
             </objects>
             <point key="canvasLocation" x="908.69565217391312" y="-254.46428571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--LoginVC-->
         <scene sceneID="oIc-Hm-2ae">
             <objects>
-                <viewController id="HnX-eG-7RY" sceneMemberID="viewController">
+                <viewController id="HnX-eG-7RY" customClass="LoginVC" customModule="Smack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CkL-Ok-RRS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -191,6 +191,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="6g1-fv-XAo"/>
                                         </constraints>
+                                        <color key="textColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" keyboardType="alphabet"/>
                                     </textField>
@@ -207,6 +208,7 @@
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="sb9-am-JDK"/>
                                         </constraints>
+                                        <color key="textColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
@@ -226,6 +228,9 @@
                                     <constraint firstAttribute="height" constant="24" id="tB7-ue-dJi"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="closeButton"/>
+                                <connections>
+                                    <action selector="closeBtnTapped:" destination="HnX-eG-7RY" eventType="touchUpInside" id="RdT-os-xA7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gCx-hk-7TP">
                                 <rect key="frame" x="82" y="314" width="250" height="50"/>
@@ -234,7 +239,7 @@
                                     <constraint firstAttribute="width" constant="250" id="JEm-Zf-hRG"/>
                                     <constraint firstAttribute="height" constant="50" id="bve-2X-AY3"/>
                                 </constraints>
-                                <state key="normal" title="Button">
+                                <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
