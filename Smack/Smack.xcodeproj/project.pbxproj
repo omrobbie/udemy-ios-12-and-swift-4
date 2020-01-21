@@ -18,6 +18,7 @@
 		FC7AAB5823D6AA1400F15CC3 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7AAB5723D6AA1400F15CC3 /* GradientView.swift */; };
 		FC7AAB5C23D6C97200F15CC3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7AAB5B23D6C97200F15CC3 /* Constants.swift */; };
 		FC7AAB5E23D6D28B00F15CC3 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7AAB5D23D6D28B00F15CC3 /* LoginVC.swift */; };
+		FC7AAB6023D6D40800F15CC3 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7AAB5F23D6D40800F15CC3 /* CreateAccountVC.swift */; };
 		FFD6AB44CBCA1E00764F1A7F /* Pods_Smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAB3921808E825FDB0835E85 /* Pods_Smack.framework */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		FC7AAB5723D6AA1400F15CC3 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		FC7AAB5B23D6C97200F15CC3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FC7AAB5D23D6D28B00F15CC3 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		FC7AAB5F23D6D40800F15CC3 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				FC7AAB4E23D584DA00F15CC3 /* ChatVC.swift */,
 				FC7AAB5023D584EF00F15CC3 /* ChannelVC.swift */,
 				FC7AAB5D23D6D28B00F15CC3 /* LoginVC.swift */,
+				FC7AAB5F23D6D40800F15CC3 /* CreateAccountVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC7AAB3223D553D000F15CC3 /* AppDelegate.swift in Sources */,
+				FC7AAB6023D6D40800F15CC3 /* CreateAccountVC.swift in Sources */,
 				FC7AAB3423D553D000F15CC3 /* SceneDelegate.swift in Sources */,
 				FC7AAB5E23D6D28B00F15CC3 /* LoginVC.swift in Sources */,
 				FC7AAB5823D6AA1400F15CC3 /* GradientView.swift in Sources */,
