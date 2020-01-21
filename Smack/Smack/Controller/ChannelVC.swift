@@ -17,5 +17,6 @@ class ChannelVC: UIViewController {
     }
 
     @IBAction func loginBtnTapped(_ sender: Any) {
+        performSegue(withIdentifier: TO_LOGIN, sender: nil)
     }
 }
