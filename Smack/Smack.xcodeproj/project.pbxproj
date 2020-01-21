@@ -15,6 +15,7 @@
 		FC7AAB4A23D57EE300F15CC3 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FC7AAB4923D57EE300F15CC3 /* SWRevealViewController.m */; };
 		FC7AAB4F23D584DA00F15CC3 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7AAB4E23D584DA00F15CC3 /* ChatVC.swift */; };
 		FC7AAB5123D584EF00F15CC3 /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7AAB5023D584EF00F15CC3 /* ChannelVC.swift */; };
+		FC7AAB5823D6AA1400F15CC3 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7AAB5723D6AA1400F15CC3 /* GradientView.swift */; };
 		FFD6AB44CBCA1E00764F1A7F /* Pods_Smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAB3921808E825FDB0835E85 /* Pods_Smack.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +35,7 @@
 		FC7AAB4923D57EE300F15CC3 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		FC7AAB4E23D584DA00F15CC3 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		FC7AAB5023D584EF00F15CC3 /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
+		FC7AAB5723D6AA1400F15CC3 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 		FC7AAB4C23D5844F00F15CC3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FC7AAB5723D6AA1400F15CC3 /* GradientView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 			files = (
 				FC7AAB3223D553D000F15CC3 /* AppDelegate.swift in Sources */,
 				FC7AAB3423D553D000F15CC3 /* SceneDelegate.swift in Sources */,
+				FC7AAB5823D6AA1400F15CC3 /* GradientView.swift in Sources */,
 				FC7AAB4A23D57EE300F15CC3 /* SWRevealViewController.m in Sources */,
 				FC7AAB5123D584EF00F15CC3 /* ChannelVC.swift in Sources */,
 				FC7AAB4F23D584DA00F15CC3 /* ChatVC.swift in Sources */,
