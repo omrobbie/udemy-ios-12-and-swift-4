@@ -115,6 +115,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginBtnTapped:" destination="wIz-UJ-wfo" eventType="touchUpInside" id="ozA-Hi-71V"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="48" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mJ8-Gd-AC3">
                                 <rect key="frame" x="0.0" y="147" width="414" height="600"/>
@@ -163,10 +166,30 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ubF-cY-Oyv"/>
                     </view>
+                    <connections>
+                        <outlet property="loginBtn" destination="XCN-Fh-dU2" id="hls-T4-bTg"/>
+                        <segue destination="HnX-eG-7RY" kind="presentation" identifier="" modalPresentationStyle="fullScreen" id="NUa-8e-akK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0qU-r8-p2R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="908.69565217391312" y="-254.46428571428569"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="oIc-Hm-2ae">
+            <objects>
+                <viewController id="HnX-eG-7RY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CkL-Ok-RRS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="0Ue-YJ-g5L"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eEx-RF-e0p"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ta-rD-ewX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1726" y="-254"/>
         </scene>
     </scenes>
     <resources>
