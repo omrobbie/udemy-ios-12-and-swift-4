@@ -13,4 +13,8 @@ class CreateAccountVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+
+    @IBAction func closeBtnTapped(_ sender: Any) {
+        performSegue(withIdentifier: UNWIND_TO_CHANNEL, sender: nil)
+    }
 }

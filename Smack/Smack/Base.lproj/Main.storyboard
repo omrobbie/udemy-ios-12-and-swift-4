@@ -369,6 +369,9 @@
                                     <constraint firstAttribute="height" constant="24" id="gAt-GZ-bMh"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="closeButton"/>
+                                <connections>
+                                    <action selector="closeBtnTapped:" destination="GSB-1R-J9r" eventType="touchUpInside" id="KNI-45-9Ik"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create an Account" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E26-pC-bHu">
                                 <rect key="frame" x="122.5" y="104" width="169" height="23"/>
@@ -388,14 +391,23 @@
                                 </state>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="Gtf-5s-hMU">
-                                <rect key="frame" x="157" y="314" width="100" height="100"/>
+                                <rect key="frame" x="157" y="334" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="EgW-ag-hAF"/>
                                     <constraint firstAttribute="width" constant="100" id="azC-ZK-v1L"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ga9-Dk-cb2">
+                                <rect key="frame" x="113" y="480" width="188" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="VU0-ag-8b9"/>
+                                </constraints>
+                                <state key="normal" title="Generate background color">
+                                    <color key="titleColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="doX-XI-Nc7">
-                                <rect key="frame" x="157.5" y="422" width="99" height="30"/>
+                                <rect key="frame" x="157.5" y="442" width="99" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="FZ3-X0-wsw"/>
                                 </constraints>
@@ -408,11 +420,13 @@
                         <constraints>
                             <constraint firstItem="VJx-ci-dqf" firstAttribute="top" secondItem="Bex-qx-nfv" secondAttribute="top" constant="8" id="5Y2-E1-sjK"/>
                             <constraint firstItem="elb-qQ-5kj" firstAttribute="bottom" secondItem="Bex-qx-nfv" secondAttribute="bottom" constant="-20" id="Axu-pX-L8h"/>
-                            <constraint firstItem="Gtf-5s-hMU" firstAttribute="top" secondItem="5RF-Gr-WxB" secondAttribute="bottom" constant="20" id="Cpc-ph-41F"/>
+                            <constraint firstItem="Gtf-5s-hMU" firstAttribute="top" secondItem="5RF-Gr-WxB" secondAttribute="bottom" constant="40" id="Cpc-ph-41F"/>
                             <constraint firstItem="elb-qQ-5kj" firstAttribute="centerX" secondItem="SaT-Fx-16R" secondAttribute="centerX" id="MtG-Hg-3q2"/>
+                            <constraint firstItem="ga9-Dk-cb2" firstAttribute="centerX" secondItem="SaT-Fx-16R" secondAttribute="centerX" id="Nna-2e-7Vv"/>
                             <constraint firstItem="doX-XI-Nc7" firstAttribute="centerX" secondItem="SaT-Fx-16R" secondAttribute="centerX" id="ZPu-tJ-klB"/>
                             <constraint firstItem="Bex-qx-nfv" firstAttribute="trailing" secondItem="VJx-ci-dqf" secondAttribute="trailing" constant="16" id="baP-Qg-KYl"/>
                             <constraint firstItem="E26-pC-bHu" firstAttribute="top" secondItem="Bex-qx-nfv" secondAttribute="top" constant="60" id="gWc-0j-RkQ"/>
+                            <constraint firstItem="ga9-Dk-cb2" firstAttribute="top" secondItem="doX-XI-Nc7" secondAttribute="bottom" constant="8" id="n88-ke-ozR"/>
                             <constraint firstItem="5RF-Gr-WxB" firstAttribute="centerX" secondItem="SaT-Fx-16R" secondAttribute="centerX" id="tWc-WQ-6sh"/>
                             <constraint firstItem="E26-pC-bHu" firstAttribute="centerX" secondItem="SaT-Fx-16R" secondAttribute="centerX" id="uDx-nj-jb6"/>
                             <constraint firstItem="Gtf-5s-hMU" firstAttribute="centerX" secondItem="SaT-Fx-16R" secondAttribute="centerX" id="xNV-FR-zjU"/>
@@ -422,8 +436,12 @@
                         <viewLayoutGuide key="safeArea" id="Bex-qx-nfv"/>
                     </view>
                     <navigationItem key="navigationItem" id="PqK-52-juj"/>
+                    <connections>
+                        <segue destination="EdP-F4-KAk" kind="unwind" identifier="unwindToChannel" unwindAction="prepareForSegueWithSegue:" id="bkX-Fj-WWl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="48I-DO-rtK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="EdP-F4-KAk" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2528.985507246377" y="-254.46428571428569"/>
         </scene>
