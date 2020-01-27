@@ -51,6 +51,8 @@ extension MapVC: MKMapViewDelegate {
     }
 
     @objc func dropPin(sender: UITapGestureRecognizer) {
+        removePin()
+
         let touchPoint = sender.location(in: mapView)
         let touchCoordinate = mapView.convert(touchPoint, toCoordinateFrom: mapView)
 
@@ -59,6 +61,12 @@ extension MapVC: MKMapViewDelegate {
 
         let coordinateRegion = MKCoordinateRegion(center: touchCoordinate, latitudinalMeters: regionRadius * 2.0, longitudinalMeters: regionRadius * 2.0)
         mapView.setRegion(coordinateRegion, animated: true)
+    }
+
+    func removePin() {
+        for annotation in mapView.annotations {
+            mapView.removeAnnotation(annotation)
+        }
     }
 }
 
