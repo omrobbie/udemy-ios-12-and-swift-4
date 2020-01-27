@@ -14,6 +14,7 @@
 		FC7AAB7523DE99E700F15CC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC7AAB7323DE99E700F15CC3 /* Main.storyboard */; };
 		FC7AAB7723DE99E800F15CC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC7AAB7623DE99E800F15CC3 /* Assets.xcassets */; };
 		FC7AAB7A23DE99E800F15CC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC7AAB7823DE99E800F15CC3 /* LaunchScreen.storyboard */; };
+		FC7AAB8723DEF2B600F15CC3 /* DroppablePin.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7AAB8623DEF2B600F15CC3 /* DroppablePin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		FC7AAB7623DE99E800F15CC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC7AAB7923DE99E800F15CC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC7AAB7B23DE99E800F15CC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC7AAB8623DEF2B600F15CC3 /* DroppablePin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroppablePin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 		FC7AAB8223DE9C1200F15CC3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FC7AAB8623DEF2B600F15CC3 /* DroppablePin.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC7AAB7223DE99E700F15CC3 /* MapVC.swift in Sources */,
+				FC7AAB8723DEF2B600F15CC3 /* DroppablePin.swift in Sources */,
 				FC7AAB6E23DE99E700F15CC3 /* AppDelegate.swift in Sources */,
 				FC7AAB7023DE99E700F15CC3 /* SceneDelegate.swift in Sources */,
 			);
