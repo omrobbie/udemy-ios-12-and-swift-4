@@ -56,6 +56,11 @@
 		FC7AAB6C23DE99E700F15CC3 /* pixel-city */ = {
 			isa = PBXGroup;
 			children = (
+				FC7AAB8523DE9C2A00F15CC3 /* Utilities */,
+				FC7AAB8423DE9C1D00F15CC3 /* Extensions */,
+				FC7AAB8323DE9C1700F15CC3 /* Model */,
+				FC7AAB8223DE9C1200F15CC3 /* View */,
+				FC7AAB8123DE9C0900F15CC3 /* Controller */,
 				FC7AAB6D23DE99E700F15CC3 /* AppDelegate.swift */,
 				FC7AAB6F23DE99E700F15CC3 /* SceneDelegate.swift */,
 				FC7AAB7123DE99E700F15CC3 /* ViewController.swift */,
@@ -65,6 +70,41 @@
 				FC7AAB7B23DE99E800F15CC3 /* Info.plist */,
 			);
 			path = "pixel-city";
+			sourceTree = "<group>";
+		};
+		FC7AAB8123DE9C0900F15CC3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FC7AAB8223DE9C1200F15CC3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FC7AAB8323DE9C1700F15CC3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FC7AAB8423DE9C1D00F15CC3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FC7AAB8523DE9C2A00F15CC3 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
