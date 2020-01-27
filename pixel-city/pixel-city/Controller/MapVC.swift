@@ -16,6 +16,7 @@ class MapVC: UIViewController {
 
     var locationManager = CLLocationManager()
     let authorizationStatus = CLLocationManager.authorizationStatus()
+    let regionRadius: Double = 1000
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,11 +27,19 @@ class MapVC: UIViewController {
     }
 
     @IBAction func centerBtnTapped(_ sender: Any) {
+        if authorizationStatus == .authorizedAlways || authorizationStatus == .authorizedWhenInUse {
+            centerMapOnUserLocation()
+        }
     }
 }
 
 extension MapVC: MKMapViewDelegate {
+    func centerMapOnUserLocation() {
+        guard let coordinate = locationManager.location?.coordinate else {return}
+        let coordinateRegion = MKCoordinateRegion(center: coordinate, latitudinalMeters: regionRadius * 0.2, longitudinalMeters: regionRadius * 0.2)
 
+        mapView.setRegion(coordinateRegion, animated: true)
+    }
 }
 
 extension MapVC: CLLocationManagerDelegate {
@@ -40,5 +49,9 @@ extension MapVC: CLLocationManagerDelegate {
         } else {
             return
         }
+    }
+
+    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+        centerMapOnUserLocation()
     }
 }
