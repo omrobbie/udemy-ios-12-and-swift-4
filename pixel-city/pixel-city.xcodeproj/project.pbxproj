@@ -10,6 +10,7 @@
 		5B2B4080CB8BF080BEDD6702 /* Pods_pixel_city.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71272230595146265B32D8C6 /* Pods_pixel_city.framework */; };
 		FC2D1E5823E0164C00F57D77 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2D1E5723E0164C00F57D77 /* PhotoCell.swift */; };
 		FC2D1E5A23E01F2000F57D77 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2D1E5923E01F2000F57D77 /* Constants.swift */; };
+		FC2D1E5C23E036B100F57D77 /* PopVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2D1E5B23E036B100F57D77 /* PopVC.swift */; };
 		FC7AAB6E23DE99E700F15CC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7AAB6D23DE99E700F15CC3 /* AppDelegate.swift */; };
 		FC7AAB7023DE99E700F15CC3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7AAB6F23DE99E700F15CC3 /* SceneDelegate.swift */; };
 		FC7AAB7223DE99E700F15CC3 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC7AAB7123DE99E700F15CC3 /* MapVC.swift */; };
@@ -25,6 +26,7 @@
 		FA84FF13D382D3B0CB3D1329 /* Pods-pixel-city.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pixel-city.release.xcconfig"; path = "Target Support Files/Pods-pixel-city/Pods-pixel-city.release.xcconfig"; sourceTree = "<group>"; };
 		FC2D1E5723E0164C00F57D77 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		FC2D1E5923E01F2000F57D77 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FC2D1E5B23E036B100F57D77 /* PopVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopVC.swift; sourceTree = "<group>"; };
 		FC7AAB6A23DE99E700F15CC3 /* pixel-city.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pixel-city.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC7AAB6D23DE99E700F15CC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC7AAB6F23DE99E700F15CC3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				FC7AAB7123DE99E700F15CC3 /* MapVC.swift */,
+				FC2D1E5B23E036B100F57D77 /* PopVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			files = (
 				FC7AAB7223DE99E700F15CC3 /* MapVC.swift in Sources */,
 				FC2D1E5823E0164C00F57D77 /* PhotoCell.swift in Sources */,
+				FC2D1E5C23E036B100F57D77 /* PopVC.swift in Sources */,
 				FC7AAB8723DEF2B600F15CC3 /* DroppablePin.swift in Sources */,
 				FC7AAB6E23DE99E700F15CC3 /* AppDelegate.swift in Sources */,
 				FC7AAB7023DE99E700F15CC3 /* SceneDelegate.swift in Sources */,
