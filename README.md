@@ -36,5 +36,10 @@ Learn to create parallax effect with accelerometer using interpolating motion ef
 <img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/accelerometron/screenshot/preview.gif" width=256/>&nbsp;
 
 ### 8. Splits
+Learn about master detail layout<br>
 <img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/Splits/screenshot/preview1.png" width=256/>&nbsp;
 <img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/Splits/screenshot/preview2.png" width=512/>&nbsp;
+
+### 9. Pixel City
+Learn about map kit, annotation, drop pin, alamofire, alamofire images, force touch<br>
+<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/pixel-city/screenshot/preview.gif" width=256/>&nbsp;
