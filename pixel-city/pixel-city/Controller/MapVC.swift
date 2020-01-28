@@ -31,6 +31,7 @@ class MapVC: UIViewController {
     var collectionView: UICollectionView?
 
     var imageUrlArray = [String]()
+    var imageArray = [UIImage]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -153,8 +154,15 @@ extension MapVC: MKMapViewDelegate {
         let coordinateRegion = MKCoordinateRegion(center: touchCoordinate, latitudinalMeters: regionRadius * 2.0, longitudinalMeters: regionRadius * 2.0)
         mapView.setRegion(coordinateRegion, animated: true)
 
-        retrieveUrls(forAnnotation: annotation) { (true) in
-            print(self.imageUrlArray)
+        retrieveUrls(forAnnotation: annotation) { (finished) in
+            if finished {
+                self.retrieveImages { (finished) in
+                    if finished {
+                        self.removeSpinner()
+                        self.removeProgressLbl()
+                    }
+                }
+            }
         }
     }
 
@@ -177,6 +185,23 @@ extension MapVC: MKMapViewDelegate {
                 self.imageUrlArray.append(postUrl)
             }
             handler(true)
+        }
+    }
+
+    func retrieveImages(handler: @escaping (_ status: Bool) -> ()) {
+        imageArray = []
+
+        for url in imageUrlArray {
+            Alamofire.request(url).responseImage { (response) in
+                guard let image = response.result.value else {return}
+
+                self.imageArray.append(image)
+                self.progressLbl?.text = "\(self.imageArray.count)/40 IMAGES DOWNLOADED"
+
+                if self.imageArray.count == self.imageUrlArray.count {
+                    handler(true)
+                }
+            }
         }
     }
 }
