@@ -15,8 +15,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" mapType="standard" zoomEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsCompass="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIm-kH-PuW">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" zoomEnabled="NO" rotateEnabled="NO" pitchEnabled="NO" showsUserLocation="YES" showsCompass="NO" showsPointsOfInterest="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIm-kH-PuW">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="895"/>
                             </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0JK-fV-pdd">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
@@ -40,7 +40,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="feP-wD-B8e">
-                                <rect key="frame" x="344" y="826" width="50" height="50"/>
+                                <rect key="frame" x="344" y="825" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="GP4-4r-llv"/>
                                     <constraint firstAttribute="height" constant="50" id="NM8-7z-egW"/>
@@ -50,9 +50,12 @@
                                     <action selector="centerBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cP9-at-xRI"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gbG-V6-Iem">
-                                <rect key="frame" x="0.0" y="896" width="414" height="0.0"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gbG-V6-Iem">
+                                <rect key="frame" x="0.0" y="895" width="414" height="1"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="cJs-QI-Ss1"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -63,7 +66,7 @@
                             <constraint firstItem="0JK-fV-pdd" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="CS5-vw-ZY0"/>
                             <constraint firstItem="jIm-kH-PuW" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Pvy-WT-Y7q"/>
                             <constraint firstAttribute="bottom" secondItem="gbG-V6-Iem" secondAttribute="bottom" id="TIA-CF-wpq"/>
-                            <constraint firstAttribute="bottom" secondItem="feP-wD-B8e" secondAttribute="bottom" constant="20" id="WJy-u9-nzM"/>
+                            <constraint firstItem="gbG-V6-Iem" firstAttribute="top" secondItem="feP-wD-B8e" secondAttribute="bottom" constant="20" id="WJy-u9-nzM"/>
                             <constraint firstItem="gbG-V6-Iem" firstAttribute="top" secondItem="jIm-kH-PuW" secondAttribute="bottom" id="WyO-6v-Nkd"/>
                             <constraint firstItem="jIm-kH-PuW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cF9-SN-ge4"/>
                             <constraint firstAttribute="trailing" secondItem="gbG-V6-Iem" secondAttribute="trailing" id="dkc-8K-apJ"/>
@@ -74,6 +77,8 @@
                     </view>
                     <connections>
                         <outlet property="mapView" destination="jIm-kH-PuW" id="nwC-W2-VQq"/>
+                        <outlet property="pullUpView" destination="gbG-V6-Iem" id="kM8-uO-qJI"/>
+                        <outlet property="pullUpViewHeightConstraint" destination="cJs-QI-Ss1" id="rqB-bW-eS7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
