@@ -25,6 +25,9 @@ class MapVC: UIViewController {
     var spinner: UIActivityIndicatorView?
     var progressLbl: UILabel?
 
+    var flowLayout = UICollectionViewFlowLayout()
+    var collectionView: UICollectionView?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -32,6 +35,15 @@ class MapVC: UIViewController {
         locationManager.delegate = self
         configureLocationService()
         addDoubleTap()
+
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: flowLayout)
+        collectionView?.register(PhotoCell.self, forCellWithReuseIdentifier: "photoCell")
+        collectionView?.backgroundColor = #colorLiteral(red: 0.4666666687, green: 0.7647058964, blue: 0.2666666806, alpha: 1)
+
+        collectionView?.delegate = self
+        collectionView?.dataSource = self
+
+        pullUpView.addSubview(collectionView!)
     }
 
     func addDoubleTap() {
@@ -68,7 +80,7 @@ class MapVC: UIViewController {
         spinner?.center = CGPoint(x: (screenSize.width / 2) + ((spinner?.frame.width)! / 2) - 10, y: 150)
         spinner?.color = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         spinner?.startAnimating()
-        pullUpView.addSubview(spinner!)
+        collectionView?.addSubview(spinner!)
     }
 
     func removeSpinner() {
@@ -83,8 +95,8 @@ class MapVC: UIViewController {
         progressLbl?.font = UIFont(name: "Avenir Next", size: 18)
         progressLbl?.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         progressLbl?.textAlignment = .center
-        progressLbl?.text = "12/40 PHOTOS LOADED"
-        pullUpView.addSubview(progressLbl!)
+        progressLbl?.text = "LOADING"
+        collectionView?.addSubview(progressLbl!)
     }
 
     func removeProgressLbl() {
@@ -161,4 +173,21 @@ extension MapVC: CLLocationManagerDelegate {
 
 extension MapVC: UIGestureRecognizerDelegate {
 
+}
+
+extension MapVC: UICollectionViewDelegate, UICollectionViewDataSource {
+
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 4
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as? PhotoCell
+
+        return cell!
+    }
 }
