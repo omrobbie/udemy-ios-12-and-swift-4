@@ -12,7 +12,14 @@ class PopVC: UIViewController {
 
     @IBOutlet weak var popImageView: UIImageView!
 
+    var passedImage: UIImage!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        popImageView.image = passedImage
+    }
+
+    func initData(forImage image: UIImage) {
+        passedImage = image
     }
 }

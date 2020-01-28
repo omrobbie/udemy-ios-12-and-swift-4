@@ -88,7 +88,7 @@
         <!--PopVC-->
         <scene sceneID="1Ds-aK-bVE">
             <objects>
-                <viewController id="7aI-yI-dGP" customClass="PopVC" customModule="pixel_city" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PopVC" id="7aI-yI-dGP" customClass="PopVC" customModule="pixel_city" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SCS-7t-s16">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
