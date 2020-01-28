@@ -74,6 +74,8 @@ class MapVC: UIViewController {
     }
 
     @objc func animateViewDown() {
+        cancelAllSessions()
+
         pullUpViewHeightConstraint.constant = 0
         UIView.animate(withDuration: 0.3) {
             self.view.layoutIfNeeded()
@@ -140,6 +142,8 @@ extension MapVC: MKMapViewDelegate {
         removePin()
         removeSpinner()
         removeProgressLbl()
+        cancelAllSessions()
+
         animateViewUp()
         addSwipe()
         addSpinner()
@@ -202,6 +206,13 @@ extension MapVC: MKMapViewDelegate {
                     handler(true)
                 }
             }
+        }
+    }
+
+    func cancelAllSessions() {
+        Alamofire.SessionManager.default.session.getTasksWithCompletionHandler { (sessionDataTask, uploadData, downloadData) in
+            sessionDataTask.forEach({ $0.cancel() })
+            downloadData.forEach({ $0.cancel() })
         }
     }
 }
