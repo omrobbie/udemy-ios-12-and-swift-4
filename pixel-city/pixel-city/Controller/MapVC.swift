@@ -23,6 +23,7 @@ class MapVC: UIViewController {
     var screenSize = UIScreen.main.bounds
 
     var spinner: UIActivityIndicatorView?
+    var progressLbl: UILabel?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,8 +64,8 @@ class MapVC: UIViewController {
     }
 
     func addSpinner() {
-        spinner = UIActivityIndicatorView(style: .whiteLarge)
-        spinner?.center = CGPoint(x: (screenSize.width / 2) - ((spinner?.frame.width ?? 0) / 2), y: 150)
+        spinner = UIActivityIndicatorView(style: .large)
+        spinner?.center = CGPoint(x: (screenSize.width / 2) + ((spinner?.frame.width)! / 2) - 10, y: 150)
         spinner?.color = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
         spinner?.startAnimating()
         pullUpView.addSubview(spinner!)
@@ -73,6 +74,22 @@ class MapVC: UIViewController {
     func removeSpinner() {
         if spinner != nil {
             spinner?.removeFromSuperview()
+        }
+    }
+
+    func addProgressLbl() {
+        progressLbl = UILabel()
+        progressLbl?.frame = CGRect(x: (screenSize.width / 2) - 150, y: 175, width: 300, height: 40)
+        progressLbl?.font = UIFont(name: "Avenir Next", size: 18)
+        progressLbl?.textColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+        progressLbl?.textAlignment = .center
+        progressLbl?.text = "12/40 PHOTOS LOADED"
+        pullUpView.addSubview(progressLbl!)
+    }
+
+    func removeProgressLbl() {
+        if progressLbl != nil {
+            progressLbl?.removeFromSuperview()
         }
     }
 
@@ -105,9 +122,11 @@ extension MapVC: MKMapViewDelegate {
     @objc func dropPin(sender: UITapGestureRecognizer) {
         removePin()
         removeSpinner()
+        removeProgressLbl()
         animateViewUp()
         addSwipe()
         addSpinner()
+        addProgressLbl()
 
         let touchPoint = sender.location(in: mapView)
         let touchCoordinate = mapView.convert(touchPoint, toCoordinateFrom: mapView)
