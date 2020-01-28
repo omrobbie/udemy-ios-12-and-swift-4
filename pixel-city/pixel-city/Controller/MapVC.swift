@@ -173,7 +173,7 @@ extension MapVC: MKMapViewDelegate {
             let photosDictArray = photosDict["photo"] as! [Dictionary<String, AnyObject>]
 
             for photo in photosDictArray {
-                let postUrl = "https://farm\(photo["farm"]!).staticflickr.com/\(photo["server"]!)/\(photo["id"]!)_\(photo["secret"]!)_h_d.jpg"
+                let postUrl = "https://live.staticflickr.com/\(photo["server"]!)/\(photo["id"]!)_\(photo["secret"]!)_d.jpg"
                 self.imageUrlArray.append(postUrl)
             }
             handler(true)
