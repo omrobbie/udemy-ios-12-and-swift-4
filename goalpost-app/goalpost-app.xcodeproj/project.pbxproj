@@ -21,6 +21,7 @@
 		FC2D1EB023E14D3E00F57D77 /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2D1EAF23E14D3E00F57D77 /* UIViewExt.swift */; };
 		FC2D1EB223E1501800F57D77 /* UIButtonExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2D1EB123E1501800F57D77 /* UIButtonExt.swift */; };
 		FC2D1EB423E1564700F57D77 /* FinishGoalVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2D1EB323E1564700F57D77 /* FinishGoalVC.swift */; };
+		FC2D1ED723E1634800F57D77 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2D1ED623E1634800F57D77 /* Globals.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		FC2D1EAF23E14D3E00F57D77 /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
 		FC2D1EB123E1501800F57D77 /* UIButtonExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonExt.swift; sourceTree = "<group>"; };
 		FC2D1EB323E1564700F57D77 /* FinishGoalVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishGoalVC.swift; sourceTree = "<group>"; };
+		FC2D1ED623E1634800F57D77 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		FC2D1E6823E1213C00F57D77 /* goalpost-app */ = {
 			isa = PBXGroup;
 			children = (
+				FC2D1ED523E1633700F57D77 /* Globals */,
 				FC2D1E8423E1219F00F57D77 /* Extensions */,
 				FC2D1E8323E1219600F57D77 /* Enums */,
 				FC2D1E8223E1217900F57D77 /* Model */,
@@ -129,6 +132,14 @@
 				FC2D1EB123E1501800F57D77 /* UIButtonExt.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FC2D1ED523E1633700F57D77 /* Globals */ = {
+			isa = PBXGroup;
+			children = (
+				FC2D1ED623E1634800F57D77 /* Globals.swift */,
+			);
+			path = Globals;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +221,7 @@
 				FC2D1EB423E1564700F57D77 /* FinishGoalVC.swift in Sources */,
 				FC2D1EAA23E13A7D00F57D77 /* GoalType.swift in Sources */,
 				FC2D1E7423E1213C00F57D77 /* goalpost_app.xcdatamodeld in Sources */,
+				FC2D1ED723E1634800F57D77 /* Globals.swift in Sources */,
 				FC2D1EAC23E141E900F57D77 /* CreateGoalVC.swift in Sources */,
 				FC2D1E8623E12BBA00F57D77 /* GoalCell.swift in Sources */,
 				FC2D1E6C23E1213C00F57D77 /* SceneDelegate.swift in Sources */,
