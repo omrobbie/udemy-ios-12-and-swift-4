@@ -56,7 +56,7 @@ class FinishGoalVC: UIViewController {
         }
     }
     
-    @IBAction func backBtnWasPressed(_ sender: Any) {
+    @IBAction func backBtnWasPressed(_ yusender: Any) {
         dismissDetail()
     }
 }

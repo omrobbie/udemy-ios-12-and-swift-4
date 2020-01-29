@@ -43,7 +43,7 @@ class CreateGoalVC: UIViewController {
 
             finishGoalVC.initData(description: goalTextView.text, type: goalType)
             finishGoalVC.modalPresentationStyle = .fullScreen
-            presentDetail(viewControllerToPresent: finishGoalVC)
+            presentingViewController?.presentSecondaryDetail(finishGoalVC)
         }
     }
 
