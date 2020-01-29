@@ -73,7 +73,7 @@
                                 <rect key="frame" x="0.0" y="75" width="414" height="821"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="70" id="mhg-AH-H55">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="goalCell" rowHeight="70" id="mhg-AH-H55" customClass="GoalCell" customModule="goalpost_app" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mhg-AH-H55" id="Xsw-7u-imJ">
@@ -139,6 +139,11 @@
                                                 <constraint firstAttribute="bottom" secondItem="55M-kg-sfY" secondAttribute="bottom" constant="8" id="vh7-8w-Kww"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="goalDescriptionLbl" destination="Wbj-N2-en2" id="yKX-Qn-lcr"/>
+                                            <outlet property="goalProgressLbl" destination="55M-kg-sfY" id="8JC-ok-vyM"/>
+                                            <outlet property="goalTypeLbl" destination="55M-kg-sfY" id="C4P-MM-huq"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
