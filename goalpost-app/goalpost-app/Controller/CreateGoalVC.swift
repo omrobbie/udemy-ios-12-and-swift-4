@@ -19,6 +19,7 @@ class CreateGoalVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        goalTextView.delegate = self
         nextBtn.bindToKeyboard()
         shortTermBtn.setSelectedColor()
         longTermBtn.setDeselectedColor()
@@ -48,5 +49,13 @@ class CreateGoalVC: UIViewController {
 
     @IBAction func backBtnWasPressed(_ sender: Any) {
         dismissDetail()
+    }
+}
+
+extension CreateGoalVC: UITextViewDelegate {
+
+    func textViewDidBeginEditing(_ textView: UITextView) {
+        goalTextView.text = ""
+        goalTextView.textColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
     }
 }
