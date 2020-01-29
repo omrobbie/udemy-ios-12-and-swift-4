@@ -368,12 +368,10 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHH-tm-0l5">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHH-tm-0l5">
                                 <rect key="frame" x="0.0" y="846" width="414" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.91764705879999997" green="0.66274509800000003" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="Fz6-HC-iqw"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
                                 <state key="normal" title="CREATE GOAL">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -386,12 +384,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="t1e-fv-m3Y" secondAttribute="trailing" id="2zV-OG-FG4"/>
-                            <constraint firstAttribute="trailing" secondItem="qHH-tm-0l5" secondAttribute="trailing" id="3WU-GP-bHl"/>
                             <constraint firstItem="xdE-ZC-eNj" firstAttribute="leading" secondItem="aVT-rn-WWE" secondAttribute="leadingMargin" constant="20" id="Eya-Zh-mFC"/>
                             <constraint firstItem="t1e-fv-m3Y" firstAttribute="leading" secondItem="aVT-rn-WWE" secondAttribute="leading" id="Hie-ZQ-ypn"/>
-                            <constraint firstItem="qHH-tm-0l5" firstAttribute="leading" secondItem="aVT-rn-WWE" secondAttribute="leading" id="QPv-o6-3Kv"/>
                             <constraint firstAttribute="trailingMargin" secondItem="xdE-ZC-eNj" secondAttribute="trailing" constant="20" id="dEk-cG-KqC"/>
-                            <constraint firstAttribute="bottom" secondItem="qHH-tm-0l5" secondAttribute="bottom" id="kzT-Xb-7gD"/>
                             <constraint firstItem="xdE-ZC-eNj" firstAttribute="top" secondItem="t1e-fv-m3Y" secondAttribute="bottom" constant="20" id="sGz-yb-TuQ"/>
                             <constraint firstItem="t1e-fv-m3Y" firstAttribute="top" secondItem="aVT-rn-WWE" secondAttribute="top" id="sJc-Zf-TPC"/>
                         </constraints>
