@@ -16,10 +16,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6kw-j6-7tg">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ZE4-V7-vYH">
-                                        <rect key="frame" x="153.5" y="37" width="107" height="25"/>
+                                        <rect key="frame" x="153.5" y="38" width="107" height="25"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GOAL" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUV-jL-M6V">
                                                 <rect key="frame" x="0.0" y="0.0" width="51" height="25"/>
@@ -35,12 +35,18 @@
                                             </label>
                                         </subviews>
                                     </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3AJ-Rl-oEu">
+                                        <rect key="frame" x="364" y="34.5" width="35" height="32"/>
+                                        <state key="normal" image="addGoal"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.42745098039215684" green="0.73725490196078436" blue="0.38823529411764707" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="81t-DM-wfp"/>
-                                    <constraint firstAttribute="bottom" secondItem="ZE4-V7-vYH" secondAttribute="bottom" constant="8" id="DDm-QP-7rB"/>
+                                    <constraint firstAttribute="trailing" secondItem="3AJ-Rl-oEu" secondAttribute="trailing" constant="15" id="0AM-di-XBq"/>
+                                    <constraint firstAttribute="height" constant="75" id="81t-DM-wfp"/>
+                                    <constraint firstAttribute="bottom" secondItem="ZE4-V7-vYH" secondAttribute="bottom" constant="12" id="DDm-QP-7rB"/>
                                     <constraint firstItem="ZE4-V7-vYH" firstAttribute="centerX" secondItem="6kw-j6-7tg" secondAttribute="centerX" id="UCY-c5-NJ0"/>
+                                    <constraint firstItem="3AJ-Rl-oEu" firstAttribute="centerY" secondItem="ZE4-V7-vYH" secondAttribute="centerY" id="oki-la-hn0"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -58,4 +64,7 @@
             <point key="canvasLocation" x="137.68115942028987" y="135.9375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="addGoal" width="35" height="32"/>
+    </resources>
 </document>
