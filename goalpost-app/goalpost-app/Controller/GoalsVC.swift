@@ -25,7 +25,11 @@ class GoalsVC: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        fetchCoreDataObjects()
+        tableView.reloadData()
+    }
 
+    func fetchCoreDataObjects() {
         fetch { (complete) in
             if complete {
                 if self.goals.count >= 1 {
@@ -35,8 +39,6 @@ class GoalsVC: UIViewController {
                 }
             }
         }
-
-        tableView.reloadData()
     }
 
     @IBAction func addGoalBtnWasPressed(_ sender: Any) {
@@ -63,6 +65,26 @@ extension GoalsVC: UITableViewDelegate, UITableViewDataSource {
 
         return cell
     }
+
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .none
+    }
+
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let deleteAction = UITableViewRowAction(style: .destructive, title: "DELETE") { (rowAction, indexPath) in
+            self.removeGoal(atIndexPath: indexPath)
+            self.fetchCoreDataObjects()
+
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+
+        deleteAction.backgroundColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
+        return [deleteAction]
+    }
 }
 
 extension GoalsVC {
@@ -77,6 +99,17 @@ extension GoalsVC {
         } catch {
             debugPrint("Could not fetch: \(error.localizedDescription)")
             completion(false)
+        }
+    }
+
+    func removeGoal(atIndexPath indexPath: IndexPath) {
+        guard let manageContext = appDelegate?.persistentContainer.viewContext else {return}
+        manageContext.delete(goals[indexPath.row])
+
+        do {
+            try manageContext.save()
+        } catch {
+            debugPrint("Could not remove: \(error.localizedDescription)")
         }
     }
 }
