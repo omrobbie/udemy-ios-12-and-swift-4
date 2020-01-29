@@ -38,7 +38,6 @@ class FinishGoalVC: UIViewController {
 
         do {
             try manageContext.save()
-            print("Successfuly save data!")
             completion(true)
         } catch {
             debugPrint("Could not save: \(error.localizedDescription)")
