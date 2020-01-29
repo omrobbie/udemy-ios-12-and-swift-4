@@ -58,16 +58,56 @@
 		FC2D1E6823E1213C00F57D77 /* goalpost-app */ = {
 			isa = PBXGroup;
 			children = (
+				FC2D1E8423E1219F00F57D77 /* Extensions */,
+				FC2D1E8323E1219600F57D77 /* Enums */,
+				FC2D1E8223E1217900F57D77 /* Model */,
+				FC2D1E8123E1217400F57D77 /* View */,
+				FC2D1E8023E1216A00F57D77 /* Controller */,
 				FC2D1E6923E1213C00F57D77 /* AppDelegate.swift */,
 				FC2D1E6B23E1213C00F57D77 /* SceneDelegate.swift */,
-				FC2D1E6D23E1213C00F57D77 /* ViewController.swift */,
 				FC2D1E6F23E1213C00F57D77 /* Main.storyboard */,
 				FC2D1E7523E1213D00F57D77 /* Assets.xcassets */,
 				FC2D1E7723E1213D00F57D77 /* LaunchScreen.storyboard */,
 				FC2D1E7A23E1213D00F57D77 /* Info.plist */,
-				FC2D1E7223E1213C00F57D77 /* goalpost_app.xcdatamodeld */,
 			);
 			path = "goalpost-app";
+			sourceTree = "<group>";
+		};
+		FC2D1E8023E1216A00F57D77 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FC2D1E6D23E1213C00F57D77 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FC2D1E8123E1217400F57D77 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FC2D1E8223E1217900F57D77 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FC2D1E7223E1213C00F57D77 /* goalpost_app.xcdatamodeld */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FC2D1E8323E1219600F57D77 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		FC2D1E8423E1219F00F57D77 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
