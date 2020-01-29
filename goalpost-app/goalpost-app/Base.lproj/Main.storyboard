@@ -128,18 +128,36 @@
                                                     <color key="textColor" red="0.42745098040000001" green="0.73725490199999999" blue="0.38823529410000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WNC-5r-Cpa">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="GOAL COMPLETE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HJm-Zp-1Sz">
+                                                            <rect key="frame" x="76" y="15" width="263" height="41"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="30"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" red="0.91764705882352937" green="0.66274509803921566" blue="0.26666666666666666" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                </view>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="WNC-5r-Cpa" firstAttribute="leading" secondItem="Xsw-7u-imJ" secondAttribute="leading" id="3eD-NX-nFJ"/>
+                                                <constraint firstAttribute="bottom" secondItem="WNC-5r-Cpa" secondAttribute="bottom" id="IyR-lx-MdG"/>
                                                 <constraint firstItem="55M-kg-sfY" firstAttribute="top" secondItem="Xsw-7u-imJ" secondAttribute="top" constant="8" id="Jh4-j5-ogg"/>
+                                                <constraint firstItem="WNC-5r-Cpa" firstAttribute="top" secondItem="Xsw-7u-imJ" secondAttribute="top" id="LZC-Ht-y9m"/>
                                                 <constraint firstItem="4y9-GV-SeV" firstAttribute="top" secondItem="Xsw-7u-imJ" secondAttribute="topMargin" id="QTz-lE-nYh"/>
                                                 <constraint firstAttribute="trailing" secondItem="55M-kg-sfY" secondAttribute="trailing" constant="8" id="VeD-GX-SDj"/>
                                                 <constraint firstItem="55M-kg-sfY" firstAttribute="leading" secondItem="4y9-GV-SeV" secondAttribute="trailing" constant="10" id="Zl2-MT-oUi"/>
+                                                <constraint firstAttribute="trailing" secondItem="WNC-5r-Cpa" secondAttribute="trailing" id="d3Y-yA-GRj"/>
                                                 <constraint firstItem="4y9-GV-SeV" firstAttribute="leading" secondItem="Xsw-7u-imJ" secondAttribute="leadingMargin" id="kvq-P7-3E4"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="4y9-GV-SeV" secondAttribute="bottom" id="oQz-IW-JP2"/>
                                                 <constraint firstAttribute="bottom" secondItem="55M-kg-sfY" secondAttribute="bottom" constant="8" id="vh7-8w-Kww"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="completionView" destination="WNC-5r-Cpa" id="M2F-Ou-jXC"/>
                                             <outlet property="goalDescriptionLbl" destination="Wbj-N2-en2" id="yKX-Qn-lcr"/>
                                             <outlet property="goalProgressLbl" destination="55M-kg-sfY" id="8JC-ok-vyM"/>
                                             <outlet property="goalTypeLbl" destination="55M-kg-sfY" id="C4P-MM-huq"/>
