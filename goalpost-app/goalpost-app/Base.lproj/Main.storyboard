@@ -306,10 +306,10 @@
             </objects>
             <point key="canvasLocation" x="889.85507246376824" y="135.9375"/>
         </scene>
-        <!--View Controller-->
+        <!--Finish GoalVC-->
         <scene sceneID="iDb-vj-CzN">
             <objects>
-                <viewController id="vmd-1m-9qC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="finishGoalVC" id="vmd-1m-9qC" customClass="FinishGoalVC" customModule="goalpost_app" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aVT-rn-WWE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -375,6 +375,9 @@
                                 <state key="normal" title="CREATE GOAL">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="createGoalBtnWasPressed:" destination="vmd-1m-9qC" eventType="touchUpInside" id="I7w-yj-Dc5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -391,6 +394,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hjq-f6-alE"/>
                     </view>
+                    <connections>
+                        <outlet property="createGoalBtn" destination="qHH-tm-0l5" id="6EC-9L-gGI"/>
+                        <outlet property="pointsTextField" destination="CJ6-DR-NsK" id="DLh-0w-ZvG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KSZ-hm-oUV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
