@@ -20,6 +20,7 @@
 		FCD735AB23E2BEDA005BBF70 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD735AA23E2BEDA005BBF70 /* Extensions.swift */; };
 		FCD735AD23E30EAF005BBF70 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD735AC23E30EAF005BBF70 /* Run.swift */; };
 		FCD735B023E31391005BBF70 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD735AF23E31391005BBF70 /* Constants.swift */; };
+		FCD735B223E3191B005BBF70 /* RunLogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD735B123E3191B005BBF70 /* RunLogCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		FCD735AA23E2BEDA005BBF70 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FCD735AC23E30EAF005BBF70 /* Run.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
 		FCD735AF23E31391005BBF70 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		FCD735B123E3191B005BBF70 /* RunLogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLogCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 		FC2D1EFB23E28A9E00F57D77 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FCD735B123E3191B005BBF70 /* RunLogCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				FCD735AD23E30EAF005BBF70 /* Run.swift in Sources */,
 				FC2D1EEB23E2737F00F57D77 /* RunLogVC.swift in Sources */,
 				FC2D1EE923E2737F00F57D77 /* BeginRunVC.swift in Sources */,
+				FCD735B223E3191B005BBF70 /* RunLogCell.swift in Sources */,
 				FC2D1EE523E2737F00F57D77 /* AppDelegate.swift in Sources */,
 				FC2D1F0023E2B25500F57D77 /* CurrentRunVC.swift in Sources */,
 				FC2D1EE723E2737F00F57D77 /* SceneDelegate.swift in Sources */,
