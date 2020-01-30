@@ -10,7 +10,7 @@ import Foundation
 import RealmSwift
 
 class Run: Object {
-    dynamic private(set) var id = ""
+    @objc dynamic private(set) var id = ""
     dynamic private(set) var date = NSDate()
     dynamic private(set) var pace = 0
     dynamic private(set) var distance = 0.0
@@ -34,17 +34,19 @@ class Run: Object {
     }
 
     static func addRunToRealm(pace: Int, distance: Double, duration: Int) {
-        let run = Run(pace: pace, distance: distance, duration: duration)
+        REALM_QUEUE.sync {
+            let run = Run(pace: pace, distance: distance, duration: duration)
 
-        do {
-            let realm = try Realm()
+            do {
+                let realm = try Realm()
 
-            try realm.write {
-                realm.add(run)
-                try realm.commitWrite()
+                try realm.write {
+                    realm.add(run)
+                    try realm.commitWrite()
+                }
+            } catch {
+                debugPrint("Error adding run to Realm: \(error.localizedDescription)")
             }
-        } catch {
-            debugPrint("Error adding run to Realm: \(error.localizedDescription)")
         }
     }
 }

@@ -19,6 +19,7 @@
 		FC2D1F0023E2B25500F57D77 /* CurrentRunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2D1EFF23E2B25500F57D77 /* CurrentRunVC.swift */; };
 		FCD735AB23E2BEDA005BBF70 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD735AA23E2BEDA005BBF70 /* Extensions.swift */; };
 		FCD735AD23E30EAF005BBF70 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD735AC23E30EAF005BBF70 /* Run.swift */; };
+		FCD735B023E31391005BBF70 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD735AF23E31391005BBF70 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		FC2D1EFF23E2B25500F57D77 /* CurrentRunVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRunVC.swift; sourceTree = "<group>"; };
 		FCD735AA23E2BEDA005BBF70 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		FCD735AC23E30EAF005BBF70 /* Run.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
+		FCD735AF23E31391005BBF70 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 		FC2D1EE323E2737F00F57D77 /* Threads */ = {
 			isa = PBXGroup;
 			children = (
+				FCD735AE23E31380005BBF70 /* Utilities */,
 				FCD735A923E2BEC8005BBF70 /* Extensions */,
 				FC2D1EFC23E28AA300F57D77 /* Model */,
 				FC2D1EFB23E28A9E00F57D77 /* View */,
@@ -136,6 +139,14 @@
 				FCD735AA23E2BEDA005BBF70 /* Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		FCD735AE23E31380005BBF70 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				FCD735AF23E31391005BBF70 /* Constants.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +272,7 @@
 				FC2D1F0023E2B25500F57D77 /* CurrentRunVC.swift in Sources */,
 				FC2D1EE723E2737F00F57D77 /* SceneDelegate.swift in Sources */,
 				FCD735AB23E2BEDA005BBF70 /* Extensions.swift in Sources */,
+				FCD735B023E31391005BBF70 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
