@@ -10,18 +10,64 @@
         <!--Run-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="Threads" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9pv-A4-QxB" customClass="BeginRunVC" customModule="Threads" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG" translatesAutoresizingMaskIntoConstraints="NO" id="7gw-Vw-IGh">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6sQ-D6-HRD">
+                                <rect key="frame" x="0.0" y="92" width="414" height="593"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RUN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTw-Bs-feC">
+                                <rect key="frame" x="185" y="44" width="44" height="28"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7db-bL-XcC">
+                                <rect key="frame" x="171.5" y="705" width="71" height="71"/>
+                                <state key="normal" image="startRunningButton"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Running" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJZ-SQ-VYE">
+                                <rect key="frame" x="170" y="788" width="74" height="17"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4HD-JD-30M">
+                                <rect key="frame" x="350" y="621" width="58" height="58"/>
+                                <state key="normal" image="centerNavButton"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="sJZ-SQ-VYE" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="3hz-Gk-0cq"/>
+                            <constraint firstItem="7gw-Vw-IGh" firstAttribute="top" secondItem="tsR-hK-woN" secondAttribute="top" id="6Kj-tP-Ada"/>
+                            <constraint firstItem="7gw-Vw-IGh" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="6fE-ZU-o8d"/>
+                            <constraint firstItem="bTw-Bs-feC" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="7zt-2g-2IY"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="bottom" secondItem="sJZ-SQ-VYE" secondAttribute="bottom" constant="8" id="EFK-Vo-34b"/>
+                            <constraint firstItem="sJZ-SQ-VYE" firstAttribute="top" secondItem="7db-bL-XcC" secondAttribute="bottom" constant="12" id="HGd-55-v58"/>
+                            <constraint firstItem="6sQ-D6-HRD" firstAttribute="leading" secondItem="tsR-hK-woN" secondAttribute="leading" id="Ld0-QU-csP"/>
+                            <constraint firstItem="4HD-JD-30M" firstAttribute="top" secondItem="6sQ-D6-HRD" secondAttribute="bottom" constant="-64" id="Net-hj-IZY"/>
+                            <constraint firstAttribute="trailing" secondItem="7gw-Vw-IGh" secondAttribute="trailing" id="TVD-4r-Gi2"/>
+                            <constraint firstAttribute="trailing" secondItem="6sQ-D6-HRD" secondAttribute="trailing" id="bQr-3q-z5X"/>
+                            <constraint firstItem="7db-bL-XcC" firstAttribute="centerX" secondItem="tsR-hK-woN" secondAttribute="centerX" id="bdD-5M-6hr"/>
+                            <constraint firstAttribute="trailing" secondItem="4HD-JD-30M" secondAttribute="trailing" constant="6" id="cAc-WS-aQe"/>
+                            <constraint firstItem="7db-bL-XcC" firstAttribute="firstBaseline" secondItem="6sQ-D6-HRD" secondAttribute="baseline" constant="20" id="g8T-yn-hjE"/>
+                            <constraint firstItem="6sQ-D6-HRD" firstAttribute="top" secondItem="bTw-Bs-feC" secondAttribute="bottom" constant="20" id="y0S-f3-xDP"/>
+                            <constraint firstAttribute="bottom" secondItem="7gw-Vw-IGh" secondAttribute="bottom" id="zQG-K4-caV"/>
+                            <constraint firstItem="bTw-Bs-feC" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="zfO-sy-g0p"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Run" image="tabbar-runIconGray" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-320"/>
+            <point key="canvasLocation" x="749.27536231884062" y="-320.08928571428572"/>
         </scene>
         <!--My Log-->
         <scene sceneID="wg7-f3-ORb">
@@ -59,6 +105,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="BG" width="375" height="667"/>
+        <image name="centerNavButton" width="58" height="58"/>
+        <image name="startRunningButton" width="71" height="71"/>
         <image name="tabbar-myLogIconGray" width="25" height="25"/>
         <image name="tabbar-runIconGray" width="27" height="28"/>
     </resources>
