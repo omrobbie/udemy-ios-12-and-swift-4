@@ -49,7 +49,7 @@ class CurrentRunVC: LocationVC {
     }
 
     func startTimer() {
-        durationLbl.text = "\(counter)"
+        durationLbl.text = counter.formatTimeDurationToString()
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
     }
 
@@ -80,7 +80,7 @@ class CurrentRunVC: LocationVC {
 
     @objc func updateCounter() {
         counter += 1
-        durationLbl.text = "\(counter)"
+        durationLbl.text = counter.formatTimeDurationToString()
     }
 
     @IBAction func pauseBtnPressed(_ sender: Any) {
