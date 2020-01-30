@@ -139,6 +139,10 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXJ-Yv-zAj">
                                 <rect key="frame" x="276" y="779" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="MH1-ms-Zj9"/>
+                                    <constraint firstAttribute="height" constant="75" id="NpD-Yx-lEI"/>
+                                </constraints>
                                 <state key="normal" image="pauseButton"/>
                                 <connections>
                                     <action selector="pauseBtnPressed:" destination="NNx-h8-3ky" eventType="touchUpInside" id="gAh-aS-jk4"/>
