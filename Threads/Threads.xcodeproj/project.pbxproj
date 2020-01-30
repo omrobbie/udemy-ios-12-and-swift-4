@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,7 @@
 		FC2D1EFE23E2A93A00F57D77 /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2D1EFD23E2A93A00F57D77 /* LocationVC.swift */; };
 		FC2D1F0023E2B25500F57D77 /* CurrentRunVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2D1EFF23E2B25500F57D77 /* CurrentRunVC.swift */; };
 		FCD735AB23E2BEDA005BBF70 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD735AA23E2BEDA005BBF70 /* Extensions.swift */; };
+		FCD735AD23E30EAF005BBF70 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD735AC23E30EAF005BBF70 /* Run.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		FC2D1EFD23E2A93A00F57D77 /* LocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
 		FC2D1EFF23E2B25500F57D77 /* CurrentRunVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentRunVC.swift; sourceTree = "<group>"; };
 		FCD735AA23E2BEDA005BBF70 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		FCD735AC23E30EAF005BBF70 /* Run.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +66,6 @@
 				E561371FD716906A5979E3E4 /* Pods-Threads.debug.xcconfig */,
 				3789335D996375D115B615C5 /* Pods-Threads.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -124,6 +125,7 @@
 		FC2D1EFC23E28AA300F57D77 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FCD735AC23E30EAF005BBF70 /* Run.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -252,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC2D1EFE23E2A93A00F57D77 /* LocationVC.swift in Sources */,
+				FCD735AD23E30EAF005BBF70 /* Run.swift in Sources */,
 				FC2D1EEB23E2737F00F57D77 /* RunLogVC.swift in Sources */,
 				FC2D1EE923E2737F00F57D77 /* BeginRunVC.swift in Sources */,
 				FC2D1EE523E2737F00F57D77 /* AppDelegate.swift in Sources */,
