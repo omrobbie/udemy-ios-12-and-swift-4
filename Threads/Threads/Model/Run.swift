@@ -53,7 +53,9 @@ class Run: Object {
     static func getAllRuns() -> Results<Run>? {
         do {
             let realm = try Realm()
-            let runs = realm.objects(Run.self)
+            var runs = realm.objects(Run.self)
+
+            runs = runs.sorted(byKeyPath: "date", ascending: false)
 
             return runs
         } catch {
