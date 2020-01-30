@@ -11,10 +11,10 @@ import RealmSwift
 
 class Run: Object {
     @objc dynamic private(set) var id = ""
-    dynamic private(set) var date = NSDate()
-    dynamic private(set) var pace = 0
-    dynamic private(set) var distance = 0.0
-    dynamic private(set) var duration = 0
+    @objc dynamic private(set) var date = NSDate()
+    @objc dynamic private(set) var pace = 0
+    @objc dynamic private(set) var distance = 0.0
+    @objc dynamic private(set) var duration = 0
 
     override class func primaryKey() -> String? {
         return "id"
