@@ -32,4 +32,19 @@ class Run: Object {
         self.distance = distance
         self.duration = duration
     }
+
+    static func addRunToRealm(pace: Int, distance: Double, duration: Int) {
+        let run = Run(pace: pace, distance: distance, duration: duration)
+
+        do {
+            let realm = try Realm()
+
+            try realm.write {
+                realm.add(run)
+                try realm.commitWrite()
+            }
+        } catch {
+            debugPrint("Error adding run to Realm: \(error.localizedDescription)")
+        }
+    }
 }
