@@ -140,6 +140,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XXJ-Yv-zAj">
                                 <rect key="frame" x="276" y="779" width="75" height="75"/>
                                 <state key="normal" image="pauseButton"/>
+                                <connections>
+                                    <action selector="pauseBtnPressed:" destination="NNx-h8-3ky" eventType="touchUpInside" id="gAh-aS-jk4"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="endRunButton" translatesAutoresizingMaskIntoConstraints="NO" id="66e-hk-qPn">
                                 <rect key="frame" x="77" y="788" width="57" height="57"/>
@@ -203,6 +206,10 @@
                         <viewLayoutGuide key="safeArea" id="ep2-rm-qDF"/>
                     </view>
                     <connections>
+                        <outlet property="distanceLbl" destination="5Lx-0p-3iI" id="zSx-b8-lyH"/>
+                        <outlet property="durationLbl" destination="Az6-FX-Zck" id="97r-mp-4tf"/>
+                        <outlet property="paceLbl" destination="0qQ-V6-7HM" id="ctq-Ow-Ehf"/>
+                        <outlet property="pauseBtn" destination="XXJ-Yv-zAj" id="ImC-tV-dzC"/>
                         <outlet property="sliderImageView" destination="66e-hk-qPn" id="p6n-dN-2ah"/>
                         <outlet property="swipeBgImageView" destination="dh6-vv-HwT" id="893-Mr-BCe"/>
                     </connections>
