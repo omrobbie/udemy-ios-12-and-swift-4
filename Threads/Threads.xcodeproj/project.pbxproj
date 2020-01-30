@@ -58,16 +58,40 @@
 		FC2D1EE323E2737F00F57D77 /* Threads */ = {
 			isa = PBXGroup;
 			children = (
+				FC2D1EFC23E28AA300F57D77 /* Model */,
+				FC2D1EFB23E28A9E00F57D77 /* View */,
+				FC2D1EFA23E28A9600F57D77 /* Controller */,
 				FC2D1EE423E2737F00F57D77 /* AppDelegate.swift */,
 				FC2D1EE623E2737F00F57D77 /* SceneDelegate.swift */,
-				FC2D1EE823E2737F00F57D77 /* BeginRunVC.swift */,
-				FC2D1EEA23E2737F00F57D77 /* RunLogVC.swift */,
 				FC2D1EEC23E2737F00F57D77 /* Main.storyboard */,
 				FC2D1EEF23E2738000F57D77 /* Assets.xcassets */,
 				FC2D1EF123E2738000F57D77 /* LaunchScreen.storyboard */,
 				FC2D1EF423E2738000F57D77 /* Info.plist */,
 			);
 			path = Threads;
+			sourceTree = "<group>";
+		};
+		FC2D1EFA23E28A9600F57D77 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FC2D1EE823E2737F00F57D77 /* BeginRunVC.swift */,
+				FC2D1EEA23E2737F00F57D77 /* RunLogVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FC2D1EFB23E28A9E00F57D77 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FC2D1EFC23E28AA300F57D77 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
