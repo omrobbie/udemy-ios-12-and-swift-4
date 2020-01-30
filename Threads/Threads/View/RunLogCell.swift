@@ -15,7 +15,7 @@ class RunLogCell: UITableViewCell {
     @IBOutlet weak var averagePaceLbl: UILabel!
     @IBOutlet weak var dateLbl: UILabel!
 
-    func configureCell(run: Run) {
+    func configure(run: Run) {
         runDurationLbl.text = run.duration.formatTimeDurationToString()
         totalDistanceLbl.text = "\(run.distance.metersToMiles(places: 2)) mi"
         averagePaceLbl.text = run.pace.formatTimeDurationToString()
