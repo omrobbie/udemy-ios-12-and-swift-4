@@ -251,6 +251,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5hj-dq-R4a">
+                                                    <rect key="frame" x="0.0" y="98" width="414" height="2"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="2" id="f5o-fL-Lne"/>
+                                                    </constraints>
+                                                </view>
                                                 <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oey-HZ-S8s">
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -303,9 +310,12 @@
                                                 <constraint firstAttribute="trailing" secondItem="oey-HZ-S8s" secondAttribute="trailing" id="HxJ-ea-ZEj"/>
                                                 <constraint firstItem="oey-HZ-S8s" firstAttribute="leading" secondItem="es7-mr-Tyd" secondAttribute="leading" id="Ixx-2R-v4x"/>
                                                 <constraint firstItem="oey-HZ-S8s" firstAttribute="top" secondItem="es7-mr-Tyd" secondAttribute="top" id="MpR-RV-6mt"/>
+                                                <constraint firstAttribute="bottom" secondItem="5hj-dq-R4a" secondAttribute="bottom" id="OSc-DA-eD7"/>
                                                 <constraint firstItem="3Tu-tH-S7k" firstAttribute="leading" secondItem="es7-mr-Tyd" secondAttribute="leadingMargin" id="Q3n-U0-ndm"/>
                                                 <constraint firstItem="asN-vP-bVW" firstAttribute="centerY" secondItem="es7-mr-Tyd" secondAttribute="centerY" id="XWE-eO-cj9"/>
                                                 <constraint firstItem="NVg-dX-1Lu" firstAttribute="centerY" secondItem="es7-mr-Tyd" secondAttribute="centerY" id="a00-oV-lso"/>
+                                                <constraint firstAttribute="trailing" secondItem="5hj-dq-R4a" secondAttribute="trailing" id="fsD-Nf-7cb"/>
+                                                <constraint firstItem="5hj-dq-R4a" firstAttribute="leading" secondItem="es7-mr-Tyd" secondAttribute="leading" id="gwq-PZ-qlh"/>
                                                 <constraint firstItem="asN-vP-bVW" firstAttribute="centerX" secondItem="es7-mr-Tyd" secondAttribute="centerX" id="pxN-Zn-Uil"/>
                                                 <constraint firstItem="3Tu-tH-S7k" firstAttribute="centerY" secondItem="es7-mr-Tyd" secondAttribute="centerY" id="vr0-93-SjU"/>
                                             </constraints>
