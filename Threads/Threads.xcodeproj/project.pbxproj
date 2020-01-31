@@ -22,6 +22,7 @@
 		FCD735B023E31391005BBF70 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD735AF23E31391005BBF70 /* Constants.swift */; };
 		FCD735B223E3191B005BBF70 /* RunLogCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD735B123E3191B005BBF70 /* RunLogCell.swift */; };
 		FCD735B423E3C68A005BBF70 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD735B323E3C68A005BBF70 /* Location.swift */; };
+		FCD735B623E3CCA7005BBF70 /* RealmConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD735B523E3CCA7005BBF70 /* RealmConfig.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		FCD735AF23E31391005BBF70 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FCD735B123E3191B005BBF70 /* RunLogCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunLogCell.swift; sourceTree = "<group>"; };
 		FCD735B323E3C68A005BBF70 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		FCD735B523E3CCA7005BBF70 /* RealmConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmConfig.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				FCD735AF23E31391005BBF70 /* Constants.swift */,
+				FCD735B523E3CCA7005BBF70 /* RealmConfig.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				FC2D1EE723E2737F00F57D77 /* SceneDelegate.swift in Sources */,
 				FCD735AB23E2BEDA005BBF70 /* Extensions.swift in Sources */,
 				FCD735B023E31391005BBF70 /* Constants.swift in Sources */,
+				FCD735B623E3CCA7005BBF70 /* RealmConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
