@@ -12,7 +12,12 @@ import MapKit
 class BeginRunVC: LocationVC {
 
     @IBOutlet weak var mapView: MKMapView!
-
+    @IBOutlet weak var lastRunBgView: UIView!
+    @IBOutlet weak var lastRunBtn: UIButton!
+    @IBOutlet weak var paceLbl: UILabel!
+    @IBOutlet weak var distanceLbl: UILabel!
+    @IBOutlet weak var durationLbl: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         checkLocationAuthStatus()
@@ -30,6 +35,8 @@ class BeginRunVC: LocationVC {
 
     @IBAction func locationCenterBtnPressed(_ sender: Any) {
     }
+
+    @IBOutlet weak var lastRunBtnPressed: NSLayoutConstraint!
 }
 
 extension BeginRunVC: CLLocationManagerDelegate {
