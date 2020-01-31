@@ -119,6 +119,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dqw-jO-bQI">
                                 <rect key="frame" x="376" y="130.5" width="28" height="28"/>
                                 <state key="normal" image="closeButton"/>
+                                <connections>
+                                    <action selector="lastRunBtnPressed:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Dxm-ln-FSg"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -155,7 +158,7 @@
                         <outlet property="durationLbl" destination="NJY-rb-dvL" id="bMf-nO-Cho"/>
                         <outlet property="lastRunBgView" destination="vef-fU-NUG" id="MtO-Vq-jTe"/>
                         <outlet property="lastRunBtn" destination="Dqw-jO-bQI" id="XSR-I1-Qoj"/>
-                        <outlet property="lastRunBtnPressed" destination="2Oi-xd-hgh" id="Ujy-pM-KOq"/>
+                        <outlet property="lastRunStackView" destination="DVv-W1-aTa" id="eLO-fm-azr"/>
                         <outlet property="mapView" destination="6sQ-D6-HRD" id="tIa-WN-99j"/>
                         <outlet property="paceLbl" destination="1fm-BO-QKk" id="KBi-hJ-1No"/>
                     </connections>
