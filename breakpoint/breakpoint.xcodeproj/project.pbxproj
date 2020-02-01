@@ -21,6 +21,7 @@
 		FCD735E723E53157005BBF70 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD735E623E53157005BBF70 /* LoginVC.swift */; };
 		FCD735E923E531F8005BBF70 /* InsetTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD735E823E531F8005BBF70 /* InsetTextField.swift */; };
 		FCD735EB23E535D7005BBF70 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD735EA23E535D7005BBF70 /* ShadowView.swift */; };
+		FCD735ED23E5456E005BBF70 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD735EC23E5456E005BBF70 /* AuthService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		FCD735E623E53157005BBF70 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		FCD735E823E531F8005BBF70 /* InsetTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetTextField.swift; sourceTree = "<group>"; };
 		FCD735EA23E535D7005BBF70 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
+		FCD735EC23E5456E005BBF70 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				FCD735E223E51D12005BBF70 /* DataService.swift */,
+				FCD735EC23E5456E005BBF70 /* AuthService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				FCD735E923E531F8005BBF70 /* InsetTextField.swift in Sources */,
 				FCD735C823E50E9F005BBF70 /* FirstViewController.swift in Sources */,
 				FCD735C423E50E9F005BBF70 /* AppDelegate.swift in Sources */,
+				FCD735ED23E5456E005BBF70 /* AuthService.swift in Sources */,
 				FCD735C623E50E9F005BBF70 /* SceneDelegate.swift in Sources */,
 				FCD735E323E51D12005BBF70 /* DataService.swift in Sources */,
 			);
