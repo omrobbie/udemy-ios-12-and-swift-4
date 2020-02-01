@@ -14,6 +14,7 @@
 		FCD735CD23E50E9F005BBF70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCD735CB23E50E9F005BBF70 /* Main.storyboard */; };
 		FCD735CF23E50EA0005BBF70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCD735CE23E50EA0005BBF70 /* Assets.xcassets */; };
 		FCD735D223E50EA0005BBF70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCD735D023E50EA0005BBF70 /* LaunchScreen.storyboard */; };
+		FCD735DF23E513EA005BBF70 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCD735DE23E513EA005BBF70 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		FCD735CE23E50EA0005BBF70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCD735D123E50EA0005BBF70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCD735D323E50EA0005BBF70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCD735DE23E513EA005BBF70 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				FCD735CE23E50EA0005BBF70 /* Assets.xcassets */,
 				FCD735D023E50EA0005BBF70 /* LaunchScreen.storyboard */,
 				FCD735D323E50EA0005BBF70 /* Info.plist */,
+				FCD735DE23E513EA005BBF70 /* GoogleService-Info.plist */,
 			);
 			path = breakpoint;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCD735D223E50EA0005BBF70 /* LaunchScreen.storyboard in Resources */,
+				FCD735DF23E513EA005BBF70 /* GoogleService-Info.plist in Resources */,
 				FCD735CF23E50EA0005BBF70 /* Assets.xcassets in Resources */,
 				FCD735CD23E50E9F005BBF70 /* Main.storyboard in Resources */,
 			);
