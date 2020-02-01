@@ -17,6 +17,8 @@
 		FCD735D223E50EA0005BBF70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCD735D023E50EA0005BBF70 /* LaunchScreen.storyboard */; };
 		FCD735DF23E513EA005BBF70 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCD735DE23E513EA005BBF70 /* GoogleService-Info.plist */; };
 		FCD735E323E51D12005BBF70 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD735E223E51D12005BBF70 /* DataService.swift */; };
+		FCD735E523E5312F005BBF70 /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD735E423E5312F005BBF70 /* AuthVC.swift */; };
+		FCD735E723E53157005BBF70 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD735E623E53157005BBF70 /* LoginVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		FCD735D323E50EA0005BBF70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCD735DE23E513EA005BBF70 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FCD735E223E51D12005BBF70 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		FCD735E423E5312F005BBF70 /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
+		FCD735E623E53157005BBF70 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,8 @@
 			children = (
 				FCD735C723E50E9F005BBF70 /* FirstViewController.swift */,
 				FCD735C923E50E9F005BBF70 /* SecondViewController.swift */,
+				FCD735E423E5312F005BBF70 /* AuthVC.swift */,
+				FCD735E623E53157005BBF70 /* LoginVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -256,7 +262,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCD735E523E5312F005BBF70 /* AuthVC.swift in Sources */,
 				FCD735CA23E50E9F005BBF70 /* SecondViewController.swift in Sources */,
+				FCD735E723E53157005BBF70 /* LoginVC.swift in Sources */,
 				FCD735C823E50E9F005BBF70 /* FirstViewController.swift in Sources */,
 				FCD735C423E50E9F005BBF70 /* AppDelegate.swift in Sources */,
 				FCD735C623E50E9F005BBF70 /* SceneDelegate.swift in Sources */,
