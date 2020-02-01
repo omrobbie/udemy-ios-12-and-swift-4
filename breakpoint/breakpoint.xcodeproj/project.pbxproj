@@ -19,6 +19,7 @@
 		FCD735E323E51D12005BBF70 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD735E223E51D12005BBF70 /* DataService.swift */; };
 		FCD735E523E5312F005BBF70 /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD735E423E5312F005BBF70 /* AuthVC.swift */; };
 		FCD735E723E53157005BBF70 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD735E623E53157005BBF70 /* LoginVC.swift */; };
+		FCD735E923E531F8005BBF70 /* InsetTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD735E823E531F8005BBF70 /* InsetTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		FCD735E223E51D12005BBF70 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		FCD735E423E5312F005BBF70 /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
 		FCD735E623E53157005BBF70 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		FCD735E823E531F8005BBF70 /* InsetTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 		FCD735DA23E5122D005BBF70 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FCD735E823E531F8005BBF70 /* InsetTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				FCD735E523E5312F005BBF70 /* AuthVC.swift in Sources */,
 				FCD735CA23E50E9F005BBF70 /* SecondViewController.swift in Sources */,
 				FCD735E723E53157005BBF70 /* LoginVC.swift in Sources */,
+				FCD735E923E531F8005BBF70 /* InsetTextField.swift in Sources */,
 				FCD735C823E50E9F005BBF70 /* FirstViewController.swift in Sources */,
 				FCD735C423E50E9F005BBF70 /* AppDelegate.swift in Sources */,
 				FCD735C623E50E9F005BBF70 /* SceneDelegate.swift in Sources */,
