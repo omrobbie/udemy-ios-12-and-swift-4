@@ -10,8 +10,8 @@
 		CC663357B883E43ED864CB4D /* Pods_breakpoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F4931EFC4AD03C042362EBE3 /* Pods_breakpoint.framework */; };
 		FCD735C423E50E9F005BBF70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD735C323E50E9F005BBF70 /* AppDelegate.swift */; };
 		FCD735C623E50E9F005BBF70 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD735C523E50E9F005BBF70 /* SceneDelegate.swift */; };
-		FCD735C823E50E9F005BBF70 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD735C723E50E9F005BBF70 /* FirstViewController.swift */; };
-		FCD735CA23E50E9F005BBF70 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD735C923E50E9F005BBF70 /* SecondViewController.swift */; };
+		FCD735C823E50E9F005BBF70 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD735C723E50E9F005BBF70 /* FeedVC.swift */; };
+		FCD735CA23E50E9F005BBF70 /* GroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD735C923E50E9F005BBF70 /* GroupVC.swift */; };
 		FCD735CD23E50E9F005BBF70 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCD735CB23E50E9F005BBF70 /* Main.storyboard */; };
 		FCD735CF23E50EA0005BBF70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCD735CE23E50EA0005BBF70 /* Assets.xcassets */; };
 		FCD735D223E50EA0005BBF70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCD735D023E50EA0005BBF70 /* LaunchScreen.storyboard */; };
@@ -31,8 +31,8 @@
 		FCD735C023E50E9F005BBF70 /* breakpoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = breakpoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD735C323E50E9F005BBF70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCD735C523E50E9F005BBF70 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FCD735C723E50E9F005BBF70 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		FCD735C923E50E9F005BBF70 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		FCD735C723E50E9F005BBF70 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		FCD735C923E50E9F005BBF70 /* GroupVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupVC.swift; sourceTree = "<group>"; };
 		FCD735CC23E50E9F005BBF70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FCD735CE23E50EA0005BBF70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCD735D123E50EA0005BBF70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -115,8 +115,8 @@
 		FCD735D923E51222005BBF70 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FCD735C723E50E9F005BBF70 /* FirstViewController.swift */,
-				FCD735C923E50E9F005BBF70 /* SecondViewController.swift */,
+				FCD735C723E50E9F005BBF70 /* FeedVC.swift */,
+				FCD735C923E50E9F005BBF70 /* GroupVC.swift */,
 				FCD735E423E5312F005BBF70 /* AuthVC.swift */,
 				FCD735E623E53157005BBF70 /* LoginVC.swift */,
 			);
@@ -273,10 +273,10 @@
 			files = (
 				FCD735EB23E535D7005BBF70 /* ShadowView.swift in Sources */,
 				FCD735E523E5312F005BBF70 /* AuthVC.swift in Sources */,
-				FCD735CA23E50E9F005BBF70 /* SecondViewController.swift in Sources */,
+				FCD735CA23E50E9F005BBF70 /* GroupVC.swift in Sources */,
 				FCD735E723E53157005BBF70 /* LoginVC.swift in Sources */,
 				FCD735E923E531F8005BBF70 /* InsetTextField.swift in Sources */,
-				FCD735C823E50E9F005BBF70 /* FirstViewController.swift in Sources */,
+				FCD735C823E50E9F005BBF70 /* FeedVC.swift in Sources */,
 				FCD735C423E50E9F005BBF70 /* AppDelegate.swift in Sources */,
 				FCD735ED23E5456E005BBF70 /* AuthService.swift in Sources */,
 				FCD735C623E50E9F005BBF70 /* SceneDelegate.swift in Sources */,
