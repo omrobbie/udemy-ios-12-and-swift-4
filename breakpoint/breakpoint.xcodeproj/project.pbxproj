@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,7 @@
 		FCD735CF23E50EA0005BBF70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCD735CE23E50EA0005BBF70 /* Assets.xcassets */; };
 		FCD735D223E50EA0005BBF70 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCD735D023E50EA0005BBF70 /* LaunchScreen.storyboard */; };
 		FCD735DF23E513EA005BBF70 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCD735DE23E513EA005BBF70 /* GoogleService-Info.plist */; };
+		FCD735E323E51D12005BBF70 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD735E223E51D12005BBF70 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		FCD735D123E50EA0005BBF70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCD735D323E50EA0005BBF70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCD735DE23E513EA005BBF70 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FCD735E223E51D12005BBF70 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,6 @@
 				7D69BE0234C5A28BD3C5770C /* Pods-breakpoint.debug.xcconfig */,
 				59554376AAF89C0F98F0B89D /* Pods-breakpoint.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -134,6 +135,7 @@
 		FCD735DD23E51254005BBF70 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				FCD735E223E51D12005BBF70 /* DataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -258,6 +260,7 @@
 				FCD735C823E50E9F005BBF70 /* FirstViewController.swift in Sources */,
 				FCD735C423E50E9F005BBF70 /* AppDelegate.swift in Sources */,
 				FCD735C623E50E9F005BBF70 /* SceneDelegate.swift in Sources */,
+				FCD735E323E51D12005BBF70 /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
