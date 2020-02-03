@@ -19,6 +19,11 @@ class MeVC: UIViewController {
         super.viewDidLoad()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        emailLbl.text = Auth.auth().currentUser?.email
+    }
+
     @IBAction func signOutBtnWasPressed(_ sender: Any) {
         let logOutPopup = UIAlertController(title: "Logout?", message: "Are you sure want to logout?", preferredStyle: .actionSheet)
         let logOutAction = UIAlertAction(title: "Logout?", style: .destructive) { (buttonTapped) in
@@ -26,6 +31,7 @@ class MeVC: UIViewController {
                 try Auth.auth().signOut()
 
                 let authVC = self.storyboard?.instantiateViewController(identifier: "AuthVC") as? AuthVC
+                authVC?.modalPresentationStyle = .fullScreen
                 self.present(authVC!, animated: true, completion: nil)
             } catch {
                 print("Error logging out: \(error.localizedDescription)")
