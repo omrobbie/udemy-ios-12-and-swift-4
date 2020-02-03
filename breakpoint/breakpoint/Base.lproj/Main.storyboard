@@ -76,10 +76,10 @@
             </objects>
             <point key="canvasLocation" x="749.27536231884062" y="-320.08928571428572"/>
         </scene>
-        <!--View Controller-->
+        <!--Me-->
         <scene sceneID="qI4-n1-756">
             <objects>
-                <viewController id="6Ud-N6-lwI" sceneMemberID="viewController">
+                <viewController id="6Ud-N6-lwI" customClass="MeVC" customModule="breakpoint" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Vyl-gl-4UL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -174,6 +174,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hC8-Zp-wI8"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Me" image="me-tabIcon" id="3D7-8E-lsE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GQ1-3q-6Qz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -367,6 +368,7 @@
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="6Ud-N6-lwI" kind="relationship" relationship="viewControllers" id="f6g-GI-im5"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -469,6 +471,7 @@
         <image name="groups-tabIcon" width="25" height="23"/>
         <image name="loginBGImage" width="375" height="284"/>
         <image name="logoutIcon" width="19" height="21"/>
+        <image name="me-tabIcon" width="25" height="25"/>
     </resources>
     <color key="tintColor" red="0.015686274509803921" green="0.6705882352941176" blue="0.77254901960784317" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
 </document>
