@@ -25,6 +25,9 @@
                                             <constraint firstAttribute="width" constant="30" id="kVE-TY-SKY"/>
                                         </constraints>
                                         <state key="normal" image="compose"/>
+                                        <connections>
+                                            <segue destination="lKr-7a-IMA" kind="presentation" modalPresentationStyle="fullScreen" id="nNO-yZ-Ivn"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_feed" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ltg-P2-dRC">
                                         <rect key="frame" x="180" y="52" width="54.5" height="21"/>
@@ -76,10 +79,10 @@
             </objects>
             <point key="canvasLocation" x="749.27536231884062" y="-320.08928571428572"/>
         </scene>
-        <!--View Controller-->
+        <!--Create PostVC-->
         <scene sceneID="MUg-k7-zIH">
             <objects>
-                <viewController id="lKr-7a-IMA" sceneMemberID="viewController">
+                <viewController id="lKr-7a-IMA" customClass="CreatePostVC" customModule="breakpoint" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b8a-yh-E32">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -100,6 +103,9 @@
                                             <constraint firstAttribute="width" constant="30" id="Qfg-F3-e8u"/>
                                         </constraints>
                                         <state key="normal" image="close"/>
+                                        <connections>
+                                            <action selector="closeBtnWasPressed:" destination="lKr-7a-IMA" eventType="touchUpInside" id="sR7-fA-B3l"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.16078431369999999" green="0.16862745100000001" blue="0.20392156859999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -141,6 +147,9 @@
                                 <state key="normal" title=" SEND" image="send">
                                     <color key="titleColor" red="0.29821088909999999" green="0.75321525339999995" blue="0.3371672034" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendBtnWasPressed:" destination="lKr-7a-IMA" eventType="touchUpInside" id="sJS-Qz-4fU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.25490196079999999" green="0.27058823529999998" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -163,6 +172,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cBo-Td-Ahj"/>
                     </view>
+                    <connections>
+                        <outlet property="emailLbl" destination="TVN-ci-k4T" id="W6x-dQ-vYd"/>
+                        <outlet property="profileImage" destination="nTx-1h-Odw" id="52a-80-o1d"/>
+                        <outlet property="sendBtn" destination="dEv-fz-SKA" id="mfF-s3-Ebu"/>
+                        <outlet property="textField" destination="AAs-ia-mQt" id="G3C-Gq-BDn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q0T-i1-eHq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
