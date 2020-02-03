@@ -131,7 +131,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Say something here..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="AAs-ia-mQt">
-                                <rect key="frame" x="20" y="188" width="374" height="623"/>
+                                <rect key="frame" x="20" y="188" width="374" height="654"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
@@ -157,12 +157,12 @@
                             <constraint firstAttribute="bottom" secondItem="dEv-fz-SKA" secondAttribute="bottom" id="14d-d4-xOS"/>
                             <constraint firstItem="AAs-ia-mQt" firstAttribute="leading" secondItem="cBo-Td-Ahj" secondAttribute="leading" constant="20" id="4cO-2M-kdU"/>
                             <constraint firstItem="TVN-ci-k4T" firstAttribute="centerY" secondItem="nTx-1h-Odw" secondAttribute="centerY" id="A0C-jY-dLW"/>
+                            <constraint firstItem="cBo-Td-Ahj" firstAttribute="bottom" secondItem="AAs-ia-mQt" secondAttribute="bottom" constant="20" id="BZh-DD-SbA"/>
                             <constraint firstItem="nTx-1h-Odw" firstAttribute="top" secondItem="U7l-XO-9DX" secondAttribute="bottom" constant="20" id="FMd-iT-wwo"/>
                             <constraint firstItem="AAs-ia-mQt" firstAttribute="top" secondItem="nTx-1h-Odw" secondAttribute="bottom" constant="20" id="IKb-d2-UFq"/>
                             <constraint firstItem="dEv-fz-SKA" firstAttribute="leading" secondItem="b8a-yh-E32" secondAttribute="leading" id="LVP-Lu-CG3"/>
                             <constraint firstItem="nTx-1h-Odw" firstAttribute="leading" secondItem="cBo-Td-Ahj" secondAttribute="leading" constant="20" id="LhH-fB-Kjy"/>
                             <constraint firstItem="U7l-XO-9DX" firstAttribute="top" secondItem="b8a-yh-E32" secondAttribute="top" id="TKt-TT-s0z"/>
-                            <constraint firstItem="dEv-fz-SKA" firstAttribute="top" secondItem="AAs-ia-mQt" secondAttribute="bottom" constant="20" id="WR0-k5-CRE"/>
                             <constraint firstItem="TVN-ci-k4T" firstAttribute="leading" secondItem="nTx-1h-Odw" secondAttribute="trailing" constant="20" id="eq8-db-AOE"/>
                             <constraint firstAttribute="trailing" secondItem="dEv-fz-SKA" secondAttribute="trailing" id="gAM-FQ-fxo"/>
                             <constraint firstItem="U7l-XO-9DX" firstAttribute="leading" secondItem="b8a-yh-E32" secondAttribute="leading" id="i1T-hu-NHb"/>
@@ -176,7 +176,7 @@
                         <outlet property="emailLbl" destination="TVN-ci-k4T" id="W6x-dQ-vYd"/>
                         <outlet property="profileImage" destination="nTx-1h-Odw" id="52a-80-o1d"/>
                         <outlet property="sendBtn" destination="dEv-fz-SKA" id="mfF-s3-Ebu"/>
-                        <outlet property="textField" destination="AAs-ia-mQt" id="G3C-Gq-BDn"/>
+                        <outlet property="textView" destination="AAs-ia-mQt" id="G3C-Gq-BDn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q0T-i1-eHq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
