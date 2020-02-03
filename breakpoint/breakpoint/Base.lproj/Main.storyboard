@@ -95,6 +95,9 @@
                                         </constraints>
                                         <color key="tintColor" red="0.015686274510000001" green="0.6705882353" blue="0.7725490196" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                         <state key="normal" image="logoutIcon"/>
+                                        <connections>
+                                            <action selector="signOutBtnWasPressed:" destination="6Ud-N6-lwI" eventType="touchUpInside" id="v8k-YE-X9J"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pmL-w7-UpQ">
                                         <rect key="frame" x="190.5" y="52" width="33" height="21"/>
@@ -175,6 +178,11 @@
                         <viewLayoutGuide key="safeArea" id="hC8-Zp-wI8"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Me" image="me-tabIcon" id="3D7-8E-lsE"/>
+                    <connections>
+                        <outlet property="emailLbl" destination="6K5-g4-fHf" id="bW7-hl-sK0"/>
+                        <outlet property="profileImage" destination="KS6-Xu-y9f" id="M7N-0f-qV1"/>
+                        <outlet property="tableView" destination="tYw-lU-gNg" id="dR0-Qv-tqW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GQ1-3q-6Qz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
