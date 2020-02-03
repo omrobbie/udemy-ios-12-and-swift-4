@@ -19,7 +19,7 @@ class CreatePostVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         textView.delegate = self
-        textView.inputAccessoryView = sendBtn
+        sendBtn.bindToKeyboard()
     }
 
     @IBAction func sendBtnWasPressed(_ sender: Any) {
