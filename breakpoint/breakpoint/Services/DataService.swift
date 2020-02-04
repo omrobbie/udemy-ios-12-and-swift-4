@@ -110,6 +110,8 @@ class DataService {
                     idArray.append(user.key)
                 }
             }
+
+            handler(idArray)
         }
     }
 

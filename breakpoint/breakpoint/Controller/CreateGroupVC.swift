@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class CreateGroupVC: UIViewController {
 
@@ -48,6 +49,20 @@ class CreateGroupVC: UIViewController {
     }
 
     @IBAction func doneBtnWasPressed(_ sender: Any) {
+        if titleTextField.text != "" && descriptionTextField.text != "" {
+            DataService.instance.getIds(forUsernames: chosenUserArray) { (idsArray) in
+                var userIds = idsArray
+                userIds.append((Auth.auth().currentUser?.uid)!)
+
+                DataService.instance.createGroup(withTitle: self.titleTextField.text!, andDescription: self.descriptionTextField.text!, forUserIds: userIds) { (groupCreated) in
+                    if groupCreated {
+                        self.dismiss(animated: true, completion: nil)
+                    } else {
+                        print("Error creating a new group!")
+                    }
+                }
+            }
+        }
     }
 
     @IBAction func closeBtnWasPressed(_ sender: Any) {
@@ -99,5 +114,4 @@ extension CreateGroupVC: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension CreateGroupVC: UITextFieldDelegate {
-
 }
