@@ -55,6 +55,6 @@ extension GroupVC: UITableViewDelegate, UITableViewDataSource {
         groupFeedVC.modalPresentationStyle = .fullScreen
         groupFeedVC.initData(forGroup: groupArray[indexPath.row])
 
-        present(groupFeedVC, animated: true, completion: nil)
+        presentDetail(groupFeedVC)
     }
 }

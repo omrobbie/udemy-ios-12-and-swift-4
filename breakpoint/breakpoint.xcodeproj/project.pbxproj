@@ -19,6 +19,7 @@
 		FCA85BDE23E9504700F4806E /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA85BDD23E9504700F4806E /* Group.swift */; };
 		FCA85BE023E9595100F4806E /* GroupFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA85BDF23E9595100F4806E /* GroupFeedCell.swift */; };
 		FCA85BE223E959C800F4806E /* GroupFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA85BE123E959C800F4806E /* GroupFeedVC.swift */; };
+		FCA85BE423E96CD100F4806E /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA85BE323E96CD100F4806E /* UIViewControllerExt.swift */; };
 		FCD735C423E50E9F005BBF70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD735C323E50E9F005BBF70 /* AppDelegate.swift */; };
 		FCD735C623E50E9F005BBF70 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD735C523E50E9F005BBF70 /* SceneDelegate.swift */; };
 		FCD735C823E50E9F005BBF70 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD735C723E50E9F005BBF70 /* FeedVC.swift */; };
@@ -50,6 +51,7 @@
 		FCA85BDD23E9504700F4806E /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		FCA85BDF23E9595100F4806E /* GroupFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFeedCell.swift; sourceTree = "<group>"; };
 		FCA85BE123E959C800F4806E /* GroupFeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFeedVC.swift; sourceTree = "<group>"; };
+		FCA85BE323E96CD100F4806E /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		FCD735C023E50E9F005BBF70 /* breakpoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = breakpoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD735C323E50E9F005BBF70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCD735C523E50E9F005BBF70 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				FCA85BD123E7EB5900F4806E /* UIViewExt.swift */,
+				FCA85BE323E96CD100F4806E /* UIViewControllerExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 				FCD735C823E50E9F005BBF70 /* FeedVC.swift in Sources */,
 				FCA85BD423E806A100F4806E /* FeedCell.swift in Sources */,
 				FCA85BDC23E94D4900F4806E /* GroupCell.swift in Sources */,
+				FCA85BE423E96CD100F4806E /* UIViewControllerExt.swift in Sources */,
 				FCA85BD823E9123100F4806E /* CreateGroupVC.swift in Sources */,
 				FCD735C423E50E9F005BBF70 /* AppDelegate.swift in Sources */,
 				FCA85BCE23E7E06C00F4806E /* MeVC.swift in Sources */,
