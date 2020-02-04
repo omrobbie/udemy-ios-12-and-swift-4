@@ -31,7 +31,10 @@ class GroupFeedVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         groupTitleLbl.text = group?.groupTitle
-        membersLbl.text = group?.members.joined(separator: ", ")
+
+        DataService.instance.getEmailsFor(group: group!) { (returnedEmailArray) in
+            self.membersLbl.text = returnedEmailArray.joined(separator: ", ")
+        }
     }
 
     func initData(forGroup group: Group) {
