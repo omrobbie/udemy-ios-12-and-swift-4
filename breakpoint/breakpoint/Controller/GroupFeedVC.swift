@@ -19,6 +19,7 @@ class GroupFeedVC: UIViewController {
     @IBOutlet weak var sendBtn: UIView!
 
     var group: Group?
+    var groupMessages = [Message]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +35,11 @@ class GroupFeedVC: UIViewController {
 
         DataService.instance.getEmailsFor(group: group!) { (returnedEmailArray) in
             self.membersLbl.text = returnedEmailArray.joined(separator: ", ")
+        }
+
+        DataService.instance.getAllMessageFor(desiredGroup: self.group!) { (returnedGroupMessages) in
+            self.groupMessages = returnedGroupMessages
+            self.tableView.reloadData()
         }
     }
 
@@ -56,14 +62,17 @@ extension GroupFeedVC: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return groupMessages.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "groupFeedCell") as? GroupFeedCell else {return UITableViewCell()}
         let profileImage = #imageLiteral(resourceName: "defaultProfileImage")
+        let item = groupMessages[indexPath.row]
 
-        cell.configureCell(profileImage: profileImage, email: "dummy@email.com", content: "Dummy content")
+        DataService.instance.getUsername(forUID: item.senderId) { (email) in
+            cell.configureCell(profileImage: profileImage, email: email, content: item.content)
+        }
 
         return cell
     }
