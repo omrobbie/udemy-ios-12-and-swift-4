@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class GroupFeedVC: UIViewController {
 
@@ -15,8 +16,8 @@ class GroupFeedVC: UIViewController {
     @IBOutlet weak var membersLbl: UILabel!
     
     @IBOutlet weak var sendView: UIView!
-    @IBOutlet weak var sendMessage: UIView!
-    @IBOutlet weak var sendBtn: UIView!
+    @IBOutlet weak var sendMessage: UITextField!
+    @IBOutlet weak var sendBtn: UIButton!
 
     var group: Group?
     var groupMessages = [Message]()
@@ -37,9 +38,11 @@ class GroupFeedVC: UIViewController {
             self.membersLbl.text = returnedEmailArray.joined(separator: ", ")
         }
 
-        DataService.instance.getAllMessageFor(desiredGroup: self.group!) { (returnedGroupMessages) in
-            self.groupMessages = returnedGroupMessages
-            self.tableView.reloadData()
+        DataService.instance.REF_GROUPS.observe(.value) { (snapshot) in
+            DataService.instance.getAllMessageFor(desiredGroup: self.group!) { (returnedGroupMessages) in
+                self.groupMessages = returnedGroupMessages
+                self.tableView.reloadData()
+            }
         }
     }
 
@@ -48,6 +51,18 @@ class GroupFeedVC: UIViewController {
     }
 
     @IBAction func sendBtnWasPressed(_ sender: Any) {
+        if sendMessage.text != "" {
+            sendMessage.isEnabled = false
+            sendBtn.isEnabled = false
+
+            DataService.instance.uploadPost(withMessage: sendMessage.text!, forUID: (Auth.auth().currentUser?.uid)!, withGroupKey: group?.key) { (complete) in
+                if complete {
+                    self.sendMessage.text = ""
+                    self.sendMessage.isEnabled = true
+                    self.sendBtn.isEnabled = true
+                }
+            }
+        }
     }
 
     @IBAction func backBtnWasPressed(_ sender: Any) {
@@ -69,6 +84,8 @@ extension GroupFeedVC: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "groupFeedCell") as? GroupFeedCell else {return UITableViewCell()}
         let profileImage = #imageLiteral(resourceName: "defaultProfileImage")
         let item = groupMessages[indexPath.row]
+
+        print(item.content)
 
         DataService.instance.getUsername(forUID: item.senderId) { (email) in
             cell.configureCell(profileImage: profileImage, email: email, content: item.content)
