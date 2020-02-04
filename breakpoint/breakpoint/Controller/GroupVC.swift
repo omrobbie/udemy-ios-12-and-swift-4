@@ -12,10 +12,21 @@ class GroupVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
+    var groupArray = [Group]()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        DataService.instance.getAllGroup { (returnedGroupArray) in
+            self.groupArray = returnedGroupArray
+            self.tableView.reloadData()
+        }
     }
 }
 
@@ -26,13 +37,14 @@ extension GroupVC: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return groupArray.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "groupCell") as? GroupCell else {return UITableViewCell()}
+        let item = groupArray[indexPath.row]
 
-        cell.configureCell(title: "Dummy title", description: "Dummy description", memberCount: 3)
+        cell.configureCell(title: item.groupTitle, description: item.groupDesc, memberCount: item.memberCount)
 
         return cell
     }
