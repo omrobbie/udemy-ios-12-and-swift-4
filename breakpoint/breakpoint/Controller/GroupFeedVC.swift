@@ -42,6 +42,10 @@ class GroupFeedVC: UIViewController {
             DataService.instance.getAllMessageFor(desiredGroup: self.group!) { (returnedGroupMessages) in
                 self.groupMessages = returnedGroupMessages
                 self.tableView.reloadData()
+
+                if self.groupMessages.count > 0 {
+                    self.tableView.scrollToRow(at: IndexPath(row: self.groupMessages.count - 1, section: 0), at: .none, animated: true)
+                }
             }
         }
     }
@@ -84,8 +88,6 @@ extension GroupFeedVC: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "groupFeedCell") as? GroupFeedCell else {return UITableViewCell()}
         let profileImage = #imageLiteral(resourceName: "defaultProfileImage")
         let item = groupMessages[indexPath.row]
-
-        print(item.content)
 
         DataService.instance.getUsername(forUID: item.senderId) { (email) in
             cell.configureCell(profileImage: profileImage, email: email, content: item.content)
