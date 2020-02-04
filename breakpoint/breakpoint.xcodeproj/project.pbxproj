@@ -17,6 +17,8 @@
 		FCA85BDA23E9156600F4806E /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA85BD923E9156600F4806E /* UserCell.swift */; };
 		FCA85BDC23E94D4900F4806E /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA85BDB23E94D4900F4806E /* GroupCell.swift */; };
 		FCA85BDE23E9504700F4806E /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA85BDD23E9504700F4806E /* Group.swift */; };
+		FCA85BE023E9595100F4806E /* GroupFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA85BDF23E9595100F4806E /* GroupFeedCell.swift */; };
+		FCA85BE223E959C800F4806E /* GroupFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA85BE123E959C800F4806E /* GroupFeedVC.swift */; };
 		FCD735C423E50E9F005BBF70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD735C323E50E9F005BBF70 /* AppDelegate.swift */; };
 		FCD735C623E50E9F005BBF70 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD735C523E50E9F005BBF70 /* SceneDelegate.swift */; };
 		FCD735C823E50E9F005BBF70 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD735C723E50E9F005BBF70 /* FeedVC.swift */; };
@@ -46,6 +48,8 @@
 		FCA85BD923E9156600F4806E /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		FCA85BDB23E94D4900F4806E /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
 		FCA85BDD23E9504700F4806E /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		FCA85BDF23E9595100F4806E /* GroupFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFeedCell.swift; sourceTree = "<group>"; };
+		FCA85BE123E959C800F4806E /* GroupFeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFeedVC.swift; sourceTree = "<group>"; };
 		FCD735C023E50E9F005BBF70 /* breakpoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = breakpoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD735C323E50E9F005BBF70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCD735C523E50E9F005BBF70 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +144,7 @@
 				FCA85BCD23E7E06C00F4806E /* MeVC.swift */,
 				FCA85BCF23E7E5EC00F4806E /* CreatePostVC.swift */,
 				FCA85BD723E9123100F4806E /* CreateGroupVC.swift */,
+				FCA85BE123E959C800F4806E /* GroupFeedVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -152,6 +157,7 @@
 				FCA85BD323E806A100F4806E /* FeedCell.swift */,
 				FCA85BD923E9156600F4806E /* UserCell.swift */,
 				FCA85BDB23E94D4900F4806E /* GroupCell.swift */,
+				FCA85BDF23E9595100F4806E /* GroupFeedCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -299,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCA85BD223E7EB5900F4806E /* UIViewExt.swift in Sources */,
+				FCA85BE223E959C800F4806E /* GroupFeedVC.swift in Sources */,
 				FCD735EB23E535D7005BBF70 /* ShadowView.swift in Sources */,
 				FCD735E523E5312F005BBF70 /* AuthVC.swift in Sources */,
 				FCD735CA23E50E9F005BBF70 /* GroupVC.swift in Sources */,
@@ -313,6 +320,7 @@
 				FCD735C423E50E9F005BBF70 /* AppDelegate.swift in Sources */,
 				FCA85BCE23E7E06C00F4806E /* MeVC.swift in Sources */,
 				FCA85BD023E7E5EC00F4806E /* CreatePostVC.swift in Sources */,
+				FCA85BE023E9595100F4806E /* GroupFeedCell.swift in Sources */,
 				FCD735ED23E5456E005BBF70 /* AuthService.swift in Sources */,
 				FCA85BD623E81B0400F4806E /* Message.swift in Sources */,
 				FCD735C623E50E9F005BBF70 /* SceneDelegate.swift in Sources */,
