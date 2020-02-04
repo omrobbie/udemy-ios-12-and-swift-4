@@ -492,6 +492,7 @@
                     </view>
                     <connections>
                         <outlet property="groupTitleLbl" destination="Epc-uf-KQo" id="TLw-OF-ApY"/>
+                        <outlet property="membersLbl" destination="TUJ-Xb-M8g" id="hkF-fY-ORD"/>
                         <outlet property="sendBtn" destination="EWf-cF-Oe3" id="nKh-E8-Td9"/>
                         <outlet property="sendMessage" destination="EWf-cF-Oe3" id="tF1-OI-a5k"/>
                         <outlet property="sendView" destination="EWf-cF-Oe3" id="0e4-VW-iw2"/>

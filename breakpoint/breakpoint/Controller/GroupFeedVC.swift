@@ -12,10 +12,13 @@ class GroupFeedVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var groupTitleLbl: UILabel!
+    @IBOutlet weak var membersLbl: UILabel!
     
     @IBOutlet weak var sendView: UIView!
     @IBOutlet weak var sendMessage: UIView!
     @IBOutlet weak var sendBtn: UIView!
+
+    var group: Group?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,6 +26,16 @@ class GroupFeedVC: UIViewController {
         tableView.dataSource = self
 
         sendView.bindToKeyboard()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        groupTitleLbl.text = group?.groupTitle
+        membersLbl.text = group?.members.joined(separator: ", ")
+    }
+
+    func initData(forGroup group: Group) {
+        self.group = group
     }
 
     @IBAction func sendBtnWasPressed(_ sender: Any) {
@@ -51,6 +64,4 @@ extension GroupFeedVC: UITableViewDelegate, UITableViewDataSource {
 
         return cell
     }
-
-
 }
