@@ -3,18 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		CD30E6F789BE29BB04DDFD56 /* Pods_RNDM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9062EFAF256F5D4CD6ACED52 /* Pods_RNDM.framework */; };
 		FCA85BF223EA938400F4806E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA85BF123EA938400F4806E /* AppDelegate.swift */; };
 		FCA85BF423EA938400F4806E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA85BF323EA938400F4806E /* SceneDelegate.swift */; };
-		FCA85BF623EA938400F4806E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA85BF523EA938400F4806E /* ViewController.swift */; };
+		FCA85BF623EA938400F4806E /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA85BF523EA938400F4806E /* MainVC.swift */; };
 		FCA85BF923EA938400F4806E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCA85BF723EA938400F4806E /* Main.storyboard */; };
 		FCA85BFB23EA938800F4806E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCA85BFA23EA938800F4806E /* Assets.xcassets */; };
 		FCA85BFE23EA938800F4806E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCA85BFC23EA938800F4806E /* LaunchScreen.storyboard */; };
 		FCA85C0623EA96FC00F4806E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCA85C0523EA96FC00F4806E /* GoogleService-Info.plist */; };
+		FCA85C0823EABD9200F4806E /* AddThoughtVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA85C0723EABD9200F4806E /* AddThoughtVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,12 +25,13 @@
 		FCA85BEE23EA938400F4806E /* RNDM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNDM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA85BF123EA938400F4806E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCA85BF323EA938400F4806E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FCA85BF523EA938400F4806E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FCA85BF523EA938400F4806E /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		FCA85BF823EA938400F4806E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FCA85BFA23EA938800F4806E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCA85BFD23EA938800F4806E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCA85BFF23EA938800F4806E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCA85C0523EA96FC00F4806E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FCA85C0723EABD9200F4806E /* AddThoughtVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddThoughtVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +52,6 @@
 				704133F6225E5150B7D6AA9B /* Pods-RNDM.debug.xcconfig */,
 				75C19A702CEC49A0518BCB72 /* Pods-RNDM.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -83,9 +84,11 @@
 		FCA85BF023EA938400F4806E /* RNDM */ = {
 			isa = PBXGroup;
 			children = (
+				FCA85C0B23EABDAC00F4806E /* Model */,
+				FCA85C0A23EABDA700F4806E /* View */,
+				FCA85C0923EABDA100F4806E /* Controller */,
 				FCA85BF123EA938400F4806E /* AppDelegate.swift */,
 				FCA85BF323EA938400F4806E /* SceneDelegate.swift */,
-				FCA85BF523EA938400F4806E /* ViewController.swift */,
 				FCA85BF723EA938400F4806E /* Main.storyboard */,
 				FCA85BFA23EA938800F4806E /* Assets.xcassets */,
 				FCA85BFC23EA938800F4806E /* LaunchScreen.storyboard */,
@@ -93,6 +96,29 @@
 				FCA85C0523EA96FC00F4806E /* GoogleService-Info.plist */,
 			);
 			path = RNDM;
+			sourceTree = "<group>";
+		};
+		FCA85C0923EABDA100F4806E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FCA85BF523EA938400F4806E /* MainVC.swift */,
+				FCA85C0723EABD9200F4806E /* AddThoughtVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FCA85C0A23EABDA700F4806E /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FCA85C0B23EABDAC00F4806E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,8 +237,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCA85BF623EA938400F4806E /* ViewController.swift in Sources */,
+				FCA85BF623EA938400F4806E /* MainVC.swift in Sources */,
 				FCA85BF223EA938400F4806E /* AppDelegate.swift in Sources */,
+				FCA85C0823EABD9200F4806E /* AddThoughtVC.swift in Sources */,
 				FCA85BF423EA938400F4806E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
