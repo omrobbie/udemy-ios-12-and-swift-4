@@ -16,6 +16,7 @@
 		FCA85BFE23EA938800F4806E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCA85BFC23EA938800F4806E /* LaunchScreen.storyboard */; };
 		FCA85C0623EA96FC00F4806E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCA85C0523EA96FC00F4806E /* GoogleService-Info.plist */; };
 		FCA85C0823EABD9200F4806E /* AddThoughtVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA85C0723EABD9200F4806E /* AddThoughtVC.swift */; };
+		FCA85C0E23EABE2B00F4806E /* Ios12SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA85C0D23EABE2B00F4806E /* Ios12SegmentedControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		FCA85BFF23EA938800F4806E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCA85C0523EA96FC00F4806E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FCA85C0723EABD9200F4806E /* AddThoughtVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddThoughtVC.swift; sourceTree = "<group>"; };
+		FCA85C0D23EABE2B00F4806E /* Ios12SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ios12SegmentedControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 		FCA85BF023EA938400F4806E /* RNDM */ = {
 			isa = PBXGroup;
 			children = (
+				FCA85C0C23EABDF300F4806E /* CustomViews */,
 				FCA85C0B23EABDAC00F4806E /* Model */,
 				FCA85C0A23EABDA700F4806E /* View */,
 				FCA85C0923EABDA100F4806E /* Controller */,
@@ -119,6 +122,14 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FCA85C0C23EABDF300F4806E /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				FCA85C0D23EABE2B00F4806E /* Ios12SegmentedControl.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCA85C0E23EABE2B00F4806E /* Ios12SegmentedControl.swift in Sources */,
 				FCA85BF623EA938400F4806E /* MainVC.swift in Sources */,
 				FCA85BF223EA938400F4806E /* AppDelegate.swift in Sources */,
 				FCA85C0823EABD9200F4806E /* AddThoughtVC.swift in Sources */,
