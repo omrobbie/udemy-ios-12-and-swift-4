@@ -57,3 +57,12 @@ Learn about realm swift, map kits, drawing polyline to the maps<br>
 <img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/Threads/screenshot/preview2.png" width=256/>&nbsp;
 <img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/Threads/screenshot/preview3.png" width=256/>&nbsp;
 <img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/Threads/screenshot/preview4.png" width=256/>&nbsp;
+
+### 12. Breakpoint
+Learn about firebase, firebase auth, firebase realtime database<br>
+<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/breakpoint/screenshot/preview1.png" width=256/>&nbsp;
+<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/breakpoint/screenshot/preview2.png" width=256/>&nbsp;
+<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/breakpoint/screenshot/preview3.png" width=256/>&nbsp;
+<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/breakpoint/screenshot/preview4.png" width=256/>&nbsp;
+<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/breakpoint/screenshot/preview5.png" width=256/>&nbsp;
+<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/breakpoint/screenshot/preview6.png" width=256/>&nbsp;
