@@ -13,6 +13,7 @@
 		FCA85BF923EA938400F4806E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCA85BF723EA938400F4806E /* Main.storyboard */; };
 		FCA85BFB23EA938800F4806E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCA85BFA23EA938800F4806E /* Assets.xcassets */; };
 		FCA85BFE23EA938800F4806E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCA85BFC23EA938800F4806E /* LaunchScreen.storyboard */; };
+		FCA85C0623EA96FC00F4806E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FCA85C0523EA96FC00F4806E /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FCA85BFA23EA938800F4806E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCA85BFD23EA938800F4806E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCA85BFF23EA938800F4806E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCA85C0523EA96FC00F4806E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				FCA85BFA23EA938800F4806E /* Assets.xcassets */,
 				FCA85BFC23EA938800F4806E /* LaunchScreen.storyboard */,
 				FCA85BFF23EA938800F4806E /* Info.plist */,
+				FCA85C0523EA96FC00F4806E /* GoogleService-Info.plist */,
 			);
 			path = RNDM;
 			sourceTree = "<group>";
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCA85BFE23EA938800F4806E /* LaunchScreen.storyboard in Resources */,
+				FCA85C0623EA96FC00F4806E /* GoogleService-Info.plist in Resources */,
 				FCA85BFB23EA938800F4806E /* Assets.xcassets in Resources */,
 				FCA85BF923EA938400F4806E /* Main.storyboard in Resources */,
 			);
