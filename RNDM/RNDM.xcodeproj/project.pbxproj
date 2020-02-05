@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CD30E6F789BE29BB04DDFD56 /* Pods_RNDM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9062EFAF256F5D4CD6ACED52 /* Pods_RNDM.framework */; };
+		FC0D350923EADD3D00BA5196 /* TextViewPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0D350823EADD3D00BA5196 /* TextViewPlaceholder.swift */; };
 		FCA85BF223EA938400F4806E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA85BF123EA938400F4806E /* AppDelegate.swift */; };
 		FCA85BF423EA938400F4806E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA85BF323EA938400F4806E /* SceneDelegate.swift */; };
 		FCA85BF623EA938400F4806E /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA85BF523EA938400F4806E /* MainVC.swift */; };
@@ -23,6 +24,7 @@
 		704133F6225E5150B7D6AA9B /* Pods-RNDM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNDM.debug.xcconfig"; path = "Target Support Files/Pods-RNDM/Pods-RNDM.debug.xcconfig"; sourceTree = "<group>"; };
 		75C19A702CEC49A0518BCB72 /* Pods-RNDM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNDM.release.xcconfig"; path = "Target Support Files/Pods-RNDM/Pods-RNDM.release.xcconfig"; sourceTree = "<group>"; };
 		9062EFAF256F5D4CD6ACED52 /* Pods_RNDM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RNDM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC0D350823EADD3D00BA5196 /* TextViewPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewPlaceholder.swift; sourceTree = "<group>"; };
 		FCA85BEE23EA938400F4806E /* RNDM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNDM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA85BF123EA938400F4806E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCA85BF323EA938400F4806E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				FCA85C0D23EABE2B00F4806E /* Ios12SegmentedControl.swift */,
+				FC0D350823EADD3D00BA5196 /* TextViewPlaceholder.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -251,6 +254,7 @@
 				FCA85C0E23EABE2B00F4806E /* Ios12SegmentedControl.swift in Sources */,
 				FCA85BF623EA938400F4806E /* MainVC.swift in Sources */,
 				FCA85BF223EA938400F4806E /* AppDelegate.swift in Sources */,
+				FC0D350923EADD3D00BA5196 /* TextViewPlaceholder.swift in Sources */,
 				FCA85C0823EABD9200F4806E /* AddThoughtVC.swift in Sources */,
 				FCA85BF423EA938400F4806E /* SceneDelegate.swift in Sources */,
 			);

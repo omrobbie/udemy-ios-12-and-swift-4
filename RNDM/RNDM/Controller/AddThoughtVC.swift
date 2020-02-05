@@ -18,24 +18,12 @@ class AddThoughtVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         postBtn.layer.cornerRadius = 4
-
-        thoughtTxt.delegate = self
         thoughtTxt.layer.cornerRadius = 4
-        thoughtTxt.text = "my random thought..."
-        thoughtTxt.textColor = .lightGray
     }
 
     @IBAction func categoryChanged(_ sender: Any) {
     }
 
     @IBAction func postBtnTapped(_ sender: Any) {
-    }
-}
-
-extension AddThoughtVC: UITextViewDelegate {
-
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        textView.text = ""
-        textView.textColor = .darkGray
     }
 }
