@@ -34,6 +34,9 @@
                                         <color key="value" red="0.96078431369999995" green="0.50980392159999999" blue="0.047058823530000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="categoryChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="TuW-pb-GnG"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2yo-cq-Gia">
                                 <rect key="frame" x="20" y="152" width="374" height="702"/>
@@ -128,7 +131,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="segmentedControl" destination="Aif-XS-sIZ" id="zT9-Zf-33T"/>
+                        <outlet property="categorySegment" destination="Aif-XS-sIZ" id="zT9-Zf-33T"/>
                         <outlet property="tableView" destination="2yo-cq-Gia" id="CM3-o9-soX"/>
                     </connections>
                 </viewController>

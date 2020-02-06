@@ -18,12 +18,13 @@ enum ThoughtCategory: String {
 
 class MainVC: UIViewController {
 
-    @IBOutlet private weak var segmentedControl: Ios12SegmentedControl!
+    @IBOutlet private weak var categorySegment: Ios12SegmentedControl!
     @IBOutlet private weak var tableView: UITableView!
 
     private var thoughts = [Thought]()
     private var thoughtsCollectionRef: CollectionReference!
     private var thoughtsListener: ListenerRegistration!
+    private var selectedCategory: String = ThoughtCategory.funny.rawValue
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,6 +68,19 @@ class MainVC: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         thoughtsListener.remove()
+    }
+
+    @IBAction func categoryChanged(_ sender: Any) {
+        switch categorySegment.selectedSegmentIndex {
+        case 0:
+            selectedCategory = ThoughtCategory.funny.rawValue
+        case 1:
+            selectedCategory = ThoughtCategory.serious.rawValue
+        case 2:
+            selectedCategory = ThoughtCategory.crazy.rawValue
+        default:
+            selectedCategory = ThoughtCategory.popular.rawValue
+        }
     }
 }
 
