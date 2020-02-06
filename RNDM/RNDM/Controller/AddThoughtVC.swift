@@ -39,12 +39,12 @@ class AddThoughtVC: UIViewController {
 
     @IBAction func postBtnTapped(_ sender: Any) {
         Firestore.firestore().collection("thoughts").addDocument(data: [
-            "category": selectedCategory,
-            "numComments": 0,
-            "numLikes": 0,
-            "thoughtTxt": thoughtTxt.text!,
-            "timestamp": FieldValue.serverTimestamp(),
-            "username": userNameTxt.text!
+            CATEGORY: selectedCategory,
+            NUM_COMMENTS: 0,
+            NUM_LIKES: 0,
+            THOUGHT_TXT: thoughtTxt.text!,
+            TIMESTAMP: FieldValue.serverTimestamp(),
+            USERNAME: userNameTxt.text!
         ]) { (error) in
             if let error = error {
                 debugPrint("Error add document: \(error.localizedDescription)")
