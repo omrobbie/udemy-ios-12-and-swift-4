@@ -16,6 +16,18 @@ class ThoughtCell: UITableViewCell {
     @IBOutlet weak var likesImg: UIImageView!
     @IBOutlet weak var likesNumLbl: UILabel!
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+
+        let tap = UITapGestureRecognizer(target: self, action: #selector(likeImgTapped))
+        likesImg.addGestureRecognizer(tap)
+        likesImg.isUserInteractionEnabled = true
+    }
+
+    @objc func likeImgTapped() {
+        print("like img tapped")
+    }
+
     func configureCell(thought: Thought) {
         usernameLbl.text = thought.username
         timestampLbl.text = thought.timestamp.toString(format: .shortDateTime)
