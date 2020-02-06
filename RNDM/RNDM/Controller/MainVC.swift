@@ -35,6 +35,8 @@ class MainVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
+        thoughts = []
+
         thoughtsCollectionRef.getDocuments { (snapshot, error) in
             if let error = error {
                 debugPrint("Error fetching documents: \(error.localizedDescription)")
