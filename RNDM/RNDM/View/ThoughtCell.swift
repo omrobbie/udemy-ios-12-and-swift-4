@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ThoughtCell: UITableViewCell {
 
@@ -15,6 +16,8 @@ class ThoughtCell: UITableViewCell {
     @IBOutlet weak var thoughtTxtLbl: UILabel!
     @IBOutlet weak var likesImg: UIImageView!
     @IBOutlet weak var likesNumLbl: UILabel!
+
+    private var thought: Thought!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,10 +28,11 @@ class ThoughtCell: UITableViewCell {
     }
 
     @objc func likeImgTapped() {
-        print("like img tapped")
+        Firestore.firestore().collection(THOUGHTS_REF).document(thought.documentId).setData([NUM_LIKES: thought.numLikes + 1], merge: true)
     }
 
     func configureCell(thought: Thought) {
+        self.thought = thought
         usernameLbl.text = thought.username
         timestampLbl.text = thought.timestamp.toString(format: .shortDateTime)
         thoughtTxtLbl.text = thought.thoughtTxt
