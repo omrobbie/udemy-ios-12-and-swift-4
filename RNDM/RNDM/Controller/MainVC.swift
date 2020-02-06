@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 enum ThoughtCategory: String {
     case funny = "funny"
@@ -21,11 +22,28 @@ class MainVC: UIViewController {
     @IBOutlet private weak var tableView: UITableView!
 
     private var thoughts = [Thought]()
+    private var thoughtsCollectionRef: CollectionReference!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+
+        thoughtsCollectionRef = Firestore.firestore().collection(THOUGHTS_REF)
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        thoughtsCollectionRef.getDocuments { (snapshot, error) in
+            if let error = error {
+                debugPrint("Error fetching documents: \(error.localizedDescription)")
+            } else {
+                for document in (snapshot?.documents)! {
+                    print(document.data())
+                }
+            }
+        }
     }
 }
 
