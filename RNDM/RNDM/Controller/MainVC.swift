@@ -23,6 +23,7 @@ class MainVC: UIViewController {
 
     private var thoughts = [Thought]()
     private var thoughtsCollectionRef: CollectionReference!
+    private var thoughtsListener: ListenerRegistration!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,13 +36,12 @@ class MainVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        thoughts = []
-
-        thoughtsCollectionRef.getDocuments { (snapshot, error) in
+        thoughtsListener = thoughtsCollectionRef.addSnapshotListener { (snapshot, error) in
             if let error = error {
                 debugPrint("Error fetching documents: \(error.localizedDescription)")
             } else {
                 guard let snapshot = snapshot else {return}
+                self.thoughts.removeAll()
 
                 for document in snapshot.documents {
                     let data = document.data()
@@ -62,6 +62,11 @@ class MainVC: UIViewController {
                 self.tableView.reloadData()
             }
         }
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        thoughtsListener.remove()
     }
 }
 
