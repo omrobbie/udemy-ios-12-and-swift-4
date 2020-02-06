@@ -40,7 +40,7 @@ class AddThoughtVC: UIViewController {
     @IBAction func postBtnTapped(_ sender: Any) {
         guard let username = userNameTxt.text else {return}
 
-        Firestore.firestore().collection("thoughts").addDocument(data: [
+        Firestore.firestore().collection(THOUGHTS_REF).addDocument(data: [
             CATEGORY: selectedCategory,
             NUM_COMMENTS: 0,
             NUM_LIKES: 0,
