@@ -39,9 +39,25 @@ class MainVC: UIViewController {
             if let error = error {
                 debugPrint("Error fetching documents: \(error.localizedDescription)")
             } else {
-                for document in (snapshot?.documents)! {
-                    print(document.data())
+                guard let snapshot = snapshot else {return}
+
+                for document in snapshot.documents {
+                    let data = document.data()
+                    let documentId = document.documentID
+
+                    let category = data[CATEGORY] as? String ?? ""
+                    let numComments = data[NUM_COMMENTS] as? Int ?? 0
+                    let numLikes = data[NUM_LIKES] as? Int ?? 0
+                    let thoughtTxt = data[THOUGHT_TXT] as? String ?? ""
+                    let timestamp = data[TIMESTAMP] as? Date ?? Date()
+                    let username = data[USERNAME] as? String ?? "Anonymous"
+
+                    let newThought = Thought(documentId: documentId, category: category, numComments: numComments, numLikes: numLikes, thoughtTxt: thoughtTxt, timestamp: timestamp, username: username)
+
+                    self.thoughts.append(newThought)
                 }
+
+                self.tableView.reloadData()
             }
         }
     }
