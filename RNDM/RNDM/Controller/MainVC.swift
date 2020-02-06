@@ -45,7 +45,10 @@ class MainVC: UIViewController {
     }
 
     func setListener() {
-        thoughtsListener = thoughtsCollectionRef.whereField(CATEGORY, isEqualTo: selectedCategory).addSnapshotListener { (snapshot, error) in
+        thoughtsListener = thoughtsCollectionRef
+            .whereField(CATEGORY, isEqualTo: selectedCategory)
+            .order(by: TIMESTAMP, descending: true)
+            .addSnapshotListener { (snapshot, error) in
             if let error = error {
                 debugPrint("Error fetching documents: \(error.localizedDescription)")
             } else {
