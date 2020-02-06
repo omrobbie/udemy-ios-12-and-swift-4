@@ -28,7 +28,11 @@ class ThoughtCell: UITableViewCell {
     }
 
     @objc func likeImgTapped() {
-        Firestore.firestore().collection(THOUGHTS_REF).document(thought.documentId).setData([NUM_LIKES: thought.numLikes + 1], merge: true)
+//        Method 1
+//        Firestore.firestore().collection(THOUGHTS_REF).document(thought.documentId).setData([NUM_LIKES: thought.numLikes + 1], merge: true)
+
+//        Method 2
+        Firestore.firestore().document("\(THOUGHTS_REF)/\(thought.documentId!)").updateData([NUM_LIKES: thought.numLikes + 1])
     }
 
     func configureCell(thought: Thought) {
