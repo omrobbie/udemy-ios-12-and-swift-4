@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class AddThoughtVC: UIViewController {
 
@@ -14,6 +15,8 @@ class AddThoughtVC: UIViewController {
     @IBOutlet weak var userNameTxt: UITextField!
     @IBOutlet weak var thoughtTxt: UITextView!
     @IBOutlet weak var postBtn: UIButton!
+
+    private var selectedCategory = "funny"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,5 +28,19 @@ class AddThoughtVC: UIViewController {
     }
 
     @IBAction func postBtnTapped(_ sender: Any) {
+        Firestore.firestore().collection("thoughts").addDocument(data: [
+            "category": selectedCategory,
+            "numComments": 0,
+            "numLikes": 0,
+            "thoughtTxt": thoughtTxt.text!,
+            "timestamp": FieldValue.serverTimestamp(),
+            "username": userNameTxt.text!
+        ]) { (error) in
+            if let error = error {
+                debugPrint("Error add document: \(error.localizedDescription)")
+            } else {
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
 }
