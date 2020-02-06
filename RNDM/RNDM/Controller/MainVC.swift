@@ -36,8 +36,16 @@ class MainVC: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        setListener()
+    }
 
-        thoughtsListener = thoughtsCollectionRef.addSnapshotListener { (snapshot, error) in
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        thoughtsListener.remove()
+    }
+
+    func setListener() {
+        thoughtsListener = thoughtsCollectionRef.whereField(CATEGORY, isEqualTo: selectedCategory).addSnapshotListener { (snapshot, error) in
             if let error = error {
                 debugPrint("Error fetching documents: \(error.localizedDescription)")
             } else {
@@ -65,11 +73,6 @@ class MainVC: UIViewController {
         }
     }
 
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        thoughtsListener.remove()
-    }
-
     @IBAction func categoryChanged(_ sender: Any) {
         switch categorySegment.selectedSegmentIndex {
         case 0:
@@ -81,6 +84,9 @@ class MainVC: UIViewController {
         default:
             selectedCategory = ThoughtCategory.popular.rawValue
         }
+
+        thoughtsListener.remove()
+        setListener()
     }
 }
 
