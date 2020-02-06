@@ -17,8 +17,10 @@ enum ThoughtCategory: String {
 
 class MainVC: UIViewController {
 
-    @IBOutlet weak var segmentedControl: Ios12SegmentedControl!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var segmentedControl: Ios12SegmentedControl!
+    @IBOutlet private weak var tableView: UITableView!
+
+    private var thoughts = [Thought]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +32,7 @@ class MainVC: UIViewController {
 extension MainVC: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return thoughts.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

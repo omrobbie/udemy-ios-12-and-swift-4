@@ -11,10 +11,10 @@ import Firebase
 
 class AddThoughtVC: UIViewController {
 
-    @IBOutlet weak var categorySegment: Ios12SegmentedControl!
-    @IBOutlet weak var userNameTxt: UITextField!
-    @IBOutlet weak var thoughtTxt: UITextView!
-    @IBOutlet weak var postBtn: UIButton!
+    @IBOutlet private weak var categorySegment: Ios12SegmentedControl!
+    @IBOutlet private weak var userNameTxt: UITextField!
+    @IBOutlet private weak var thoughtTxt: UITextView!
+    @IBOutlet private weak var postBtn: UIButton!
 
     private var selectedCategory = ThoughtCategory.funny
 
