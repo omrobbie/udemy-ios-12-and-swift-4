@@ -16,7 +16,7 @@ class AddThoughtVC: UIViewController {
     @IBOutlet private weak var thoughtTxt: UITextView!
     @IBOutlet private weak var postBtn: UIButton!
 
-    private var selectedCategory = ThoughtCategory.funny
+    private var selectedCategory: String = ThoughtCategory.funny.rawValue
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,13 +27,13 @@ class AddThoughtVC: UIViewController {
     @IBAction func categoryChanged(_ sender: Any) {
         switch categorySegment.selectedSegmentIndex {
         case 0:
-            selectedCategory = ThoughtCategory.funny
+            selectedCategory = ThoughtCategory.funny.rawValue
         case 1:
-            selectedCategory = ThoughtCategory.serious
+            selectedCategory = ThoughtCategory.serious.rawValue
         case 2:
-            selectedCategory = ThoughtCategory.crazy
+            selectedCategory = ThoughtCategory.crazy.rawValue
         default:
-            selectedCategory = ThoughtCategory.popular
+            selectedCategory = ThoughtCategory.popular.rawValue
         }
     }
 
