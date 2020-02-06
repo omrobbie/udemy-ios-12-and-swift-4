@@ -18,9 +18,7 @@ class ThoughtCell: UITableViewCell {
 
     func configureCell(thought: Thought) {
         usernameLbl.text = thought.username
-        timestampLbl.text = String(describing: thought.timestamp)
         thoughtTxtLbl.text = thought.thoughtTxt
-        likesImg.image = #imageLiteral(resourceName: "starIconFilled")
-        likesNumLbl.text = String(describing: thought.numLikes)
+        likesNumLbl.text = String(thought.numLikes)
     }
 }
