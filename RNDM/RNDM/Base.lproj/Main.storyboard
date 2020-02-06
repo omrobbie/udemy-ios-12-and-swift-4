@@ -39,7 +39,7 @@
                                 <rect key="frame" x="20" y="152" width="374" height="702"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="110.5" id="9ER-0M-Le2">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="thoughtCell" rowHeight="110.5" id="9ER-0M-Le2" customClass="ThoughtCell" customModule="RNDM" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="110.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9ER-0M-Le2" id="lmX-bO-OaQ">
@@ -97,6 +97,13 @@
                                                 <constraint firstItem="BIh-MB-leX" firstAttribute="leading" secondItem="lmX-bO-OaQ" secondAttribute="leadingMargin" id="ySV-5L-7hK"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="likesImg" destination="VZk-3s-mlq" id="Ct5-cT-FtD"/>
+                                            <outlet property="likesNumLbl" destination="lRW-kM-krJ" id="NNj-Jj-jB3"/>
+                                            <outlet property="thoughtTxtLbl" destination="5nO-7Y-8ZH" id="Ovu-YW-9GJ"/>
+                                            <outlet property="timestampLbl" destination="IJp-CI-5Uw" id="Qpz-WX-9qU"/>
+                                            <outlet property="usernameLbl" destination="zdq-vb-aeH" id="GUT-U7-TXA"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
