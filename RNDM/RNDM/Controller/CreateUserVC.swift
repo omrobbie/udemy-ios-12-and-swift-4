@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class CreateUserVC: UIViewController {
 
@@ -21,6 +22,24 @@ class CreateUserVC: UIViewController {
     }
 
     @IBAction func createBtnTapped(_ sender: Any) {
+        guard let email = emailTxt.text,
+            let password = passwordTxt.text,
+            let username = usernameTxt.text else {return}
+
+        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+            if let error = error {
+                debugPrint("Error creating user: \(error.localizedDescription)")
+                return
+            }
+
+            let changeRequest = user?.user.createProfileChangeRequest()
+            changeRequest?.displayName = username
+            changeRequest?.commitChanges(completion: { (error) in
+                if let error = error {
+                    debugPrint("Error change username request: \(error.localizedDescription)")
+                }
+            })
+        }
     }
 
     @IBAction func cancelBtnTapped(_ sender: Any) {
