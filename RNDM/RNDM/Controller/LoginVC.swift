@@ -18,6 +18,8 @@ class LoginVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        loginBtn.layer.cornerRadius = 10
+        createUserBtn.layer.cornerRadius = 10
     }
 
     @IBAction func loginBtnTapped(_ sender: Any) {
