@@ -18,9 +18,10 @@ class CommentsVC: UIViewController {
     var thought: Thought!
     var thoughtRef: DocumentReference!
     var username: String!
+    var commentListener: ListenerRegistration!
 
     var comments = [Comment]()
-        .self
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -31,6 +32,22 @@ class CommentsVC: UIViewController {
         if let name = Auth.auth().currentUser?.displayName {
             username = name
         }
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        commentListener = thoughtRef.collection(COMMENTS_REF).addSnapshotListener({ (snapshot, error) in
+            guard let snapshot = snapshot else {
+                debugPrint("Error fetching comment: \(error?.localizedDescription)")
+                return
+            }
+
+            self.comments = Comment.parseData(snapshot: snapshot)
+            self.tableView.reloadData()
+        })
+    }
+
+    override func viewDidDisappear(_ animated: Bool) {
+        commentListener.remove()
     }
 
     @IBAction func addCommentBtnTapped(_ sender: Any) {
