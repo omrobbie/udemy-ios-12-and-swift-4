@@ -38,8 +38,8 @@ class CommentsVC: UIViewController {
         commentListener = thoughtRef.collection(COMMENTS_REF)
             .order(by: TIMESTAMP)
             .addSnapshotListener({ (snapshot, error) in
-                guard let snapshot = snapshot else {
-                    debugPrint("Error fetching comment: \(error?.localizedDescription)")
+                if let error = error {
+                    debugPrint("Error fetching comment: \(error.localizedDescription)")
                     return
                 }
 
