@@ -35,15 +35,22 @@ class CommentsVC: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        commentListener = thoughtRef.collection(COMMENTS_REF).addSnapshotListener({ (snapshot, error) in
-            guard let snapshot = snapshot else {
-                debugPrint("Error fetching comment: \(error?.localizedDescription)")
-                return
-            }
+        commentListener = thoughtRef.collection(COMMENTS_REF)
+            .order(by: TIMESTAMP)
+            .addSnapshotListener({ (snapshot, error) in
+                guard let snapshot = snapshot else {
+                    debugPrint("Error fetching comment: \(error?.localizedDescription)")
+                    return
+                }
 
-            self.comments = Comment.parseData(snapshot: snapshot)
-            self.tableView.reloadData()
-        })
+                self.comments = Comment.parseData(snapshot: snapshot)
+                self.tableView.reloadData()
+
+                if self.comments.count > 0 {
+                    let indexPath = IndexPath(row: self.comments.count - 1, section: 0)
+                    self.tableView.scrollToRow(at: indexPath, at: .none, animated: true)
+                }
+            })
     }
 
     override func viewDidDisappear(_ animated: Bool) {
