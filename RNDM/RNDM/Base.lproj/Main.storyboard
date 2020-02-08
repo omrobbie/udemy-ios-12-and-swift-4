@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Aif-XS-sIZ" customClass="Ios12SegmentedControl" customModule="RNDM" customModuleProvider="target">
-                                <rect key="frame" x="20" y="104" width="374" height="33"/>
+                                <rect key="frame" x="20" y="104" width="374" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="rTH-ua-HWg"/>
                                 </constraints>
@@ -124,6 +124,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="RNDM" id="JwK-hP-i5p">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="cTy-qI-bFX">
+                            <connections>
+                                <action selector="logoutTapped:" destination="BYZ-38-t0r" id="NHg-I9-WQg"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="addThoughtIcon" id="ZZs-au-F1n">
                             <connections>
                                 <segue destination="TAv-29-xg7" kind="show" id="o51-uP-LOG"/>

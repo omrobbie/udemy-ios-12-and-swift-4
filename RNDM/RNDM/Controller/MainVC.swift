@@ -43,6 +43,7 @@ class MainVC: UIViewController {
                 let storybord = UIStoryboard(name: "Main", bundle: nil)
                 let loginVC = storybord.instantiateViewController(identifier: "loginVC")
 
+                loginVC.modalPresentationStyle = .fullScreen
                 self.present(loginVC, animated: true, completion: nil)
             } else {
                 self.setListener()
@@ -99,6 +100,14 @@ class MainVC: UIViewController {
 
         thoughtsListener.remove()
         setListener()
+    }
+
+    @IBAction func logoutTapped(_ sender: Any) {
+        do {
+            try Auth.auth().signOut()
+        } catch {
+            debugPrint("Error signing out: \(error.localizedDescription)")
+        }
     }
 }
 
