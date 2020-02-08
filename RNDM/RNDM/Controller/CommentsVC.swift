@@ -10,9 +10,29 @@ import UIKit
 
 class CommentsVC: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addCommentTxt: UITextField!
+    @IBOutlet var keyboardView: UIView!
+
     var thought: Thought!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+
+    @IBAction func addCommentBtnTapped(_ sender: Any) {
+    }
+}
+
+extension CommentsVC: UITableViewDelegate, UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
     }
 }
