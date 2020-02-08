@@ -15,6 +15,7 @@ class CommentsVC: UIViewController {
     @IBOutlet var keyboardView: UIView!
 
     var thought: Thought!
+    var comments = [Comment]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,13 +30,13 @@ class CommentsVC: UIViewController {
 extension CommentsVC: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return comments.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "commentCell") as? CommentCell else {return UITableViewCell()}
 
-        cell.configureCell()
+        cell.configureCell(comment: comments[indexPath.row])
 
         return cell
     }

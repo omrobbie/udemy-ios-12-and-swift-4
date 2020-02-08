@@ -14,6 +14,9 @@ class CommentCell: UITableViewCell {
     @IBOutlet weak var timestampLbl: UILabel!
     @IBOutlet weak var commentLbl: UILabel!
 
-    func configureCell() {
+    func configureCell(comment: Comment) {
+        usernameLbl.text = comment.username
+        timestampLbl.text = comment.timestamp.toString(format: .shortDateTime)
+        commentLbl.text = comment.comment
     }
 }
