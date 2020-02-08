@@ -114,7 +114,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="commentsNumLbl" destination="YXf-Tv-cAZ" id="3v1-g5-wAv"/>
-                                            <outlet property="likesImg" destination="VZk-3s-mlq" id="Ct5-cT-FtD"/>
+                                            <outlet property="likesImg" destination="VZk-3s-mlq" id="ZqQ-i6-1Fd"/>
                                             <outlet property="likesNumLbl" destination="lRW-kM-krJ" id="NNj-Jj-jB3"/>
                                             <outlet property="thoughtTxtLbl" destination="5nO-7Y-8ZH" id="Ovu-YW-9GJ"/>
                                             <outlet property="timestampLbl" destination="IJp-CI-5Uw" id="Qpz-WX-9qU"/>
@@ -204,7 +204,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="724"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="89" id="WTg-G7-J2Z">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="commentCell" rowHeight="89" id="WTg-G7-J2Z" customClass="CommentCell" customModule="RNDM" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="89"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WTg-G7-J2Z" id="2RA-T8-k8N">
@@ -241,6 +241,11 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="nLf-OW-YLR" secondAttribute="bottom" constant="8" id="zG4-ky-ZPF"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentLbl" destination="nLf-OW-YLR" id="hvF-1v-9gm"/>
+                                            <outlet property="timestampLbl" destination="RxG-RD-xZM" id="h8S-4C-8Xg"/>
+                                            <outlet property="usernameLbl" destination="MIy-bh-pRi" id="bsg-Nn-mt0"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
