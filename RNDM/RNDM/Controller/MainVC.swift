@@ -25,6 +25,7 @@ class MainVC: UIViewController {
     private var thoughtsCollectionRef: CollectionReference!
     private var thoughtsListener: ListenerRegistration!
     private var selectedCategory: String = ThoughtCategory.funny.rawValue
+    private var handle: AuthStateDidChangeListenerHandle?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,12 +37,25 @@ class MainVC: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        setListener()
+
+        handle = Auth.auth().addStateDidChangeListener({ (auth, user) in
+            if user == nil {
+                let storybord = UIStoryboard(name: "Main", bundle: nil)
+                let loginVC = storybord.instantiateViewController(identifier: "loginVC")
+
+                self.present(loginVC, animated: true, completion: nil)
+            } else {
+                self.setListener()
+            }
+        })
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        thoughtsListener.remove()
+
+        if thoughtsListener != nil {
+            thoughtsListener.remove()
+        }
     }
 
     func setListener() {

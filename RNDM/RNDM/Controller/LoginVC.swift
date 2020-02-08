@@ -23,9 +23,6 @@ class LoginVC: UIViewController {
     }
 
     @IBAction func loginBtnTapped(_ sender: Any) {
-    }
-
-    @IBAction func createUserBtnTapped(_ sender: Any) {
         guard let email = emailTxt.text,
             let password = passwordTxt.text else {return}
 
