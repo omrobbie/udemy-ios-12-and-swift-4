@@ -38,7 +38,7 @@
                                     <action selector="categoryChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="TuW-pb-GnG"/>
                                 </connections>
                             </segmentedControl>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2yo-cq-Gia">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2yo-cq-Gia">
                                 <rect key="frame" x="20" y="152" width="374" height="702"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
@@ -151,11 +151,28 @@
                     <connections>
                         <outlet property="categorySegment" destination="Aif-XS-sIZ" id="zT9-Zf-33T"/>
                         <outlet property="tableView" destination="2yo-cq-Gia" id="CM3-o9-soX"/>
+                        <segue destination="BTX-iJ-gMX" kind="show" identifier="toComments" id="eh7-9a-ggk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="115.84821428571428"/>
+        </scene>
+        <!--CommentsVC-->
+        <scene sceneID="hpm-qO-Cy6">
+            <objects>
+                <viewController id="BTX-iJ-gMX" customClass="CommentsVC" customModule="RNDM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fMU-Ls-sEX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="KMu-Mz-s0u"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="DyH-9F-jcy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W3r-P4-1dd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2074" y="514"/>
         </scene>
         <!--Add ThoughtVC-->
         <scene sceneID="IHh-VA-ady">
@@ -248,7 +265,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="waP-a2-2la" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1841" y="116"/>
+            <point key="canvasLocation" x="2074" y="-212"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="D7U-Hz-uWu">
