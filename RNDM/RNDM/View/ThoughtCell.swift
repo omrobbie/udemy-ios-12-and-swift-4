@@ -16,7 +16,8 @@ class ThoughtCell: UITableViewCell {
     @IBOutlet weak var thoughtTxtLbl: UILabel!
     @IBOutlet weak var likesImg: UIImageView!
     @IBOutlet weak var likesNumLbl: UILabel!
-
+    @IBOutlet weak var commentsNumLbl: UILabel!
+    
     private var thought: Thought!
 
     override func awakeFromNib() {
@@ -41,5 +42,6 @@ class ThoughtCell: UITableViewCell {
         timestampLbl.text = thought.timestamp.toString(format: .shortDateTime)
         thoughtTxtLbl.text = thought.thoughtTxt
         likesNumLbl.text = String(thought.numLikes)
+        commentsNumLbl.text = String(thought.numComments)
     }
 }

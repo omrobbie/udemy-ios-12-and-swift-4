@@ -42,11 +42,11 @@
                                 <rect key="frame" x="20" y="152" width="374" height="702"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="thoughtCell" rowHeight="113" id="9ER-0M-Le2" customClass="ThoughtCell" customModule="RNDM" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="374" height="113"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="thoughtCell" rowHeight="109" id="9ER-0M-Le2" customClass="ThoughtCell" customModule="RNDM" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="109"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9ER-0M-Le2" id="lmX-bO-OaQ">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="113"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="109"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Feb 2, 2:22" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJp-CI-5Uw">
@@ -56,19 +56,32 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="BIh-MB-leX">
-                                                    <rect key="frame" x="20" y="74" width="334" height="24"/>
+                                                    <rect key="frame" x="20" y="78" width="83" height="16"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="starIconFilled" translatesAutoresizingMaskIntoConstraints="NO" id="VZk-3s-mlq">
-                                                            <rect key="frame" x="0.0" y="0.0" width="24" height="24"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="24" id="1lK-tk-1k2"/>
-                                                                <constraint firstAttribute="width" constant="24" id="Ohz-kE-QDi"/>
+                                                                <constraint firstAttribute="height" constant="16" id="1lK-tk-1k2"/>
+                                                                <constraint firstAttribute="width" constant="16" id="Ohz-kE-QDi"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRW-kM-krJ">
-                                                            <rect key="frame" x="30" y="0.0" width="304" height="24"/>
-                                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                                            <rect key="frame" x="22" y="0.0" width="16.5" height="16"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commentIcon" translatesAutoresizingMaskIntoConstraints="NO" id="FxL-ip-qn3">
+                                                            <rect key="frame" x="44.5" y="0.0" width="16" height="16"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="16" id="OBB-yp-iXo"/>
+                                                                <constraint firstAttribute="height" constant="16" id="Wfj-VY-lvn"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXf-Tv-cAZ">
+                                                            <rect key="frame" x="66.5" y="0.0" width="16.5" height="16"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -87,20 +100,20 @@
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="BIh-MB-leX" secondAttribute="bottom" constant="4" id="5m3-uG-B9I"/>
                                                 <constraint firstItem="5nO-7Y-8ZH" firstAttribute="top" secondItem="zdq-vb-aeH" secondAttribute="bottom" constant="8" id="8cX-Vk-9NH"/>
                                                 <constraint firstItem="5nO-7Y-8ZH" firstAttribute="trailing" secondItem="lmX-bO-OaQ" secondAttribute="trailingMargin" id="JBW-OZ-lRA"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="BIh-MB-leX" secondAttribute="trailing" id="VOz-VQ-S8S"/>
+                                                <constraint firstItem="BIh-MB-leX" firstAttribute="top" secondItem="5nO-7Y-8ZH" secondAttribute="bottom" constant="8" id="Mb0-pR-Zud"/>
                                                 <constraint firstItem="IJp-CI-5Uw" firstAttribute="centerY" secondItem="zdq-vb-aeH" secondAttribute="centerY" id="XE9-Q1-c61"/>
                                                 <constraint firstItem="IJp-CI-5Uw" firstAttribute="leading" secondItem="zdq-vb-aeH" secondAttribute="trailing" constant="8" id="dEy-zn-9Kz"/>
-                                                <constraint firstItem="BIh-MB-leX" firstAttribute="top" secondItem="5nO-7Y-8ZH" secondAttribute="bottom" constant="4" id="dql-C1-ZvY"/>
                                                 <constraint firstItem="zdq-vb-aeH" firstAttribute="top" secondItem="lmX-bO-OaQ" secondAttribute="topMargin" id="h8f-r7-XmX"/>
                                                 <constraint firstItem="zdq-vb-aeH" firstAttribute="leading" secondItem="lmX-bO-OaQ" secondAttribute="leadingMargin" id="jau-qv-R1C"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="BIh-MB-leX" secondAttribute="bottom" constant="4" id="nEO-Jf-q6Q"/>
                                                 <constraint firstItem="BIh-MB-leX" firstAttribute="leading" secondItem="lmX-bO-OaQ" secondAttribute="leadingMargin" id="qy7-ga-XZD"/>
                                                 <constraint firstItem="5nO-7Y-8ZH" firstAttribute="leading" secondItem="lmX-bO-OaQ" secondAttribute="leadingMargin" id="tdW-YU-blb"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="commentsNumLbl" destination="YXf-Tv-cAZ" id="3v1-g5-wAv"/>
                                             <outlet property="likesImg" destination="VZk-3s-mlq" id="Ct5-cT-FtD"/>
                                             <outlet property="likesNumLbl" destination="lRW-kM-krJ" id="NNj-Jj-jB3"/>
                                             <outlet property="thoughtTxtLbl" destination="5nO-7Y-8ZH" id="Ovu-YW-9GJ"/>
@@ -455,6 +468,7 @@
     </scenes>
     <resources>
         <image name="addThoughtIcon" width="21" height="24"/>
+        <image name="commentIcon" width="26" height="22"/>
         <image name="starIconFilled" width="20" height="19"/>
     </resources>
 </document>
