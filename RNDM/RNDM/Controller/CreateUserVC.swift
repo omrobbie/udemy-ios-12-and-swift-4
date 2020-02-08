@@ -39,9 +39,24 @@ class CreateUserVC: UIViewController {
                     debugPrint("Error change username request: \(error.localizedDescription)")
                 }
             })
+
+            guard let userId = user?.user.uid else {return}
+
+            Firestore.firestore().collection(USERS_REF).document(userId).setData([
+                USERNAME: username,
+                DATE_CREATED: FieldValue.serverTimestamp()
+            ]) { (error) in
+                if let error = error {
+                    debugPrint("Error save user to firestore: \(error.localizedDescription)")
+                    return
+                }
+
+                self.dismiss(animated: true, completion: nil)
+            }
         }
     }
 
     @IBAction func cancelBtnTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
 }
