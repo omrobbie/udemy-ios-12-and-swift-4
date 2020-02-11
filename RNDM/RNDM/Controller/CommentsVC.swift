@@ -104,8 +104,15 @@ extension CommentsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "commentCell") as? CommentCell else {return UITableViewCell()}
 
-        cell.configureCell(comment: comments[indexPath.row])
+        cell.configureCell(comment: comments[indexPath.row], delegate: self)
 
         return cell
+    }
+}
+
+extension CommentsVC: CommentDelegate {
+
+    func commentOptionsTapped(comment: Comment) {
+        print(comment.username ?? "")
     }
 }
