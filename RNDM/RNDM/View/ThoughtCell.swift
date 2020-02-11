@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import FirebaseAuth
 
 protocol ThoughtDelegate {
     func thoughtOptionsTapped(thought: Thought)

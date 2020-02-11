@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import FirebaseAuth
 
 enum ThoughtCategory: String {
     case funny = "funny"

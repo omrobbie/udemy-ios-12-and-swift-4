@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import FirebaseAuth
 
 protocol CommentDelegate {
     func commentOptionsTapped(comment: Comment)
