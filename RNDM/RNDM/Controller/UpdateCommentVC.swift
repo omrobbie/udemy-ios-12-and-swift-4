@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class UpdateCommentVC: UIViewController {
 
@@ -24,6 +25,18 @@ class UpdateCommentVC: UIViewController {
     }
 
     @IBAction func updateBtnTapped(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        let thoughtRef = Firestore.firestore().collection(THOUGHTS_REF).document(commentData.thought.documentId)
+        let commentRef = thoughtRef.collection(COMMENTS_REF).document(commentData.comment.documentId)
+
+        commentRef.updateData([
+            COMMENT: commentTxt.text ?? ""
+        ]) { (error) in
+            if let error = error {
+                debugPrint("Error update comment: \(error.localizedDescription)")
+                return
+            }
+
+            self.dismiss(animated: true, completion: nil)
+        }
     }
 }
