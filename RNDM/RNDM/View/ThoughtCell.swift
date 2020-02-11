@@ -17,6 +17,7 @@ class ThoughtCell: UITableViewCell {
     @IBOutlet weak var likesImg: UIImageView!
     @IBOutlet weak var likesNumLbl: UILabel!
     @IBOutlet weak var commentsNumLbl: UILabel!
+    @IBOutlet weak var optionMenu: UIImageView!
     
     private var thought: Thought!
 

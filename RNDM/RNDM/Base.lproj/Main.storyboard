@@ -98,11 +98,20 @@
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ellipsis_dark" translatesAutoresizingMaskIntoConstraints="NO" id="LqU-Rm-X8V">
+                                                    <rect key="frame" x="368" y="10" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="gI5-Iw-PtN"/>
+                                                        <constraint firstAttribute="width" constant="30" id="hL2-mb-ENi"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottomMargin" secondItem="BIh-MB-leX" secondAttribute="bottom" constant="4" id="5m3-uG-B9I"/>
                                                 <constraint firstItem="5nO-7Y-8ZH" firstAttribute="top" secondItem="zdq-vb-aeH" secondAttribute="bottom" constant="8" id="8cX-Vk-9NH"/>
+                                                <constraint firstItem="LqU-Rm-X8V" firstAttribute="centerY" secondItem="IJp-CI-5Uw" secondAttribute="centerY" id="HLE-SN-zNZ"/>
                                                 <constraint firstItem="5nO-7Y-8ZH" firstAttribute="trailing" secondItem="lmX-bO-OaQ" secondAttribute="trailingMargin" id="JBW-OZ-lRA"/>
+                                                <constraint firstAttribute="trailing" secondItem="LqU-Rm-X8V" secondAttribute="trailing" constant="16" id="Lu4-1C-yWD"/>
                                                 <constraint firstItem="BIh-MB-leX" firstAttribute="top" secondItem="5nO-7Y-8ZH" secondAttribute="bottom" constant="8" id="Mb0-pR-Zud"/>
                                                 <constraint firstItem="IJp-CI-5Uw" firstAttribute="centerY" secondItem="zdq-vb-aeH" secondAttribute="centerY" id="XE9-Q1-c61"/>
                                                 <constraint firstItem="IJp-CI-5Uw" firstAttribute="leading" secondItem="zdq-vb-aeH" secondAttribute="trailing" constant="8" id="dEy-zn-9Kz"/>
@@ -116,6 +125,7 @@
                                             <outlet property="commentsNumLbl" destination="YXf-Tv-cAZ" id="3v1-g5-wAv"/>
                                             <outlet property="likesImg" destination="VZk-3s-mlq" id="ZqQ-i6-1Fd"/>
                                             <outlet property="likesNumLbl" destination="lRW-kM-krJ" id="NNj-Jj-jB3"/>
+                                            <outlet property="optionMenu" destination="LqU-Rm-X8V" id="NJI-Di-2ZK"/>
                                             <outlet property="thoughtTxtLbl" destination="5nO-7Y-8ZH" id="Ovu-YW-9GJ"/>
                                             <outlet property="timestampLbl" destination="IJp-CI-5Uw" id="Qpz-WX-9qU"/>
                                             <outlet property="usernameLbl" destination="zdq-vb-aeH" id="GUT-U7-TXA"/>
@@ -229,6 +239,13 @@
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ellipsis_dark" translatesAutoresizingMaskIntoConstraints="NO" id="rm1-tF-mzI">
+                                                    <rect key="frame" x="368" y="10" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="CN2-n7-BES"/>
+                                                        <constraint firstAttribute="width" constant="30" id="zyi-wC-dby"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="RxG-RD-xZM" firstAttribute="centerY" secondItem="MIy-bh-pRi" secondAttribute="centerY" id="1Ua-Wq-isq"/>
@@ -236,13 +253,16 @@
                                                 <constraint firstItem="nLf-OW-YLR" firstAttribute="top" secondItem="MIy-bh-pRi" secondAttribute="bottom" constant="8" id="OBe-gK-2F9"/>
                                                 <constraint firstItem="nLf-OW-YLR" firstAttribute="leading" secondItem="2RA-T8-k8N" secondAttribute="leadingMargin" id="P6U-JN-Mqo"/>
                                                 <constraint firstItem="MIy-bh-pRi" firstAttribute="top" secondItem="2RA-T8-k8N" secondAttribute="topMargin" id="QtN-R9-C48"/>
+                                                <constraint firstItem="rm1-tF-mzI" firstAttribute="centerY" secondItem="RxG-RD-xZM" secondAttribute="centerY" id="WTM-w3-Rxb"/>
                                                 <constraint firstItem="MIy-bh-pRi" firstAttribute="leading" secondItem="2RA-T8-k8N" secondAttribute="leadingMargin" id="YaV-aS-vSO"/>
                                                 <constraint firstItem="RxG-RD-xZM" firstAttribute="leading" secondItem="MIy-bh-pRi" secondAttribute="trailing" constant="8" id="dj5-JT-wNw"/>
+                                                <constraint firstAttribute="trailing" secondItem="rm1-tF-mzI" secondAttribute="trailing" constant="16" id="n0N-in-Awq"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="nLf-OW-YLR" secondAttribute="bottom" constant="8" id="zG4-ky-ZPF"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="commentLbl" destination="nLf-OW-YLR" id="hvF-1v-9gm"/>
+                                            <outlet property="optionMenu" destination="rm1-tF-mzI" id="RcQ-te-y1C"/>
                                             <outlet property="timestampLbl" destination="RxG-RD-xZM" id="h8S-4C-8Xg"/>
                                             <outlet property="usernameLbl" destination="MIy-bh-pRi" id="bsg-Nn-mt0"/>
                                         </connections>
@@ -282,7 +302,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FiI-Cy-bgI" customClass="Ios12SegmentedControl" customModule="RNDM" customModuleProvider="target">
-                                <rect key="frame" x="20" y="104" width="374" height="32"/>
+                                <rect key="frame" x="20" y="104" width="374" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="32" id="901-pd-Jj2"/>
                                 </constraints>
@@ -585,6 +605,7 @@
     <resources>
         <image name="addThoughtIcon" width="21" height="24"/>
         <image name="commentIcon" width="26" height="22"/>
+        <image name="ellipsis_dark" width="30" height="30"/>
         <image name="starIconFilled" width="20" height="19"/>
     </resources>
 </document>
