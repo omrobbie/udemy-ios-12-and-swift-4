@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 
 enum ThoughtCategory: String {
     case funny = "funny"
@@ -129,12 +130,19 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "thoughtCell") as? ThoughtCell else {return UITableViewCell()}
-        cell.configureCell(thought: thoughts[indexPath.row])
+        cell.configureCell(thought: thoughts[indexPath.row], delegate: self)
 
         return cell
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "toComments", sender: thoughts[indexPath.row])
+    }
+}
+
+extension MainVC: ThoughtDelegate {
+
+    func thoughtOptionsTapped(thought: Thought) {
+        print(thought.username ?? "0")
     }
 }
