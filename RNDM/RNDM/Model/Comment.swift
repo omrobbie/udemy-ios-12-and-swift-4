@@ -11,12 +11,14 @@ import Firebase
 
 class Comment {
 
+    private(set) var documentId: String!
     private(set) var username: String!
     private(set) var timestamp: Date!
     private(set) var comment: String!
     private(set) var userId: String!
 
-    init(username: String, timestamp: Date, comment: String, userId: String) {
+    init(documentId: String, username: String, timestamp: Date, comment: String, userId: String) {
+        self.documentId = documentId
         self.username = username
         self.timestamp = timestamp
         self.comment = comment
@@ -29,13 +31,14 @@ class Comment {
 
         for document in snapshot.documents {
             let data = document.data()
+            let documentId = document.documentID
 
             let username = data[USERNAME] as? String ?? "Anonymous"
             let timestamp = data[TIMESTAMP] as? Date ?? Date()
             let comment = data[COMMENT] as? String ?? ""
             let userId = data[USER_ID] as? String ?? ""
 
-            let newComment = Comment(username: username, timestamp: timestamp, comment: comment, userId: userId)
+            let newComment = Comment(documentId: documentId, username: username, timestamp: timestamp, comment: comment, userId: userId)
             comments.append(newComment)
         }
 
