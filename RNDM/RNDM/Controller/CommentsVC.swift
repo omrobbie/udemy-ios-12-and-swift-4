@@ -146,7 +146,7 @@ extension CommentsVC: CommentDelegate {
         }
 
         let editAction = UIAlertAction(title: "Edit Comment", style: .default) { (action) in
-
+            self.performSegue(withIdentifier: "toEditComment", sender: nil)
         }
 
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in

@@ -18,6 +18,7 @@
 		FC4FD98E23EE8AE100A8C284 /* CommentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4FD98D23EE8AE100A8C284 /* CommentsVC.swift */; };
 		FC4FD99023EE98ED00A8C284 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4FD98F23EE98ED00A8C284 /* CommentCell.swift */; };
 		FC4FD99223EE9BD000A8C284 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4FD99123EE9BD000A8C284 /* Comment.swift */; };
+		FC4FDA3F23F2A19400A8C284 /* UpdateCommentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4FDA3E23F2A19400A8C284 /* UpdateCommentVC.swift */; };
 		FCA85BF223EA938400F4806E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA85BF123EA938400F4806E /* AppDelegate.swift */; };
 		FCA85BF423EA938400F4806E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA85BF323EA938400F4806E /* SceneDelegate.swift */; };
 		FCA85BF623EA938400F4806E /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA85BF523EA938400F4806E /* MainVC.swift */; };
@@ -43,6 +44,7 @@
 		FC4FD98D23EE8AE100A8C284 /* CommentsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsVC.swift; sourceTree = "<group>"; };
 		FC4FD98F23EE98ED00A8C284 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
 		FC4FD99123EE9BD000A8C284 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		FC4FDA3E23F2A19400A8C284 /* UpdateCommentVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateCommentVC.swift; sourceTree = "<group>"; };
 		FCA85BEE23EA938400F4806E /* RNDM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RNDM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA85BF123EA938400F4806E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCA85BF323EA938400F4806E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				FC4FD98723EE4B8E00A8C284 /* LoginVC.swift */,
 				FC4FD98923EE4D5B00A8C284 /* CreateUserVC.swift */,
 				FC4FD98D23EE8AE100A8C284 /* CommentsVC.swift */,
+				FC4FDA3E23F2A19400A8C284 /* UpdateCommentVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				FCA85C0823EABD9200F4806E /* AddThoughtVC.swift in Sources */,
 				FCA85BF423EA938400F4806E /* SceneDelegate.swift in Sources */,
 				FC4FD99023EE98ED00A8C284 /* CommentCell.swift in Sources */,
+				FC4FDA3F23F2A19400A8C284 /* UpdateCommentVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
