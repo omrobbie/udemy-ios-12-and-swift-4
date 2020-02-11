@@ -116,9 +116,28 @@ extension CommentsVC: CommentDelegate {
         let alert = UIAlertController(title: "Edit Comment", message: "You can delete or edit", preferredStyle: .actionSheet)
 
         let deleteAction = UIAlertAction(title: "Delete Comment", style: .default) { (action) in
-            Firestore.firestore().collection(THOUGHTS_REF).document(self.thought.documentId).collection(COMMENTS_REF).document(comment.documentId).delete { (error) in
+            Firestore.firestore().runTransaction({ (transaction, error) -> Any? in
+                let thoughtDocument: DocumentSnapshot
+
+                do {
+                    try thoughtDocument = transaction.getDocument(self.thoughtRef)
+                } catch {
+                    debugPrint("Error add comment: \(error.localizedDescription)")
+                    return nil
+                }
+
+                guard let oldNumComment = thoughtDocument.data()?[NUM_COMMENTS] as? Int else {return nil}
+
+                transaction.updateData([NUM_COMMENTS: oldNumComment - 1], forDocument: self.thoughtRef)
+
+                let commentRef = self.thoughtRef.collection(COMMENTS_REF).document(comment.documentId)
+
+                transaction.deleteDocument(commentRef)
+
+                return nil
+            }) { (object, error) in
                 if let error = error {
-                    debugPrint("Unable to delete: \(error.localizedDescription)")
+                    debugPrint("Error delete or edit comment transaction: \(error.localizedDescription)")
                     return
                 }
 
