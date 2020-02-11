@@ -113,6 +113,31 @@ extension CommentsVC: UITableViewDelegate, UITableViewDataSource {
 extension CommentsVC: CommentDelegate {
 
     func commentOptionsTapped(comment: Comment) {
-        print(comment.username ?? "")
+        let alert = UIAlertController(title: "Edit Comment", message: "You can delete or edit", preferredStyle: .actionSheet)
+
+        let deleteAction = UIAlertAction(title: "Delete Comment", style: .default) { (action) in
+            Firestore.firestore().collection(THOUGHTS_REF).document(self.thought.documentId).collection(COMMENTS_REF).document(comment.documentId).delete { (error) in
+                if let error = error {
+                    debugPrint("Unable to delete: \(error.localizedDescription)")
+                    return
+                }
+
+                alert.dismiss(animated: true, completion: nil)
+            }
+        }
+
+        let editAction = UIAlertAction(title: "Edit Comment", style: .default) { (action) in
+
+        }
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+
+        }
+
+        alert.addAction(deleteAction)
+        alert.addAction(editAction)
+        alert.addAction(cancelAction)
+
+        present(alert, animated: true, completion: nil)
     }
 }
