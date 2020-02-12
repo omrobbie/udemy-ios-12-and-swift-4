@@ -66,3 +66,11 @@ Learn about firebase, firebase auth, firebase realtime database<br>
 <img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/breakpoint/screenshot/preview4.png" width=256/>&nbsp;
 <img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/breakpoint/screenshot/preview5.png" width=256/>&nbsp;
 <img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/breakpoint/screenshot/preview6.png" width=256/>&nbsp;
+
+### 13. RNDM
+Learn about firestore, database security rules, query snapshot, transaction, batch<br>
+<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/RNDM/screenshot/preview1.png" width=256/>&nbsp;
+<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/RNDM/screenshot/preview2.png" width=256/>&nbsp;
+<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/RNDM/screenshot/preview3.png" width=256/>&nbsp;
+<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/RNDM/screenshot/preview4.png" width=256/>&nbsp;
+<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/RNDM/screenshot/preview5.png" width=256/>&nbsp;
