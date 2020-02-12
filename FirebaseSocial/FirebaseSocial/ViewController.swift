@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import GoogleSignIn
+import FBSDKLoginKit
 
 class ViewController: UIViewController {
 
@@ -77,5 +78,14 @@ class ViewController: UIViewController {
         } catch let signOutError as NSError {
             debugPrint("Error signing out from Firebase: \(signOutError.localizedDescription)")
         }
+    }
+}
+
+extension ViewController: LoginButtonDelegate {
+
+    func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
+    }
+
+    func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
     }
 }
