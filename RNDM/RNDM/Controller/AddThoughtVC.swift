@@ -12,7 +12,6 @@ import Firebase
 class AddThoughtVC: UIViewController {
 
     @IBOutlet private weak var categorySegment: Ios12SegmentedControl!
-    @IBOutlet private weak var userNameTxt: UITextField!
     @IBOutlet private weak var thoughtTxt: UITextView!
     @IBOutlet private weak var postBtn: UIButton!
 
@@ -38,15 +37,13 @@ class AddThoughtVC: UIViewController {
     }
 
     @IBAction func postBtnTapped(_ sender: Any) {
-        guard let username = userNameTxt.text else {return}
-
         Firestore.firestore().collection(THOUGHTS_REF).addDocument(data: [
             CATEGORY: selectedCategory,
             NUM_COMMENTS: 0,
             NUM_LIKES: 0,
             THOUGHT_TXT: thoughtTxt.text!,
             TIMESTAMP: FieldValue.serverTimestamp(),
-            USERNAME: username,
+            USERNAME: Auth.auth().currentUser?.displayName ?? "",
             USER_ID: Auth.auth().currentUser?.uid ?? ""
         ]) { (error) in
             if let error = error {
