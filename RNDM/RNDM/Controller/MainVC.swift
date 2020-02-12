@@ -142,6 +142,17 @@ extension MainVC: UITableViewDelegate, UITableViewDataSource {
 extension MainVC: ThoughtDelegate {
 
     func thoughtOptionsTapped(thought: Thought) {
-        print(thought.username ?? "0")
+        let alert = UIAlertController(title: "Delete", message: "Do you want to delete your thought?", preferredStyle: .actionSheet)
+
+        let deleteAction = UIAlertAction(title: "Delete Thought", style: .default) { (action) in
+
+        }
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+
+        alert.addAction(deleteAction)
+        alert.addAction(cancelAction)
+
+        present(alert, animated: true, completion: nil)
     }
 }
