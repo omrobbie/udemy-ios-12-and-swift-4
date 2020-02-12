@@ -21,6 +21,17 @@ class ViewController: UIViewController {
         logoutBtn.layer.cornerRadius = 10
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        Auth.auth().addStateDidChangeListener { (auth, user) in
+            if user == nil {
+                self.userInfoLbl.text = "No user logged in"
+            } else {
+                let currentUser = Auth.auth().currentUser
+                self.userInfoLbl.text = "Welcome user: \(currentUser?.displayName ?? "")"
+            }
+        }
+    }
+
     func firebaseLogin(_ credential: AuthCredential) {
         Auth.auth().signIn(with: credential) { (user, error) in
             if let error = error {
