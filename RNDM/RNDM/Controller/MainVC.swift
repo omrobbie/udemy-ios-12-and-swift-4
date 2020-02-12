@@ -96,6 +96,33 @@ class MainVC: UIViewController {
         }
     }
 
+    func delete(collection: CollectionReference, batchSize: Int = 100, completion: @escaping (Error?) -> ()) {
+        collection.limit(to: batchSize).getDocuments { (docset, error) in
+            guard let docset = docset else {
+                completion(error)
+                return
+            }
+
+            guard docset.count > 0 else {
+                completion(nil)
+                return
+            }
+
+            let batch = collection.firestore.batch()
+            docset.documents.forEach { batch.deleteDocument($0.reference) }
+
+            batch.commit { (error) in
+                if let error = error {
+                    debugPrint("Error delete with batch: \(error.localizedDescription)")
+                    completion(error)
+                    return
+                }
+
+                self.delete(collection: collection, batchSize: batchSize, completion: completion)
+            }
+        }
+    }
+
     @IBAction func categoryChanged(_ sender: Any) {
         switch categorySegment.selectedSegmentIndex {
         case 0:
