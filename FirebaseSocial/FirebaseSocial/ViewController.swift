@@ -13,11 +13,14 @@ import GoogleSignIn
 class ViewController: UIViewController {
 
     @IBOutlet weak var userInfoLbl: UILabel!
+    @IBOutlet weak var customGoogleBtn: UIButton!
     @IBOutlet weak var logoutBtn: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         GIDSignIn.sharedInstance()?.presentingViewController = self
+
+        customGoogleBtn.layer.cornerRadius = 5
         logoutBtn.layer.cornerRadius = 10
     }
 
@@ -63,6 +66,10 @@ class ViewController: UIViewController {
         GIDSignIn.sharedInstance()?.signIn()
     }
     
+    @IBAction func customGoogleBtnTapped(_ sender: Any) {
+        GIDSignIn.sharedInstance()?.signIn()
+    }
+
     @IBAction func logoutBtnTapped(_ sender: Any) {
         do {
             logoutSocial()

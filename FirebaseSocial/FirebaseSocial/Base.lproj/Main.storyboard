@@ -47,13 +47,29 @@
                                     <action selector="googleSignInBtnTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="Sh7-ed-cv8"/>
                                 </connections>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jaY-n6-RAu">
+                                <rect key="frame" x="20" y="134" width="374" height="50"/>
+                                <color key="backgroundColor" red="0.91764705882352937" green="0.2627450980392157" blue="0.20784313725490194" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="MVz-pr-ijW"/>
+                                </constraints>
+                                <state key="normal" title="Login Google">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="customGoogleBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7OY-xb-xgZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="xfk-cI-TFn" firstAttribute="top" secondItem="cD9-W8-Mim" secondAttribute="bottom" constant="8" id="4M0-kH-sJw"/>
                             <constraint firstItem="Ua1-1F-rO3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="50l-xu-tBT"/>
+                            <constraint firstItem="jaY-n6-RAu" firstAttribute="top" secondItem="Ua1-1F-rO3" secondAttribute="bottom" constant="20" id="DpQ-qA-FCO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xfk-cI-TFn" secondAttribute="trailing" constant="20" id="M1E-Qd-UJ3"/>
                             <constraint firstItem="cD9-W8-Mim" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="NNH-uY-bkA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jaY-n6-RAu" secondAttribute="trailing" constant="20" id="W24-0w-91y"/>
+                            <constraint firstItem="jaY-n6-RAu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Zeb-k0-aU4"/>
                             <constraint firstItem="Ua1-1F-rO3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fJz-xu-peg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cD9-W8-Mim" secondAttribute="trailing" constant="20" id="hFf-oI-gmh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xfk-cI-TFn" secondAttribute="bottom" constant="20" id="jaA-vH-mrE"/>
@@ -63,6 +79,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="customGoogleBtn" destination="jaY-n6-RAu" id="x7v-qE-2PI"/>
                         <outlet property="logoutBtn" destination="xfk-cI-TFn" id="e9W-Gb-TTl"/>
                         <outlet property="userInfoLbl" destination="cD9-W8-Mim" id="Jgr-vF-yXw"/>
                     </connections>
