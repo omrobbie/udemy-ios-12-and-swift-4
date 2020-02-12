@@ -172,13 +172,20 @@ extension MainVC: ThoughtDelegate {
         let alert = UIAlertController(title: "Delete", message: "Do you want to delete your thought?", preferredStyle: .actionSheet)
 
         let deleteAction = UIAlertAction(title: "Delete Thought", style: .default) { (action) in
-            self.thoughtsCollectionRef.document(thought.documentId).delete { (error) in
+            self.delete(collection: self.thoughtsCollectionRef.document(thought.documentId).collection(COMMENTS_REF)) { (error) in
                 if let error = error {
-                    debugPrint("Error delete thought: \(error.localizedDescription)")
+                    debugPrint("Error delete comment on subcollection: \(error.localizedDescription)")
                     return
                 }
 
-                alert.dismiss(animated: true, completion: nil)
+                self.thoughtsCollectionRef.document(thought.documentId).delete { (error) in
+                    if let error = error {
+                        debugPrint("Error delete thought: \(error.localizedDescription)")
+                        return
+                    }
+
+                    alert.dismiss(animated: true, completion: nil)
+                }
             }
         }
 
