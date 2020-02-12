@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import GoogleSignIn
 
 class ViewController: UIViewController {
 
@@ -15,9 +17,14 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        GIDSignIn.sharedInstance()?.presentingViewController = self
         logoutBtn.layer.cornerRadius = 10
     }
 
+    @IBAction func googleSignInBtnTapped(_ sender: Any) {
+        GIDSignIn.sharedInstance()?.signIn()
+    }
+    
     @IBAction func logoutBtnTapped(_ sender: Any) {
     }
 }

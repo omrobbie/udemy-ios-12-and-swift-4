@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -50,7 +50,6 @@
 				F277A452130EFD5036AC6564 /* Pods-FirebaseSocial.debug.xcconfig */,
 				ACE378ED02AC6EBA7A90B097 /* Pods-FirebaseSocial.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
