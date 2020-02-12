@@ -35,5 +35,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func logoutBtnTapped(_ sender: Any) {
+        let firebaseAuth = Auth.auth()
+
+        do {
+            try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+            debugPrint("Error signing out from Firebase: \(signOutError.localizedDescription)")
+        }
     }
 }
