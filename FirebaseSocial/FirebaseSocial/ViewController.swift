@@ -41,15 +41,32 @@ class ViewController: UIViewController {
         }
     }
 
+    func logoutSocial() {
+        guard let user = Auth.auth().currentUser else {return}
+
+        for info in user.providerData {
+            switch info.providerID {
+            case GoogleAuthProviderID:
+                GIDSignIn.sharedInstance()?.signOut()
+                print("Google")
+            case TwitterAuthProviderID:
+                print("Twitter")
+            case FacebookAuthProviderID:
+                print("Facebook")
+            default:
+                break
+            }
+        }
+    }
+
     @IBAction func googleSignInBtnTapped(_ sender: Any) {
         GIDSignIn.sharedInstance()?.signIn()
     }
     
     @IBAction func logoutBtnTapped(_ sender: Any) {
-        let firebaseAuth = Auth.auth()
-
         do {
-            try firebaseAuth.signOut()
+            logoutSocial()
+            try Auth.auth().signOut()
         } catch let signOutError as NSError {
             debugPrint("Error signing out from Firebase: \(signOutError.localizedDescription)")
         }
