@@ -21,6 +21,15 @@ class ViewController: UIViewController {
         logoutBtn.layer.cornerRadius = 10
     }
 
+    func firebaseLogin(_ credential: AuthCredential) {
+        Auth.auth().signIn(with: credential) { (user, error) in
+            if let error = error {
+                debugPrint("Error login with firebase: \(error.localizedDescription)")
+                return
+            }
+        }
+    }
+
     @IBAction func googleSignInBtnTapped(_ sender: Any) {
         GIDSignIn.sharedInstance()?.signIn()
     }
