@@ -21,22 +21,30 @@
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>facebook</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.googleusercontent.apps.791210871810-qetptb9kge73d9bvl7rau9trjdmg9nrk</string>
+				<string>fb274241506395844</string>
 			</array>
 		</dict>
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>google</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>274241506395844</string>
+				<string>com.googleusercontent.apps.791210871810-qetptb9kge73d9bvl7rau9trjdmg9nrk</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>FacebookAppID</key>
+	<string>274241506395844</string>
+	<key>FacebookDisplayName</key>
+	<string>BOT</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIApplicationSceneManifest</key>

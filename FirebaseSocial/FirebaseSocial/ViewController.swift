@@ -15,11 +15,19 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var userInfoLbl: UILabel!
     @IBOutlet weak var customGoogleBtn: UIButton!
+    @IBOutlet var facebookLoginBtn: FBLoginButton!
     @IBOutlet weak var logoutBtn: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         GIDSignIn.sharedInstance()?.presentingViewController = self
+
+//        let fbLoginButton = FBLoginButton()
+//        fbLoginButton.delegate = self
+//        fbLoginButton.frame = facebookLoginBtn.frame
+//        view.addSubview(fbLoginButton)
+
+//        facebookLoginBtn.delegate = self
 
         customGoogleBtn.layer.cornerRadius = 5
         logoutBtn.layer.cornerRadius = 10
