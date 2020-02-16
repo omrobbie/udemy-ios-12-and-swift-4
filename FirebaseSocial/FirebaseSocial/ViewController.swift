@@ -94,6 +94,28 @@ class ViewController: UIViewController {
         GIDSignIn.sharedInstance()?.signIn()
     }
 
+    @IBAction func customFacebookBtnTapped(_ sender: Any) {
+        loginManager.logIn(permissions: ["email"], from: self) { (result, error) in
+            if let error = error {
+                debugPrint("Error signin in with Facebook: \(error.localizedDescription)")
+                return
+            }
+
+            if result!.isCancelled {
+                debugPrint("Facebook login is cancelled!")
+                return
+            }
+
+            guard let accessToken = result?.token?.tokenString else {
+                debugPrint("Error to get access token")
+                return
+            }
+
+            let credential = FacebookAuthProvider.credential(withAccessToken: accessToken)
+            self.firebaseLogin(credential)
+        }
+    }
+
     @IBAction func logoutBtnTapped(_ sender: Any) {
         do {
             logoutSocial()
