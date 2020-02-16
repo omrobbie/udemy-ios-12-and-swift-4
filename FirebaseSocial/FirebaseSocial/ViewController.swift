@@ -22,12 +22,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         GIDSignIn.sharedInstance()?.presentingViewController = self
 
-//        let fbLoginButton = FBLoginButton()
-//        fbLoginButton.delegate = self
-//        fbLoginButton.frame = facebookLoginBtn.frame
-//        view.addSubview(fbLoginButton)
-
-//        facebookLoginBtn.delegate = self
+        initFacebookButton()
 
         customGoogleBtn.layer.cornerRadius = 5
         logoutBtn.layer.cornerRadius = 10
@@ -42,6 +37,20 @@ class ViewController: UIViewController {
                 self.userInfoLbl.text = "Welcome user: \(currentUser?.displayName ?? "")"
             }
         }
+    }
+
+    func initFacebookButton() {
+        facebookLoginBtn.delegate = self
+
+        for constraint in facebookLoginBtn.constraints where constraint.firstAttribute == .height {
+            constraint.constant = 50
+        }
+
+//        other way to call facebook login button
+//        let fbLoginButton = FBLoginButton()
+//        fbLoginButton.delegate = self
+//        fbLoginButton.frame = facebookLoginBtn.frame
+//        view.addSubview(fbLoginButton)
     }
 
     func firebaseLogin(_ credential: AuthCredential) {

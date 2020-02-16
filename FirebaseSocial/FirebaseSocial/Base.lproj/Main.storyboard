@@ -60,9 +60,8 @@
                                     <action selector="customGoogleBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7OY-xb-xgZ"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wcn-4X-xhS" customClass="FBLoginButton">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wcn-4X-xhS" customClass="FBSDKLoginButton">
                                 <rect key="frame" x="20" y="204" width="374" height="50"/>
-                                <color key="backgroundColor" white="0.67000000000000004" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="e0z-64-ta5"/>
                                 </constraints>
