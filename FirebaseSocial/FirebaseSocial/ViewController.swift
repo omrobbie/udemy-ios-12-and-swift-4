@@ -20,11 +20,9 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        GIDSignIn.sharedInstance()?.presentingViewController = self
-
+        initGoogleButton()
         initFacebookButton()
 
-        customGoogleBtn.layer.cornerRadius = 5
         logoutBtn.layer.cornerRadius = 10
     }
 
@@ -37,6 +35,11 @@ class ViewController: UIViewController {
                 self.userInfoLbl.text = "Welcome user: \(currentUser?.displayName ?? "")"
             }
         }
+    }
+
+    func initGoogleButton() {
+        GIDSignIn.sharedInstance()?.presentingViewController = self
+        customGoogleBtn.layer.cornerRadius = 5
     }
 
     func initFacebookButton() {
