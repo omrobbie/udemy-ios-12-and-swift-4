@@ -104,6 +104,18 @@ class ViewController: UIViewController {
 extension ViewController: LoginButtonDelegate {
 
     func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
+        if let error = error {
+            debugPrint("Error signing in with Facebook: \(error.localizedDescription)")
+            return
+        }
+
+        guard let accessToken = result?.token?.tokenString else {
+            debugPrint("Error to get access token!")
+            return
+        }
+
+        let credential = FacebookAuthProvider.credential(withAccessToken: accessToken)
+        firebaseLogin(credential)
     }
 
     func loginButtonDidLogOut(_ loginButton: FBLoginButton) {
