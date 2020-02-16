@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     @IBOutlet var facebookLoginBtn: FBLoginButton!
     @IBOutlet weak var logoutBtn: UIButton!
 
+    var loginManager = LoginManager()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         initGoogleButton()
@@ -71,12 +73,13 @@ class ViewController: UIViewController {
         for info in user.providerData {
             switch info.providerID {
             case GoogleAuthProviderID:
-                GIDSignIn.sharedInstance()?.signOut()
                 print("Google")
+                GIDSignIn.sharedInstance()?.signOut()
             case TwitterAuthProviderID:
                 print("Twitter")
             case FacebookAuthProviderID:
                 print("Facebook")
+                loginManager.logOut()
             default:
                 break
             }
