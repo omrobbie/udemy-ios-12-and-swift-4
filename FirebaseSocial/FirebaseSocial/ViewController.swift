@@ -46,6 +46,7 @@ class ViewController: UIViewController {
 
     func initFacebookButton() {
         facebookLoginBtn.delegate = self
+        facebookLoginBtn.permissions = ["email"]
 
         for constraint in facebookLoginBtn.constraints where constraint.firstAttribute == .height {
             constraint.constant = 50
