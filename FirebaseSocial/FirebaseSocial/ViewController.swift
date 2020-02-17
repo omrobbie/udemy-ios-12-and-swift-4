@@ -17,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var userInfoLbl: UILabel!
     @IBOutlet weak var customGoogleBtn: UIButton!
     @IBOutlet var facebookLoginBtn: FBLoginButton!
+    @IBOutlet weak var twitterLoginButton: TWTRLogInButton!
     @IBOutlet weak var logoutBtn: UIButton!
 
     var loginManager = LoginManager()
@@ -25,7 +26,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         initGoogleButton()
         initFacebookButton()
-        initTwitterButton()
+//        twitter login button disabled because it using Interface Builder
+//        initTwitterButton()
 
         logoutBtn.layer.cornerRadius = 10
     }

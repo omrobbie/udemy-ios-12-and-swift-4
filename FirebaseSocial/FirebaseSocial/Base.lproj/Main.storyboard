@@ -79,6 +79,13 @@
                                     <action selector="customFacebookBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1eH-Hw-Mu4"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8fZ-3g-TeW" customClass="TWTRLogInButton">
+                                <rect key="frame" x="20" y="344" width="374" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="BpM-ul-dQJ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -88,14 +95,17 @@
                             <constraint firstItem="Ua1-1F-rO3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="50l-xu-tBT"/>
                             <constraint firstItem="jaY-n6-RAu" firstAttribute="top" secondItem="Ua1-1F-rO3" secondAttribute="bottom" constant="20" id="DpQ-qA-FCO"/>
                             <constraint firstItem="zMm-Vo-xBI" firstAttribute="top" secondItem="wcn-4X-xhS" secondAttribute="bottom" constant="20" id="FFW-Ne-IrO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8fZ-3g-TeW" secondAttribute="trailing" constant="20" id="Gh0-dd-d3V"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xfk-cI-TFn" secondAttribute="trailing" constant="20" id="M1E-Qd-UJ3"/>
                             <constraint firstItem="cD9-W8-Mim" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="NNH-uY-bkA"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jaY-n6-RAu" secondAttribute="trailing" constant="20" id="W24-0w-91y"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zMm-Vo-xBI" secondAttribute="trailing" constant="20" id="YCr-lT-oYz"/>
                             <constraint firstItem="jaY-n6-RAu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Zeb-k0-aU4"/>
+                            <constraint firstItem="8fZ-3g-TeW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="a61-Wg-S7m"/>
                             <constraint firstItem="wcn-4X-xhS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="euV-Oo-i7s"/>
                             <constraint firstItem="Ua1-1F-rO3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fJz-xu-peg"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cD9-W8-Mim" secondAttribute="trailing" constant="20" id="hFf-oI-gmh"/>
+                            <constraint firstItem="8fZ-3g-TeW" firstAttribute="top" secondItem="zMm-Vo-xBI" secondAttribute="bottom" constant="20" id="hoG-nm-t6v"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xfk-cI-TFn" secondAttribute="bottom" constant="20" id="jaA-vH-mrE"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ua1-1F-rO3" secondAttribute="trailing" constant="20" id="qkr-XR-Zpr"/>
                             <constraint firstItem="xfk-cI-TFn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tLc-9H-vJA"/>
@@ -107,6 +117,7 @@
                         <outlet property="customGoogleBtn" destination="jaY-n6-RAu" id="x7v-qE-2PI"/>
                         <outlet property="facebookLoginBtn" destination="wcn-4X-xhS" id="egB-Tg-jZD"/>
                         <outlet property="logoutBtn" destination="xfk-cI-TFn" id="e9W-Gb-TTl"/>
+                        <outlet property="twitterLoginButton" destination="8fZ-3g-TeW" id="UCy-cd-kzm"/>
                         <outlet property="userInfoLbl" destination="cD9-W8-Mim" id="Jgr-vF-yXw"/>
                     </connections>
                 </viewController>
