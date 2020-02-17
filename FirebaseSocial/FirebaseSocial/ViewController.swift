@@ -103,6 +103,9 @@ class ViewController: UIViewController {
                 GIDSignIn.sharedInstance()?.signOut()
             case TwitterAuthProviderID:
                 print("Twitter")
+                if let userId = TWTRTwitter.sharedInstance().sessionStore.session()?.userID {
+                TWTRTwitter.sharedInstance().sessionStore.logOutUserID(userId)
+                }
             case FacebookAuthProviderID:
                 print("Facebook")
                 loginManager.logOut()
