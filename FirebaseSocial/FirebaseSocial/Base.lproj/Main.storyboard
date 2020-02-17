@@ -130,6 +130,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="customFacebookBtn" destination="zMm-Vo-xBI" id="sd5-YS-BAo"/>
                         <outlet property="customGoogleBtn" destination="jaY-n6-RAu" id="x7v-qE-2PI"/>
                         <outlet property="customTwitterBtn" destination="gvK-Xe-Uid" id="D1H-Sr-4MA"/>
                         <outlet property="facebookLoginBtn" destination="wcn-4X-xhS" id="egB-Tg-jZD"/>

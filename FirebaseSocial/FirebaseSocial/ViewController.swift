@@ -16,7 +16,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var userInfoLbl: UILabel!
     @IBOutlet weak var customGoogleBtn: UIButton!
-    @IBOutlet var facebookLoginBtn: FBLoginButton!
+    @IBOutlet weak var facebookLoginBtn: FBLoginButton!
+    @IBOutlet weak var customFacebookBtn: UIButton!
     @IBOutlet weak var twitterLoginButton: TWTRLogInButton!
     @IBOutlet weak var customTwitterBtn: UIButton!
     @IBOutlet weak var logoutBtn: UIButton!
@@ -30,6 +31,8 @@ class ViewController: UIViewController {
 //        twitter login button disabled because it using Interface Builder
 //        initTwitterButton()
 
+        customGoogleBtn.layer.cornerRadius = 5
+        customFacebookBtn.layer.cornerRadius = 5
         customTwitterBtn.layer.cornerRadius = 5
         logoutBtn.layer.cornerRadius = 10
     }
@@ -47,7 +50,6 @@ class ViewController: UIViewController {
 
     func initGoogleButton() {
         GIDSignIn.sharedInstance()?.presentingViewController = self
-        customGoogleBtn.layer.cornerRadius = 5
     }
 
     func initFacebookButton() {
