@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import GoogleSignIn
 import FBSDKCoreKit
+import TwitterKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
@@ -19,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
         initGoogle()
         initFacebook(application, launchOptions)
+        initTwitter()
 
         return true
     }
@@ -30,8 +32,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
         guard let google = GIDSignIn.sharedInstance()?.handle(url) else {return false}
         let facebook = ApplicationDelegate.shared.application(app, open: url, options: options)
+        let twitter = TWTRTwitter.sharedInstance().application(app, open: url, options:     options)
 
-        return google || facebook
+        return google || facebook || twitter
     }
 
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
@@ -54,5 +57,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
 
     func initFacebook(_ application: UIApplication, _ launchOptions: [UIApplication.LaunchOptionsKey: Any]?) {
         ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+    }
+
+    func initTwitter() {
+        let key = Bundle.main.object(forInfoDictionaryKey: "twitterKey")
+        let secret = Bundle.main.object(forInfoDictionaryKey: "twitterSecret")
+
+        if let key = key as? String, let secret = secret as? String {
+            TWTRTwitter.sharedInstance().start(withConsumerKey: key, consumerSecret: secret)
+        }
     }
 }

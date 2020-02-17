@@ -38,7 +38,22 @@
 				<string>com.googleusercontent.apps.791210871810-qetptb9kge73d9bvl7rau9trjdmg9nrk</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>twitter</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>twitterkit-gvbI6GrjMWQu2JOkjJcDL3um3</string>
+			</array>
+		</dict>
 	</array>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>twitter</string>
+        <string>twitterauth</string>
+    </array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>FacebookAppID</key>
@@ -85,5 +100,9 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>twitterKey</key>
+	<string>gvbI6GrjMWQu2JOkjJcDL3um3</string>
+	<key>twitterSecret</key>
+	<string>VIHV8DsPcDCdKgNyoWWOaGqpUV7CzNMIUWL5lnKtefJiCYYyi3</string>
 </dict>
 </plist>
