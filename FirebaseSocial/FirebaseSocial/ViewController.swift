@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import GoogleSignIn
 import FBSDKLoginKit
+import TwitterKit
 
 class ViewController: UIViewController {
 
@@ -24,6 +25,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         initGoogleButton()
         initFacebookButton()
+        initTwitterButton()
 
         logoutBtn.layer.cornerRadius = 10
     }
@@ -57,6 +59,23 @@ class ViewController: UIViewController {
 //        fbLoginButton.delegate = self
 //        fbLoginButton.frame = facebookLoginBtn.frame
 //        view.addSubview(fbLoginButton)
+    }
+
+    func initTwitterButton() {
+        let twitterButton = TWTRLogInButton { (session, error) in
+            if let error = error {
+                debugPrint("Error signing in with Twitter: \(error.localizedDescription)")
+                return
+            }
+
+            guard let session = session else {return}
+            let credential = TwitterAuthProvider.credential(withToken: session.authTokenSecret, secret: session.authTokenSecret)
+
+            self.firebaseLogin(credential)
+        }
+
+        twitterButton.center = view.center
+        view.addSubview(twitterButton)
     }
 
     func firebaseLogin(_ credential: AuthCredential) {
