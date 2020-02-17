@@ -86,13 +86,29 @@
                                     <constraint firstAttribute="height" constant="50" id="BpM-ul-dQJ"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvK-Xe-Uid">
+                                <rect key="frame" x="20" y="414" width="374" height="50"/>
+                                <color key="backgroundColor" red="0.24313725490196078" green="0.63137254901960782" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Yoe-hQ-0zE"/>
+                                </constraints>
+                                <state key="normal" title="Twitter Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="customTwitterBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J8u-lr-DvB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="gvK-Xe-Uid" firstAttribute="top" secondItem="8fZ-3g-TeW" secondAttribute="bottom" constant="20" id="2Xc-Yk-azS"/>
                             <constraint firstItem="wcn-4X-xhS" firstAttribute="top" secondItem="jaY-n6-RAu" secondAttribute="bottom" constant="20" id="2eD-Y0-3qY"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wcn-4X-xhS" secondAttribute="trailing" constant="20" id="2gl-am-TcT"/>
+                            <constraint firstItem="gvK-Xe-Uid" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="42J-D3-BzR"/>
                             <constraint firstItem="xfk-cI-TFn" firstAttribute="top" secondItem="cD9-W8-Mim" secondAttribute="bottom" constant="8" id="4M0-kH-sJw"/>
                             <constraint firstItem="Ua1-1F-rO3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="50l-xu-tBT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gvK-Xe-Uid" secondAttribute="trailing" constant="20" id="5o6-Jy-DY9"/>
                             <constraint firstItem="jaY-n6-RAu" firstAttribute="top" secondItem="Ua1-1F-rO3" secondAttribute="bottom" constant="20" id="DpQ-qA-FCO"/>
                             <constraint firstItem="zMm-Vo-xBI" firstAttribute="top" secondItem="wcn-4X-xhS" secondAttribute="bottom" constant="20" id="FFW-Ne-IrO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8fZ-3g-TeW" secondAttribute="trailing" constant="20" id="Gh0-dd-d3V"/>
@@ -115,6 +131,7 @@
                     </view>
                     <connections>
                         <outlet property="customGoogleBtn" destination="jaY-n6-RAu" id="x7v-qE-2PI"/>
+                        <outlet property="customTwitterBtn" destination="gvK-Xe-Uid" id="D1H-Sr-4MA"/>
                         <outlet property="facebookLoginBtn" destination="wcn-4X-xhS" id="egB-Tg-jZD"/>
                         <outlet property="logoutBtn" destination="xfk-cI-TFn" id="e9W-Gb-TTl"/>
                         <outlet property="twitterLoginButton" destination="8fZ-3g-TeW" id="UCy-cd-kzm"/>

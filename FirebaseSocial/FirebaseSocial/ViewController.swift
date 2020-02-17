@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var customGoogleBtn: UIButton!
     @IBOutlet var facebookLoginBtn: FBLoginButton!
     @IBOutlet weak var twitterLoginButton: TWTRLogInButton!
+    @IBOutlet weak var customTwitterBtn: UIButton!
     @IBOutlet weak var logoutBtn: UIButton!
 
     var loginManager = LoginManager()
@@ -29,6 +30,7 @@ class ViewController: UIViewController {
 //        twitter login button disabled because it using Interface Builder
 //        initTwitterButton()
 
+        customTwitterBtn.layer.cornerRadius = 5
         logoutBtn.layer.cornerRadius = 10
     }
 
@@ -134,6 +136,20 @@ class ViewController: UIViewController {
             }
 
             let credential = FacebookAuthProvider.credential(withAccessToken: accessToken)
+            self.firebaseLogin(credential)
+        }
+    }
+
+    @IBAction func customTwitterBtnTapped(_ sender: Any) {
+        TWTRTwitter.sharedInstance().logIn { (session, error) in
+            if let error = error {
+                debugPrint("Error signing in with Twitter: \(error.localizedDescription)")
+                return
+            }
+
+            guard let session = session else {return}
+            let credential = TwitterAuthProvider.credential(withToken: session.authTokenSecret, secret: session.authTokenSecret)
+
             self.firebaseLogin(credential)
         }
     }
