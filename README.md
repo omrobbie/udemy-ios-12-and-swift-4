@@ -74,3 +74,10 @@ Learn about firestore, database security rules, query snapshot, transaction, bat
 <img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/RNDM/screenshot/preview3.png" width=256/>&nbsp;
 <img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/RNDM/screenshot/preview4.png" width=256/>&nbsp;
 <img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/RNDM/screenshot/preview5.png" width=256/>&nbsp;
+<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/RNDM/screenshot/preview6.png" width=256/>&nbsp;
+
+### 14. Firebase Social
+Learn about firebase login for Google, Facebook, and Twitter<br>
+<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/FirebaseSocial/screenshot/preview1.png" width=256/>&nbsp;
+<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/FirebaseSocial/screenshot/preview2.png" width=256/>&nbsp;
+<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/FirebaseSocial/screenshot/preview3.png" width=256/>&nbsp;
