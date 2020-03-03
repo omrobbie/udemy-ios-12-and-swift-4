@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FCE60FFF240E2231005DE0D1 /* FoodZilla.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodZilla.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCE60FFF240E2231005DE0D1 /* FoodZilla Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FoodZilla Store.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCE61002240E2231005DE0D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCE61004240E2231005DE0D1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FCE61006240E2231005DE0D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		FCE61000240E2231005DE0D1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FCE60FFF240E2231005DE0D1 /* FoodZilla.app */,
+				FCE60FFF240E2231005DE0D1 /* FoodZilla Store.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,7 +84,7 @@
 			);
 			name = FoodZilla;
 			productName = FoodZilla;
-			productReference = FCE60FFF240E2231005DE0D1 /* FoodZilla.app */;
+			productReference = FCE60FFF240E2231005DE0D1 /* FoodZilla Store.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -285,13 +285,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3SMXMP42NY;
 				INFOPLIST_FILE = FoodZilla/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.omrobbie.FoodZilla;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "FoodZilla Store";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -302,13 +303,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3SMXMP42NY;
 				INFOPLIST_FILE = FoodZilla/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.omrobbie.FoodZilla;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "FoodZilla Store";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
