@@ -17,6 +17,8 @@
 		FCE61019240E48E0005DE0D1 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE61018240E48E0005DE0D1 /* DetailVC.swift */; };
 		FCE6101E240E4B9F005DE0D1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE6101D240E4B9F005DE0D1 /* Item.swift */; };
 		FCE61021240E4C29005DE0D1 /* FoodItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE61020240E4C29005DE0D1 /* FoodItems.swift */; };
+		FCE61024240E57E7005DE0D1 /* IAPServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE61023240E57E7005DE0D1 /* IAPServices.swift */; };
+		FCE61026240E58AA005DE0D1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE61025240E58AA005DE0D1 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		FCE61018240E48E0005DE0D1 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 		FCE6101D240E4B9F005DE0D1 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		FCE61020240E4C29005DE0D1 /* FoodItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItems.swift; sourceTree = "<group>"; };
+		FCE61023240E57E7005DE0D1 /* IAPServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPServices.swift; sourceTree = "<group>"; };
+		FCE61025240E58AA005DE0D1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +54,7 @@
 			children = (
 				FCE61001240E2231005DE0D1 /* FoodZilla */,
 				FCE61000240E2231005DE0D1 /* Products */,
+				FCE61027240E5C99005DE0D1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +69,7 @@
 		FCE61001240E2231005DE0D1 /* FoodZilla */ = {
 			isa = PBXGroup;
 			children = (
+				FCE61022240E57D1005DE0D1 /* Services */,
 				FCE6101F240E4C0C005DE0D1 /* Helpers */,
 				FCE6101C240E4B19005DE0D1 /* View */,
 				FCE6101B240E4B13005DE0D1 /* Model */,
@@ -107,8 +113,24 @@
 			isa = PBXGroup;
 			children = (
 				FCE61020240E4C29005DE0D1 /* FoodItems.swift */,
+				FCE61025240E58AA005DE0D1 /* Constants.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		FCE61022240E57D1005DE0D1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FCE61023240E57E7005DE0D1 /* IAPServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FCE61027240E5C99005DE0D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -184,11 +206,13 @@
 			files = (
 				FCE61019240E48E0005DE0D1 /* DetailVC.swift in Sources */,
 				FCE61017240E4426005DE0D1 /* ItemCell.swift in Sources */,
+				FCE61024240E57E7005DE0D1 /* IAPServices.swift in Sources */,
 				FCE61007240E2231005DE0D1 /* StorefrontVC.swift in Sources */,
 				FCE61003240E2231005DE0D1 /* AppDelegate.swift in Sources */,
 				FCE6101E240E4B9F005DE0D1 /* Item.swift in Sources */,
 				FCE61021240E4C29005DE0D1 /* FoodItems.swift in Sources */,
 				FCE61005240E2231005DE0D1 /* SceneDelegate.swift in Sources */,
+				FCE61026240E58AA005DE0D1 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

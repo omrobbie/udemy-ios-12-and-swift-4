@@ -15,11 +15,17 @@ class StorefrontVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        iapLoadProducts()
     }
 
     func setupUI() {
         collectionView.delegate = self
         collectionView.dataSource = self
+    }
+
+    func iapLoadProducts() {
+        IAPService.instance.delegate = self
+        IAPService.instance.loadProducts()
     }
 
     @IBAction func restoreBtnWasTapped(_ sender: Any) {
@@ -44,5 +50,12 @@ extension StorefrontVC: UICollectionViewDelegate, UICollectionViewDataSource {
         vc.modalPresentationStyle = .fullScreen
         vc.initData(forItem: foodItems[indexPath.row])
         present(vc, animated: true, completion: nil)
+    }
+}
+
+extension StorefrontVC: IAPServiceDelegate {
+
+    func iapProductsLoaded() {
+        print("IAP Products Loaded!")
     }
 }
