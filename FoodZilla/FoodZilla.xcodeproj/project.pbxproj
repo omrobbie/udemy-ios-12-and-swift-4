@@ -60,17 +60,41 @@
 		FCE61001240E2231005DE0D1 /* FoodZilla */ = {
 			isa = PBXGroup;
 			children = (
+				FCE6101C240E4B19005DE0D1 /* View */,
+				FCE6101B240E4B13005DE0D1 /* Model */,
+				FCE6101A240E4B0B005DE0D1 /* Controller */,
 				FCE61002240E2231005DE0D1 /* AppDelegate.swift */,
 				FCE61004240E2231005DE0D1 /* SceneDelegate.swift */,
-				FCE61006240E2231005DE0D1 /* StorefrontVC.swift */,
-				FCE61016240E4426005DE0D1 /* ItemCell.swift */,
-				FCE61008240E2231005DE0D1 /* Main.storyboard */,
-				FCE61018240E48E0005DE0D1 /* DetailVC.swift */,
 				FCE6100B240E2233005DE0D1 /* Assets.xcassets */,
-				FCE6100D240E2233005DE0D1 /* LaunchScreen.storyboard */,
 				FCE61010240E2233005DE0D1 /* Info.plist */,
 			);
 			path = FoodZilla;
+			sourceTree = "<group>";
+		};
+		FCE6101A240E4B0B005DE0D1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FCE61006240E2231005DE0D1 /* StorefrontVC.swift */,
+				FCE61018240E48E0005DE0D1 /* DetailVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FCE6101B240E4B13005DE0D1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FCE6101C240E4B19005DE0D1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FCE6100D240E2233005DE0D1 /* LaunchScreen.storyboard */,
+				FCE61008240E2231005DE0D1 /* Main.storyboard */,
+				FCE61016240E4426005DE0D1 /* ItemCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
