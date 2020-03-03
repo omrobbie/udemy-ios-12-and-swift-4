@@ -14,6 +14,7 @@
 		FCE6100C240E2233005DE0D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCE6100B240E2233005DE0D1 /* Assets.xcassets */; };
 		FCE6100F240E2233005DE0D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCE6100D240E2233005DE0D1 /* LaunchScreen.storyboard */; };
 		FCE61017240E4426005DE0D1 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE61016240E4426005DE0D1 /* ItemCell.swift */; };
+		FCE61019240E48E0005DE0D1 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE61018240E48E0005DE0D1 /* DetailVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		FCE6100E240E2233005DE0D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCE61010240E2233005DE0D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCE61016240E4426005DE0D1 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		FCE61018240E48E0005DE0D1 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				FCE61006240E2231005DE0D1 /* StorefrontVC.swift */,
 				FCE61016240E4426005DE0D1 /* ItemCell.swift */,
 				FCE61008240E2231005DE0D1 /* Main.storyboard */,
+				FCE61018240E48E0005DE0D1 /* DetailVC.swift */,
 				FCE6100B240E2233005DE0D1 /* Assets.xcassets */,
 				FCE6100D240E2233005DE0D1 /* LaunchScreen.storyboard */,
 				FCE61010240E2233005DE0D1 /* Info.plist */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCE61019240E48E0005DE0D1 /* DetailVC.swift in Sources */,
 				FCE61017240E4426005DE0D1 /* ItemCell.swift in Sources */,
 				FCE61007240E2231005DE0D1 /* StorefrontVC.swift in Sources */,
 				FCE61003240E2231005DE0D1 /* AppDelegate.swift in Sources */,
