@@ -17,8 +17,18 @@ class DetailVC: UIViewController {
     @IBOutlet weak var btnBuyItem: UIButton!
     @IBOutlet weak var btnHideAds: UIButton!
 
+    private(set) var item: Item!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        itemImage.image = item.image
+        itemName.text = item.name
+        itemPrice.text = String(describing: item.price)
+        btnBuyItem.setTitle("Buy this item for $\(item.price)", for: .normal)
+    }
+
+    func initData(forItem item: Item) {
+        self.item = item
     }
 
     @IBAction func btnBuyItemWasTapped(_ sender: Any) {

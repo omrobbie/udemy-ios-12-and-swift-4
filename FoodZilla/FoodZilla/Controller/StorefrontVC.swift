@@ -38,4 +38,11 @@ extension StorefrontVC: UICollectionViewDelegate, UICollectionViewDataSource {
 
         return cell
     }
+
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let vc = storyboard?.instantiateViewController(withIdentifier: "DetailVC") as? DetailVC else {return}
+        vc.modalPresentationStyle = .fullScreen
+        vc.initData(forItem: foodItems[indexPath.row])
+        present(vc, animated: true, completion: nil)
+    }
 }
