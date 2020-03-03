@@ -9,4 +9,13 @@
 import UIKit
 
 class ItemCell: UICollectionViewCell {
+    @IBOutlet weak var itemImage: UIImageView!
+    @IBOutlet weak var itemName: UILabel!
+    @IBOutlet weak var itemPrice: UILabel!
+
+    func setupCell(forItem item: Item) {
+        itemImage.image = item.image
+        itemName.text = item.name
+        itemPrice.text = String(describing: item.price)
+    }
 }

@@ -63,6 +63,11 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="133" height="181"/>
+                                        <connections>
+                                            <outlet property="itemImage" destination="jVo-Vh-skJ" id="3wn-cB-SXZ"/>
+                                            <outlet property="itemName" destination="W8d-Sh-WUQ" id="ycc-fE-rhz"/>
+                                            <outlet property="itemPrice" destination="vXW-wQ-PWG" id="ddZ-qn-uHY"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>

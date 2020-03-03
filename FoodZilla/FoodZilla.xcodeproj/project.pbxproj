@@ -15,6 +15,8 @@
 		FCE6100F240E2233005DE0D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCE6100D240E2233005DE0D1 /* LaunchScreen.storyboard */; };
 		FCE61017240E4426005DE0D1 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE61016240E4426005DE0D1 /* ItemCell.swift */; };
 		FCE61019240E48E0005DE0D1 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE61018240E48E0005DE0D1 /* DetailVC.swift */; };
+		FCE6101E240E4B9F005DE0D1 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE6101D240E4B9F005DE0D1 /* Item.swift */; };
+		FCE61021240E4C29005DE0D1 /* FoodItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE61020240E4C29005DE0D1 /* FoodItems.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		FCE61010240E2233005DE0D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCE61016240E4426005DE0D1 /* ItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		FCE61018240E48E0005DE0D1 /* DetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
+		FCE6101D240E4B9F005DE0D1 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		FCE61020240E4C29005DE0D1 /* FoodItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodItems.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 		FCE61001240E2231005DE0D1 /* FoodZilla */ = {
 			isa = PBXGroup;
 			children = (
+				FCE6101F240E4C0C005DE0D1 /* Helpers */,
 				FCE6101C240E4B19005DE0D1 /* View */,
 				FCE6101B240E4B13005DE0D1 /* Model */,
 				FCE6101A240E4B0B005DE0D1 /* Controller */,
@@ -83,6 +88,7 @@
 		FCE6101B240E4B13005DE0D1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FCE6101D240E4B9F005DE0D1 /* Item.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -95,6 +101,14 @@
 				FCE61016240E4426005DE0D1 /* ItemCell.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		FCE6101F240E4C0C005DE0D1 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FCE61020240E4C29005DE0D1 /* FoodItems.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +186,8 @@
 				FCE61017240E4426005DE0D1 /* ItemCell.swift in Sources */,
 				FCE61007240E2231005DE0D1 /* StorefrontVC.swift in Sources */,
 				FCE61003240E2231005DE0D1 /* AppDelegate.swift in Sources */,
+				FCE6101E240E4B9F005DE0D1 /* Item.swift in Sources */,
+				FCE61021240E4C29005DE0D1 /* FoodItems.swift in Sources */,
 				FCE61005240E2231005DE0D1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
