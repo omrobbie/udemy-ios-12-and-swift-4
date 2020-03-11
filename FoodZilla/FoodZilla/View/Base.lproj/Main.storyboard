@@ -20,30 +20,30 @@
                                 <rect key="frame" x="20" y="114" width="374" height="748"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5jf-9Y-dNX">
-                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="itemSize" width="176" height="192"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ItemCell" id="9Xl-ck-Dcp" customClass="ItemCell" customModule="FoodZilla_Store" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="133" height="181"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="176" height="192"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="lnP-De-hjB">
-                                            <rect key="frame" x="0.0" y="0.0" width="133" height="181"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="176" height="192"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="food1" translatesAutoresizingMaskIntoConstraints="NO" id="jVo-Vh-skJ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="133" height="181"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="176" height="192"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8d-Sh-WUQ">
-                                                    <rect key="frame" x="8" y="8" width="117" height="24"/>
+                                                    <rect key="frame" x="8" y="8" width="160" height="24"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vXW-wQ-PWG">
-                                                    <rect key="frame" x="8" y="32" width="117" height="20"/>
+                                                    <rect key="frame" x="8" y="32" width="160" height="20"/>
                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -62,7 +62,7 @@
                                                 <constraint firstItem="jVo-Vh-skJ" firstAttribute="leading" secondItem="lnP-De-hjB" secondAttribute="leading" id="yrU-U7-vVr"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="133" height="181"/>
+                                        <size key="customSize" width="176" height="192"/>
                                         <connections>
                                             <outlet property="itemImage" destination="jVo-Vh-skJ" id="3wn-cB-SXZ"/>
                                             <outlet property="itemName" destination="W8d-Sh-WUQ" id="ycc-fE-rhz"/>
