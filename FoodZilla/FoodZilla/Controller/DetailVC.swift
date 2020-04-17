@@ -25,10 +25,33 @@ class DetailVC: UIViewController {
         itemName.text = item.name
         itemPrice.text = String(describing: item.price)
         btnBuyItem.setTitle("Buy this item for $\(item.price)", for: .normal)
+
+        NotificationCenter.default.addObserver(self, selector: #selector(handlePurchase(_:)), name: NSNotification.Name(IAPServicenPurchaseNotification), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(handleFailure), name: NSNotification.Name(IAPServiceFailureNotification), object: nil)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self)
     }
 
     func initData(forItem item: Item) {
         self.item = item
+    }
+
+    @objc func handlePurchase(_ notification: Notification) {
+        guard let productID = notification.object as? String else {return}
+
+        switch productID {
+        case IAP_MEAL_ID:
+            debugPrint("Meal successfully purchased.")
+        case IAP_HIDE_ADS_ID: break
+        default: break
+        }
+    }
+
+    @objc func handleFailure() {
+        debugPrint("Purchase failed!")
     }
 
     @IBAction func btnBuyItemWasTapped(_ sender: Any) {
