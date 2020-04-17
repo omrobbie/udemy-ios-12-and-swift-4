@@ -44,6 +44,7 @@ class DetailVC: UIViewController {
 
         switch productID {
         case IAP_MEAL_ID:
+            btnBuyItem.isEnabled = true
             debugPrint("Meal successfully purchased.")
         case IAP_HIDE_ADS_ID: break
         default: break
@@ -51,10 +52,12 @@ class DetailVC: UIViewController {
     }
 
     @objc func handleFailure() {
+        btnBuyItem.isEnabled = true
         debugPrint("Purchase failed!")
     }
 
     @IBAction func btnBuyItemWasTapped(_ sender: Any) {
+        btnBuyItem.isEnabled = false
         IAPService.instance.attemptPurchaseForItemWith(productIndex: .meal)
     }
 
