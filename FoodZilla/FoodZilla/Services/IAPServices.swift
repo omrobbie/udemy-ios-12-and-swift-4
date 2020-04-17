@@ -34,6 +34,7 @@ class IAPService: NSObject {
     }
 
     func productIdToStringSet() {
+        productIds.insert(IAP_HIDE_ADS_ID)
         productIds.insert(IAP_MEAL_ID)
     }
 

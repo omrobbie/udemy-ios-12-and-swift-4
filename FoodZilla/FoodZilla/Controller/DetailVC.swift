@@ -62,6 +62,7 @@ class DetailVC: UIViewController {
     }
 
     @IBAction func btnHideAdsWasTapped(_ sender: Any) {
+        IAPService.instance.attemptPurchaseForItemWith(productIndex: .hideAds)
     }
 
     @IBAction func btnCloseWasTapped(_ sender: Any) {
