@@ -23,6 +23,11 @@ class IAPService: NSObject {
     var productIds = Set<String>()
     var productRequest = SKProductsRequest()
 
+    override init() {
+        super.init()
+        SKPaymentQueue.default().add(self)
+    }
+
     func loadProducts() {
         productIdToStringSet()
         requestProducts(forIds: productIds)
@@ -38,6 +43,17 @@ class IAPService: NSObject {
         productRequest.delegate = self
         productRequest.start()
     }
+
+    func attemptPurchaseForItemWith(productIndex: Product) {
+        if products.count == 0 {
+            debugPrint("There is no products available to purchase!")
+            return
+        }
+
+        let product = products[productIndex.rawValue]
+        let payment = SKPayment(product: product)
+        SKPaymentQueue.default().add(payment)
+    }
 }
 
 extension IAPService: SKProductsRequestDelegate {
@@ -51,5 +67,23 @@ extension IAPService: SKProductsRequestDelegate {
         }
 
         delegate?.iapProductsLoaded()
+    }
+}
+
+extension IAPService: SKPaymentTransactionObserver {
+
+    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+        for transaction in transactions {
+            switch transaction.transactionState {
+            case .purchased:
+                SKPaymentQueue.default().finishTransaction(transaction)
+                debugPrint("Purchase was successful!")
+            case .restored: break
+            case .failed: break
+            case .deferred: break
+            case .purchasing: break
+            default: break
+            }
+        }
     }
 }
