@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import LocalAuthentication
 
 class NoteVC: UIViewController {
 
@@ -19,6 +20,38 @@ class NoteVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
+    }
+
+    func authenticationBiometrics(completion: @escaping (Bool) -> ()) {
+        let context = LAContext()
+        let localizedReasonString = "Our app users Touch ID / Face ID to secure your notes."
+        var authError: NSError?
+
+        if #available(iOS 8.0, macCatalyst 10.12.1, *) {
+            if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &authError) {
+                context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: localizedReasonString) { (success, error) in
+                    if success {
+                        completion(true)
+                    } else {
+                        guard let evaluateErrorString = error?.localizedDescription else {return}
+                        self.showAlert(withMessage: evaluateErrorString)
+                        completion(false)
+                    }
+                }
+            } else {
+                guard let authErrorString = authError?.localizedDescription else {return}
+                showAlert(withMessage: authErrorString)
+            }
+        } else {
+            completion(false)
+        }
+    }
+
+    func showAlert(withMessage message: String) {
+        let alertVC = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        let actionOk = UIAlertAction(title: "Ok", style: .default)
+        alertVC.addAction(actionOk)
+        present(alertVC, animated: true)
     }
 }
 
