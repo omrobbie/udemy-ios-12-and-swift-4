@@ -28,4 +28,12 @@ extension NoteVC: UITableViewDelegate, UITableViewDataSource {
         cell.parse(data: notesArray[indexPath.row])
         return cell
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = storyboard?.instantiateViewController(identifier: "NoteDetailVC") as! NoteDetailVC
+        vc.modalPresentationStyle = .fullScreen
+        vc.note = notesArray[indexPath.row]
+        vc.index = indexPath.row
+        navigationController?.pushViewController(vc, animated: true)
+    }
 }
