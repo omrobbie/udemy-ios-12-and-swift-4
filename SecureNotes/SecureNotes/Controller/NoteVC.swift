@@ -68,6 +68,24 @@ extension NoteVC: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = notesArray[indexPath.row]
+
+        switch item.lockStatus {
+        case .locked:
+            authenticationBiometrics { (authenticated) in
+                if authenticated {
+                    notesArray[indexPath.row].lockStatus = lockStatusFlipper(item.lockStatus)
+                    DispatchQueue.main.async {
+                        self.pushToDetailFor(indexPath: indexPath)
+                    }
+                }
+            }
+        case .unlocked:
+            pushToDetailFor(indexPath: indexPath)
+        }
+    }
+
+    func pushToDetailFor(indexPath: IndexPath) {
         let vc = storyboard?.instantiateViewController(identifier: "NoteDetailVC") as! NoteDetailVC
         vc.modalPresentationStyle = .fullScreen
         vc.note = notesArray[indexPath.row]
