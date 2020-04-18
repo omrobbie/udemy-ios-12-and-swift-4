@@ -126,6 +126,7 @@
                         <viewLayoutGuide key="safeArea" id="2WW-1u-hjR"/>
                     </view>
                     <connections>
+                        <outlet property="btnLock" destination="7yh-uM-oRT" id="zlL-tW-NgP"/>
                         <outlet property="txtNote" destination="UaG-3a-tp3" id="y2Z-Wk-ogm"/>
                     </connections>
                 </viewController>

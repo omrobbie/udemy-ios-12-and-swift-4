@@ -15,6 +15,11 @@ class NoteVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+    }
 }
 
 extension NoteVC: UITableViewDelegate, UITableViewDataSource {

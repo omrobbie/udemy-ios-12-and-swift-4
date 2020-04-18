@@ -11,6 +11,7 @@ import UIKit
 class NoteDetailVC: UIViewController {
 
     @IBOutlet weak var txtNote: UITextView!
+    @IBOutlet weak var btnLock: UIButton!
 
     var note: Note!
     var index: Int!
@@ -18,10 +19,14 @@ class NoteDetailVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         txtNote.text = note.message
+
+        if isNoteLocked(note.lockStatus) {
+            btnLock.setTitle("UNLOCK NOTE", for: .normal)
+        }
     }
 
     @IBAction func btnLockTapped(_ sender: Any) {
-        notesArray[index].lockStatus = .locked
+        notesArray[index].lockStatus = lockStatusFlipper(note.lockStatus)
         navigationController?.popViewController(animated: true)
     }
 }

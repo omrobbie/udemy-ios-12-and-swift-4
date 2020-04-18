@@ -18,6 +18,7 @@
 		FC986236244BB51800D09B9A /* NoteObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC986235244BB51800D09B9A /* NoteObjects.swift */; };
 		FC986238244BB76F00D09B9A /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC986237244BB76F00D09B9A /* NoteCell.swift */; };
 		FC98623A244BBC1F00D09B9A /* NoteDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC986239244BBC1F00D09B9A /* NoteDetailVC.swift */; };
+		FC98623C244BBEE700D09B9A /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC98623B244BBEE700D09B9A /* Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		FC986235244BB51800D09B9A /* NoteObjects.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteObjects.swift; sourceTree = "<group>"; };
 		FC986237244BB76F00D09B9A /* NoteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 		FC986239244BBC1F00D09B9A /* NoteDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteDetailVC.swift; sourceTree = "<group>"; };
+		FC98623B244BBEE700D09B9A /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				FC986235244BB51800D09B9A /* NoteObjects.swift */,
+				FC98623B244BBEE700D09B9A /* Helpers.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				FC98621D244BB1FA00D09B9A /* NoteVC.swift in Sources */,
 				FC986219244BB1FA00D09B9A /* AppDelegate.swift in Sources */,
 				FC986234244BB4CA00D09B9A /* LockStatus.swift in Sources */,
+				FC98623C244BBEE700D09B9A /* Helpers.swift in Sources */,
 				FC98621B244BB1FA00D09B9A /* SceneDelegate.swift in Sources */,
 				FC986238244BB76F00D09B9A /* NoteCell.swift in Sources */,
 				FC986232244BB49200D09B9A /* Note.swift in Sources */,
