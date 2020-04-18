@@ -62,6 +62,45 @@ class IAPService: NSObject {
     func restorePurcases() {
         SKPaymentQueue.default().restoreCompletedTransactions()
     }
+
+    func uploadReceipt(completion: @escaping (Bool) -> ()) {
+        guard let receiptUrl = Bundle.main.appStoreReceiptURL,
+            let receipt = try? Data(contentsOf: receiptUrl).base64EncodedString()
+            else {
+                debugPrint("No receipt url")
+                completion(false)
+                return
+        }
+
+        let body = [
+            "receipt-data": receipt,
+            "password": appSecret
+        ]
+
+        let bodyData = try! JSONSerialization.data(withJSONObject: body, options: [])
+
+        let url = URL(string: "https://sandbox.itunes.apple.com/verifyReceipt")!
+
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        request.httpBody = bodyData
+
+        let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
+            if let error = error {
+                debugPrint("Error: \(error.localizedDescription)")
+                completion(false)
+                return
+            }
+
+            guard let data = data else {return}
+
+            let json = try! JSONSerialization.jsonObject(with: data, options: [])
+            print(json)
+            completion(true)
+        }
+
+        task.resume()
+    }
 }
 
 extension IAPService: SKProductsRequestDelegate {
@@ -113,6 +152,13 @@ extension IAPService: SKPaymentTransactionObserver {
         case IAP_HIDE_ADS_ID:
             setNonConsumablePurchase(true)
         case IAP_MEAL_MONTHLY:
+            uploadReceipt { (valid) in
+                if valid {
+                    debugPrint("Subscription is valid.")
+                } else {
+                    debugPrint("You don't have subscription purchased!")
+                }
+            }
             sendNotificationFor(status: .subsribed, withIdentifier: transaction.payment.productIdentifier, orBoolean: true)
             setNonConsumablePurchase(true)
         default: break
