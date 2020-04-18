@@ -12,4 +12,5 @@ enum Product: Int {
 
     case hideAds = 0
     case meal = 1
+    case mealMonthly = 2
 }

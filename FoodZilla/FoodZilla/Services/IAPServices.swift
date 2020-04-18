@@ -38,6 +38,7 @@ class IAPService: NSObject {
     func productIdToStringSet() {
         productIds.insert(IAP_HIDE_ADS_ID)
         productIds.insert(IAP_MEAL_ID)
+        productIds.insert(IAP_MEAL_MONTHLY)
     }
 
     func requestProducts(forIds ids: Set<String>) {
@@ -87,10 +88,13 @@ extension IAPService: SKPaymentTransactionObserver {
                 complete(transaction: transaction)
                 sendNotificationFor(status: .purchased, withIdentifier: transaction.payment.productIdentifier)
                 debugPrint("Purchase was successful!")
-            case .restored: break
+            case .restored:
+                SKPaymentQueue.default().finishTransaction(transaction)
+                debugPrint("Purchases was restored!")
             case .failed:
                 SKPaymentQueue.default().finishTransaction(transaction)
                 sendNotificationFor(status: .failed, withIdentifier: nil)
+                debugPrint("Purchase was failed!")
             case .deferred: break
             case .purchasing: break
             default: break

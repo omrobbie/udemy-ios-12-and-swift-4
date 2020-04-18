@@ -38,6 +38,10 @@ class StorefrontVC: UIViewController {
         present(alertVC, animated: true)
     }
 
+    @IBAction func subscribeBtnWasTapped(_ sender: Any) {
+        IAPService.instance.attemptPurchaseForItemWith(productIndex: .mealMonthly)
+    }
+
     @IBAction func restoreBtnWasTapped(_ sender: Any) {
         let alertVC = UIAlertController(title: "Restore Purchases?", message: "Do you want to restore any in-app purchases you've previously purchased?", preferredStyle: .actionSheet)
         let actionCancel = UIAlertAction(title: "Cancel", style: .cancel)
