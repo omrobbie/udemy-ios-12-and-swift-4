@@ -20,11 +20,12 @@ class NoteVC: UIViewController {
 extension NoteVC: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return notesArray.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! NoteCell
+        cell.parse(data: notesArray[indexPath.row])
         return cell
     }
 }
