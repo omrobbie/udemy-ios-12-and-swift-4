@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  NoteVC.swift
 //  SecureNotes
 //
 //  Created by omrobbie on 19/04/20.
