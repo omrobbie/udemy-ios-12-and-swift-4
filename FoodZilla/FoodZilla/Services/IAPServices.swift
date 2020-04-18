@@ -86,14 +86,13 @@ extension IAPService: SKPaymentTransactionObserver {
             case .purchased:
                 SKPaymentQueue.default().finishTransaction(transaction)
                 complete(transaction: transaction)
-                sendNotificationFor(status: .purchased, withIdentifier: transaction.payment.productIdentifier)
                 debugPrint("Purchase was successful!")
             case .restored:
                 SKPaymentQueue.default().finishTransaction(transaction)
                 debugPrint("Purchases was restored!")
             case .failed:
                 SKPaymentQueue.default().finishTransaction(transaction)
-                sendNotificationFor(status: .failed, withIdentifier: nil)
+                sendNotificationFor(status: .failed, withIdentifier: nil, orBoolean: nil)
                 debugPrint("Purchase was failed!")
             case .deferred: break
             case .purchasing: break
@@ -103,14 +102,18 @@ extension IAPService: SKPaymentTransactionObserver {
     }
 
     func paymentQueueRestoreCompletedTransactionsFinished(_ queue: SKPaymentQueue) {
-        sendNotificationFor(status: .restored, withIdentifier: nil)
+        sendNotificationFor(status: .restored, withIdentifier: nil, orBoolean: nil)
         setNonConsumablePurchase(true)
     }
 
     func complete(transaction: SKPaymentTransaction) {
         switch transaction.payment.productIdentifier {
-        case IAP_MEAL_ID: break
+        case IAP_MEAL_ID:
+            sendNotificationFor(status: .purchased, withIdentifier: transaction.payment.productIdentifier, orBoolean: nil)
         case IAP_HIDE_ADS_ID:
+            setNonConsumablePurchase(true)
+        case IAP_MEAL_MONTHLY:
+            sendNotificationFor(status: .subsribed, withIdentifier: transaction.payment.productIdentifier, orBoolean: true)
             setNonConsumablePurchase(true)
         default: break
         }
@@ -120,14 +123,16 @@ extension IAPService: SKPaymentTransactionObserver {
         UserDefaults.standard.set(status, forKey: "nonConsumablePurchaseWasMade")
     }
 
-    func sendNotificationFor(status: PurchaseStatus, withIdentifier identifier: String?) {
+    func sendNotificationFor(status: PurchaseStatus, withIdentifier identifier: String?, orBoolean bool: Bool?) {
         switch status {
         case .purchased:
             NotificationCenter.default.post(name: NSNotification.Name(IAPServicenPurchaseNotification), object: identifier)
         case .restored:
-            NotificationCenter.default.post(name: NSNotification.Name(IAPServiceRestoreNotification), object: identifier)
+            NotificationCenter.default.post(name: NSNotification.Name(IAPServiceRestoreNotification), object: nil)
         case .failed:
-            NotificationCenter.default.post(name: NSNotification.Name(IAPServiceFailureNotification), object: identifier)
+            NotificationCenter.default.post(name: NSNotification.Name(IAPServiceFailureNotification), object: nil)
+        case .subsribed:
+            NotificationCenter.default.post(name: NSNotification.Name(IAPSubInfoChangedNotification), object: bool)
         }
     }
 }

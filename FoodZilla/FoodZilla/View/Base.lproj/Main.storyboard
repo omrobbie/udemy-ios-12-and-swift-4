@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="p4x-K9-TRG">
-                                <rect key="frame" x="20" y="114" width="374" height="748"/>
+                                <rect key="frame" x="20" y="114" width="374" height="707.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5jf-9Y-dNX">
                                     <size key="itemSize" width="176" height="192"/>
@@ -113,13 +113,22 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Updating" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKS-3C-hCO">
+                                <rect key="frame" x="20" y="841.5" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="EKS-3C-hCO" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="2qO-du-wpz"/>
                             <constraint firstItem="p4x-K9-TRG" firstAttribute="top" secondItem="G1k-Xt-txb" secondAttribute="bottom" constant="20" id="7Ba-Hd-ETM"/>
+                            <constraint firstItem="EKS-3C-hCO" firstAttribute="top" secondItem="p4x-K9-TRG" secondAttribute="bottom" constant="20" id="Idf-md-4HV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EKS-3C-hCO" secondAttribute="trailing" constant="20" id="JUe-9D-3b5"/>
+                            <constraint firstItem="EKS-3C-hCO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="KOd-E0-BX5"/>
                             <constraint firstAttribute="trailing" secondItem="G1k-Xt-txb" secondAttribute="trailing" constant="20" id="UXK-ef-b7F"/>
                             <constraint firstItem="p4x-K9-TRG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Xyt-En-jlQ"/>
-                            <constraint firstItem="p4x-K9-TRG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="lZi-YM-9Rq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="p4x-K9-TRG" secondAttribute="trailing" constant="20" id="pXe-40-DM2"/>
                             <constraint firstItem="G1k-Xt-txb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qLg-zr-dlX"/>
                             <constraint firstItem="G1k-Xt-txb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="vWM-42-icA"/>
@@ -128,6 +137,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="p4x-K9-TRG" id="PxN-8U-BI5"/>
+                        <outlet property="lblSubscriptionStatus" destination="EKS-3C-hCO" id="c8a-Aa-5Zz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
