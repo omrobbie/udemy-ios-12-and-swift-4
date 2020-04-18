@@ -83,6 +83,55 @@
             </objects>
             <point key="canvasLocation" x="1050.7246376811595" y="138.61607142857142"/>
         </scene>
+        <!--Note DetailVC-->
+        <scene sceneID="qBg-oZ-9r5">
+            <objects>
+                <viewController id="Pzz-eC-OB1" customClass="NoteDetailVC" customModule="SecureNotes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7KO-oy-qJq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Message TextView" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="UaG-3a-tp3">
+                                <rect key="frame" x="20" y="44" width="374" height="768"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7yh-uM-oRT">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="tWg-Dp-f49"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
+                                <state key="normal" title="LOCK NOTE">
+                                    <color key="titleColor" red="0.91764705879999997" green="0.66274509800000003" blue="0.2666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLockTapped:" destination="Pzz-eC-OB1" eventType="touchUpInside" id="w0s-Bt-hyl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2WW-1u-hjR" firstAttribute="trailing" secondItem="UaG-3a-tp3" secondAttribute="trailing" constant="20" id="1xK-Ck-dhf"/>
+                            <constraint firstItem="UaG-3a-tp3" firstAttribute="leading" secondItem="2WW-1u-hjR" secondAttribute="leading" constant="20" id="58H-nr-5X2"/>
+                            <constraint firstItem="7yh-uM-oRT" firstAttribute="top" secondItem="UaG-3a-tp3" secondAttribute="bottom" id="BJU-Dy-egc"/>
+                            <constraint firstItem="7yh-uM-oRT" firstAttribute="leading" secondItem="2WW-1u-hjR" secondAttribute="leading" id="DiP-ex-Kqh"/>
+                            <constraint firstItem="2WW-1u-hjR" firstAttribute="bottom" secondItem="7yh-uM-oRT" secondAttribute="bottom" id="Vnn-My-KCo"/>
+                            <constraint firstItem="UaG-3a-tp3" firstAttribute="top" secondItem="2WW-1u-hjR" secondAttribute="top" id="k3Y-eQ-yzj"/>
+                            <constraint firstItem="2WW-1u-hjR" firstAttribute="trailing" secondItem="7yh-uM-oRT" secondAttribute="trailing" id="suE-KX-Ib0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2WW-1u-hjR"/>
+                    </view>
+                    <connections>
+                        <outlet property="txtNote" destination="UaG-3a-tp3" id="y2Z-Wk-ogm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GZS-kB-osi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1829" y="139"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="fCt-JU-n2W">
             <objects>
