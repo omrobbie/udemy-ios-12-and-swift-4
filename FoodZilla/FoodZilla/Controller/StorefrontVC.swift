@@ -21,6 +21,8 @@ class StorefrontVC: UIViewController {
     func setupUI() {
         collectionView.delegate = self
         collectionView.dataSource = self
+
+        NotificationCenter.default.addObserver(self, selector: #selector(showRestoredAlert), name: NSNotification.Name(IAPServiceRestoreNotification), object: nil)
     }
 
     func iapLoadProducts() {
@@ -28,7 +30,26 @@ class StorefrontVC: UIViewController {
         IAPService.instance.loadProducts()
     }
 
+    @objc func showRestoredAlert() {
+        let alertVC = UIAlertController(title: "Success!", message: "Your purchases were successfully restored.", preferredStyle: .alert)
+        let actionOk = UIAlertAction(title: "Ok", style: .default)
+
+        alertVC.addAction(actionOk)
+        present(alertVC, animated: true)
+    }
+
     @IBAction func restoreBtnWasTapped(_ sender: Any) {
+        let alertVC = UIAlertController(title: "Restore Purchases?", message: "Do you want to restore any in-app purchases you've previously purchased?", preferredStyle: .actionSheet)
+        let actionCancel = UIAlertAction(title: "Cancel", style: .cancel)
+
+        let actionRestore = UIAlertAction(title: "Restore", style: .default) { (_) in
+            IAPService.instance.restorePurcases()
+        }
+
+        alertVC.addAction(actionRestore)
+        alertVC.addAction(actionCancel)
+
+        present(alertVC, animated: true)
     }
 }
 
