@@ -85,3 +85,9 @@ Learn about firebase login for Google, Facebook, and Twitter<br>
 ### 15. FoodZilla Store
 Learn about In-App Purchase with iTunes Connect using StoreKit<br>
 <img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/FoodZilla/screenshot/preview.png" width=256/>&nbsp;
+
+### 16. Secure Notes
+Learn about authentication biometrics with Touch ID or Face ID using LocalAuthentication<br>
+<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/SecureNotes/screenshot/preview1.png" width=256/>&nbsp;
+<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/SecureNotes/screenshot/preview2.png" width=256/>&nbsp;
+<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/SecureNotes/screenshot/preview3.png" width=256/>&nbsp;
