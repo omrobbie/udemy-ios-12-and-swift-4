@@ -82,6 +82,7 @@ class IAPService: SKReceiptRefreshRequest {
     }
 
     func isSubscriptionActive(completion: @escaping (Bool) -> ()) {
+        reloadExpiryDate()
         let nowDate = Date()
         guard let expirationDate = expirationDate else {return}
 
@@ -147,6 +148,10 @@ class IAPService: SKReceiptRefreshRequest {
 
     func setExpiration(forDate date: Date) {
         UserDefaults.standard.set(date, forKey: "expirationDate")
+    }
+
+    func reloadExpiryDate() {
+        expirationDate = UserDefaults.standard.value(forKey: "expirationDate") as? Date
     }
 }
 
