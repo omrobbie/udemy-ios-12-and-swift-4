@@ -85,6 +85,7 @@ class IAPService: SKReceiptRefreshRequest {
         reloadExpiryDate()
         let nowDate = Date()
         guard let expirationDate = expirationDate else {return}
+        debugPrint("Time Remaining: ", expirationDate.timeIntervalSinceNow / 60, " minutes")
 
         if nowDate.isLessThan(expirationDate) {
              completion(true)
@@ -175,19 +176,20 @@ extension IAPService: SKPaymentTransactionObserver {
         for transaction in transactions {
             switch transaction.transactionState {
             case .purchased:
-                SKPaymentQueue.default().finishTransaction(transaction)
                 complete(transaction: transaction)
-                uploadReceipt { (valid) in }
+                SKPaymentQueue.default().finishTransaction(transaction)
                 debugPrint("Purchase was successful!")
             case .restored:
                 SKPaymentQueue.default().finishTransaction(transaction)
                 debugPrint("Purchases was restored!")
             case .failed:
-                SKPaymentQueue.default().finishTransaction(transaction)
                 sendNotificationFor(status: .failed, withIdentifier: nil, orBoolean: nil)
+                SKPaymentQueue.default().finishTransaction(transaction)
                 debugPrint("Purchase was failed!")
-            case .deferred: break
-            case .purchasing: break
+            case .deferred:
+                SKPaymentQueue.default().finishTransaction(transaction)
+            case .purchasing:
+                debugPrint("Purchasing...")
             default: break
             }
         }
@@ -203,6 +205,9 @@ extension IAPService: SKPaymentTransactionObserver {
         case IAP_MEAL_ID:
             sendNotificationFor(status: .purchased, withIdentifier: transaction.payment.productIdentifier, orBoolean: nil)
         case IAP_HIDE_ADS_ID:
+            setNonConsumablePurchase(true)
+        case IAP_MEAL_MONTHLY:
+            sendNotificationFor(status: .subsribed, withIdentifier: nil, orBoolean: true)
             setNonConsumablePurchase(true)
         default: break
         }

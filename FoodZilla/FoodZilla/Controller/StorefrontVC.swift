@@ -12,11 +12,20 @@ class StorefrontVC: UIViewController {
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var lblSubscriptionStatus: UILabel!
-    
+
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         iapLoadProducts()
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        IAPService.instance.isSubscriptionActive { (active) in }
     }
 
     func setupUI() {
@@ -46,10 +55,14 @@ class StorefrontVC: UIViewController {
         DispatchQueue.main.async {
             if status {
                 debugPrint("Subscriptino valid")
+                self.view.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+                self.collectionView.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
                 self.lblSubscriptionStatus.text = "SUBSCRIPTION ACTIVE"
                 self.lblSubscriptionStatus.textColor = .systemGreen
             } else {
                 debugPrint("Subscription expired")
+                self.view.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+                self.collectionView.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
                 self.lblSubscriptionStatus.text = "SUBSCRIPTION EXPIRED"
                 self.lblSubscriptionStatus.textColor = .systemRed
             }
