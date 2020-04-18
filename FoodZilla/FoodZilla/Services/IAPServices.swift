@@ -13,11 +13,11 @@ protocol IAPServiceDelegate {
     func iapProductsLoaded()
 }
 
-class IAPService: NSObject {
+class IAPService: SKReceiptRefreshRequest {
 
     static let instance = IAPService()
 
-    var delegate: IAPServiceDelegate?
+    var iapDelegate: IAPServiceDelegate?
 
     var products = [SKProduct]()
     var productIds = Set<String>()
@@ -25,11 +25,6 @@ class IAPService: NSObject {
 
     var expirationDate = UserDefaults.standard.value(forKey: "expirationDate") as? Date
     var nonConsumablePurchaseWasMade = UserDefaults.standard.bool(forKey: "nonConsumablePurchaseWasMade")
-
-    override init() {
-        super.init()
-        SKPaymentQueue.default().add(self)
-    }
 
     func loadProducts() {
         productIdToStringSet()
@@ -62,6 +57,28 @@ class IAPService: NSObject {
 
     func restorePurcases() {
         SKPaymentQueue.default().restoreCompletedTransactions()
+    }
+
+    func requestDidFinish(_ request: SKRequest) {
+        uploadReceipt { (valid) in
+            if valid {
+                debugPrint("Subscription valid")
+                self.isSubscriptionActive { (active) in
+                    if active {
+                        debugPrint("Subscription active")
+                    } else {
+                        debugPrint("Subscription expired")
+                    }
+
+                    self.sendNotificationFor(status: .subsribed, withIdentifier: nil, orBoolean: active)
+                    self.setNonConsumablePurchase(active)
+                }
+            } else {
+                debugPrint("Subscription invalid")
+                self.sendNotificationFor(status: .subsribed, withIdentifier: nil, orBoolean: false)
+                self.setNonConsumablePurchase(false)
+            }
+        }
     }
 
     func isSubscriptionActive(completion: @escaping (Bool) -> ()) {
@@ -143,7 +160,7 @@ extension IAPService: SKProductsRequestDelegate {
             return
         }
 
-        delegate?.iapProductsLoaded()
+        iapDelegate?.iapProductsLoaded()
     }
 }
 
@@ -181,16 +198,6 @@ extension IAPService: SKPaymentTransactionObserver {
         case IAP_MEAL_ID:
             sendNotificationFor(status: .purchased, withIdentifier: transaction.payment.productIdentifier, orBoolean: nil)
         case IAP_HIDE_ADS_ID:
-            setNonConsumablePurchase(true)
-        case IAP_MEAL_MONTHLY:
-            uploadReceipt { (valid) in
-                if valid {
-                    debugPrint("Subscription is valid.")
-                } else {
-                    debugPrint("You don't have subscription purchased!")
-                }
-            }
-            sendNotificationFor(status: .subsribed, withIdentifier: transaction.payment.productIdentifier, orBoolean: true)
             setNonConsumablePurchase(true)
         default: break
         }

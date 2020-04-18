@@ -28,7 +28,7 @@ class StorefrontVC: UIViewController {
     }
 
     func iapLoadProducts() {
-        IAPService.instance.delegate = self
+        IAPService.instance.iapDelegate = self
         IAPService.instance.loadProducts()
     }
 
@@ -43,10 +43,16 @@ class StorefrontVC: UIViewController {
     @objc func subsriptionStatusWasChanged(_ notification: Notification) {
         guard let status = notification.object as? Bool else {return}
 
-        if status {
-            debugPrint("Subscriptino valid")
-        } else {
-            debugPrint("Subscription expired")
+        DispatchQueue.main.async {
+            if status {
+                debugPrint("Subscriptino valid")
+                self.lblSubscriptionStatus.text = "SUBSCRIPTION ACTIVE"
+                self.lblSubscriptionStatus.textColor = .systemGreen
+            } else {
+                debugPrint("Subscription expired")
+                self.lblSubscriptionStatus.text = "SUBSCRIPTION EXPIRED"
+                self.lblSubscriptionStatus.textColor = .systemRed
+            }
         }
     }
 
