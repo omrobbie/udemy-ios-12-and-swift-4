@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC9861EB244B29C700D09B9A /* DateExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9861EA244B29C700D09B9A /* DateExt.swift */; };
 		FCC2DE9B244918FA00D2D275 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC2DE9A244918FA00D2D275 /* Product.swift */; };
 		FCC2DE9D2449192500D2D275 /* PurchaseStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC2DE9C2449192500D2D275 /* PurchaseStatus.swift */; };
 		FCE61003240E2231005DE0D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE61002240E2231005DE0D1 /* AppDelegate.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC9861EA244B29C700D09B9A /* DateExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExt.swift; sourceTree = "<group>"; };
 		FCC2DE9A244918FA00D2D275 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		FCC2DE9C2449192500D2D275 /* PurchaseStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseStatus.swift; sourceTree = "<group>"; };
 		FCE60FFF240E2231005DE0D1 /* FoodZilla Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FoodZilla Store.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +55,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC9861E9244B29B800D09B9A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FC9861EA244B29C700D09B9A /* DateExt.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		FCC2DE99244918EE00D2D275 /* Enums */ = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +92,7 @@
 		FCE61001240E2231005DE0D1 /* FoodZilla */ = {
 			isa = PBXGroup;
 			children = (
+				FC9861E9244B29B800D09B9A /* Extensions */,
 				FCC2DE99244918EE00D2D275 /* Enums */,
 				FCE61022240E57D1005DE0D1 /* Services */,
 				FCE6101F240E4C0C005DE0D1 /* Helpers */,
@@ -229,6 +240,7 @@
 				FCC2DE9B244918FA00D2D275 /* Product.swift in Sources */,
 				FCE61005240E2231005DE0D1 /* SceneDelegate.swift in Sources */,
 				FCE61026240E58AA005DE0D1 /* Constants.swift in Sources */,
+				FC9861EB244B29C700D09B9A /* DateExt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

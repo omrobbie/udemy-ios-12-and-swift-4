@@ -23,6 +23,7 @@ class IAPService: NSObject {
     var productIds = Set<String>()
     var productRequest = SKProductsRequest()
 
+    var expirationDate = UserDefaults.standard.value(forKey: "expirationDate") as? Date
     var nonConsumablePurchaseWasMade = UserDefaults.standard.bool(forKey: "nonConsumablePurchaseWasMade")
 
     override init() {
@@ -61,6 +62,17 @@ class IAPService: NSObject {
 
     func restorePurcases() {
         SKPaymentQueue.default().restoreCompletedTransactions()
+    }
+
+    func isSubscriptionActive(completion: @escaping (Bool) -> ()) {
+        let nowDate = Date()
+        guard let expirationDate = expirationDate else {return}
+
+        if nowDate.isLessThan(expirationDate) {
+             completion(true)
+        } else {
+            completion(false)
+        }
     }
 
     func uploadReceipt(completion: @escaping (Bool) -> ()) {
@@ -109,10 +121,15 @@ class IAPService: NSObject {
             let formatter = DateFormatter()
             formatter.dateFormat = "yyyy-MM-dd HH:mm:ss VV"
             let expirationDate: Date = (formatter.date(from: lastReceipt["expires_date"] as! String) as Date?)!
+            self.setExpiration(forDate: expirationDate)
             return expirationDate
         }
 
         return nil
+    }
+
+    func setExpiration(forDate date: Date) {
+        UserDefaults.standard.set(date, forKey: "expirationDate")
     }
 }
 
