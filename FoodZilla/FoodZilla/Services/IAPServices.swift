@@ -94,12 +94,25 @@ class IAPService: NSObject {
 
             guard let data = data else {return}
 
-            let json = try! JSONSerialization.jsonObject(with: data, options: [])
-            print(json)
+            let json = try! JSONSerialization.jsonObject(with: data, options: []) as! Dictionary<String, Any>
+            let newExpirationDate = self.expirationDateFromResponse(jsonResponse: json)
+            debugPrint("New expiration date: \(newExpirationDate!)")
             completion(true)
         }
 
         task.resume()
+    }
+
+    func expirationDateFromResponse(jsonResponse: Dictionary<String, Any>) -> Date? {
+        if let receiptInfo: NSArray = jsonResponse["latest_receipt_info"] as? NSArray {
+            let lastReceipt = receiptInfo.lastObject as! Dictionary<String, Any>
+            let formatter = DateFormatter()
+            formatter.dateFormat = "yyyy-MM-dd HH:mm:ss VV"
+            let expirationDate: Date = (formatter.date(from: lastReceipt["expires_date"] as! String) as Date?)!
+            return expirationDate
+        }
+
+        return nil
     }
 }
 
@@ -125,6 +138,7 @@ extension IAPService: SKPaymentTransactionObserver {
             case .purchased:
                 SKPaymentQueue.default().finishTransaction(transaction)
                 complete(transaction: transaction)
+                uploadReceipt { (valid) in }
                 debugPrint("Purchase was successful!")
             case .restored:
                 SKPaymentQueue.default().finishTransaction(transaction)
