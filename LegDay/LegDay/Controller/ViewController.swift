@@ -50,6 +50,6 @@ class ViewController: UIViewController {
         lblTimer.isHidden = false
 
         lblType.text = "TYPE: \(workoutType.capitalized)"
-        lblTimer.text = "\(goalValue) LEFT"
+        lblTimer.text = "\(goalValue.convertToClockTime()) LEFT"
     }
 }
