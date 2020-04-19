@@ -13,6 +13,7 @@
 		FCB93AEB244BC96E003CEF1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCB93AE9244BC96E003CEF1F /* Main.storyboard */; };
 		FCB93AED244BC96F003CEF1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCB93AEC244BC96F003CEF1F /* Assets.xcassets */; };
 		FCB93AF0244BC96F003CEF1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCB93AEE244BC96F003CEF1F /* LaunchScreen.storyboard */; };
+		FCB93AFB244BCD40003CEF1F /* CicleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB93AFA244BCD40003CEF1F /* CicleButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FCB93AEC244BC96F003CEF1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCB93AEF244BC96F003CEF1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCB93AF1244BC96F003CEF1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCB93AFA244BCD40003CEF1F /* CicleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CicleButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,40 @@
 		FCB93AE2244BC96E003CEF1F /* Scribe */ = {
 			isa = PBXGroup;
 			children = (
+				FCB93AF9244BCD24003CEF1F /* Model */,
+				FCB93AF8244BCD1F003CEF1F /* View */,
+				FCB93AF7244BCD17003CEF1F /* Controller */,
 				FCB93AE3244BC96E003CEF1F /* AppDelegate.swift */,
 				FCB93AE5244BC96E003CEF1F /* SceneDelegate.swift */,
-				FCB93AE7244BC96E003CEF1F /* ViewController.swift */,
-				FCB93AE9244BC96E003CEF1F /* Main.storyboard */,
 				FCB93AEC244BC96F003CEF1F /* Assets.xcassets */,
 				FCB93AEE244BC96F003CEF1F /* LaunchScreen.storyboard */,
 				FCB93AF1244BC96F003CEF1F /* Info.plist */,
 			);
 			path = Scribe;
+			sourceTree = "<group>";
+		};
+		FCB93AF7244BCD17003CEF1F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FCB93AE7244BC96E003CEF1F /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FCB93AF8244BCD1F003CEF1F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FCB93AE9244BC96E003CEF1F /* Main.storyboard */,
+				FCB93AFA244BCD40003CEF1F /* CicleButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FCB93AF9244BCD24003CEF1F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +165,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCB93AFB244BCD40003CEF1F /* CicleButton.swift in Sources */,
 				FCB93AE8244BC96E003CEF1F /* ViewController.swift in Sources */,
 				FCB93AE4244BC96E003CEF1F /* AppDelegate.swift in Sources */,
 				FCB93AE6244BC96E003CEF1F /* SceneDelegate.swift in Sources */,
