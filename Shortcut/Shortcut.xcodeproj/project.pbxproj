@@ -15,6 +15,7 @@
 		FCB93B4E244C1075003CEF1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCB93B4C244C1075003CEF1F /* LaunchScreen.storyboard */; };
 		FCB93B59244C18DB003CEF1F /* SpaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB93B58244C18DB003CEF1F /* SpaceVC.swift */; };
 		FCB93B5B244C18E4003CEF1F /* OceanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB93B5A244C18E4003CEF1F /* OceanVC.swift */; };
+		FCB93B5E244C2823003CEF1F /* ShortcutType.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB93B5D244C2823003CEF1F /* ShortcutType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		FCB93B4F244C1075003CEF1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCB93B58244C18DB003CEF1F /* SpaceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceVC.swift; sourceTree = "<group>"; };
 		FCB93B5A244C18E4003CEF1F /* OceanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OceanVC.swift; sourceTree = "<group>"; };
+		FCB93B5D244C2823003CEF1F /* ShortcutType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortcutType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 		FCB93B40244C1074003CEF1F /* Shortcut */ = {
 			isa = PBXGroup;
 			children = (
+				FCB93B5C244C280D003CEF1F /* Enums */,
 				FCB93B57244C18B3003CEF1F /* Model */,
 				FCB93B56244C18AF003CEF1F /* View */,
 				FCB93B55244C18A5003CEF1F /* Controller */,
@@ -95,6 +98,14 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		FCB93B5C244C280D003CEF1F /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				FCB93B5D244C2823003CEF1F /* ShortcutType.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +184,7 @@
 				FCB93B42244C1074003CEF1F /* AppDelegate.swift in Sources */,
 				FCB93B5B244C18E4003CEF1F /* OceanVC.swift in Sources */,
 				FCB93B44244C1074003CEF1F /* SceneDelegate.swift in Sources */,
+				FCB93B5E244C2823003CEF1F /* ShortcutType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +329,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3SMXMP42NY;
 				INFOPLIST_FILE = Shortcut/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,7 +348,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3SMXMP42NY;
 				INFOPLIST_FILE = Shortcut/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
