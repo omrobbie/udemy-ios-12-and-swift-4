@@ -10,7 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var lblType: UILabel!
+    @IBOutlet weak var lblTimer: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
+    }
+
+    fileprivate func setupUI() {
+        lblType.isHidden = true
+        lblTimer.isHidden = true
     }
 }
