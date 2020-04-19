@@ -1,0 +1,49 @@
+{
+  "frames" : [
+    {
+      "filename" : "carDefault_0000.png"
+    },
+    {
+      "filename" : "carDefault_0001.png"
+    },
+    {
+      "filename" : "carDefault_0002.png"
+    },
+    {
+      "filename" : "carDefault_0003.png"
+    },
+    {
+      "filename" : "carDefault_0004.png"
+    },
+    {
+      "filename" : "carDefault_0005.png"
+    },
+    {
+      "filename" : "carDefault_0006.png"
+    },
+    {
+      "filename" : "carDefault_0007.png"
+    },
+    {
+      "filename" : "carDefault_0008.png"
+    },
+    {
+      "filename" : "carDefault_0009.png"
+    },
+    {
+      "filename" : "carDefault_0010.png"
+    },
+    {
+      "filename" : "carDefault_0011.png"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "duration" : 5,
+    "duration-type" : "fps",
+    "repetitions" : 0
+  }
+}

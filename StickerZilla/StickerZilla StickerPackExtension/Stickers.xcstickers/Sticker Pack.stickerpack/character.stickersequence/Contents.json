@@ -1,0 +1,64 @@
+{
+  "frames" : [
+    {
+      "filename" : "1.png"
+    },
+    {
+      "filename" : "2.png"
+    },
+    {
+      "filename" : "3.png"
+    },
+    {
+      "filename" : "4.png"
+    },
+    {
+      "filename" : "5.png"
+    },
+    {
+      "filename" : "6.png"
+    },
+    {
+      "filename" : "7.png"
+    },
+    {
+      "filename" : "8.png"
+    },
+    {
+      "filename" : "9.png"
+    },
+    {
+      "filename" : "10.png"
+    },
+    {
+      "filename" : "11.png"
+    },
+    {
+      "filename" : "12.png"
+    },
+    {
+      "filename" : "13.png"
+    },
+    {
+      "filename" : "14.png"
+    },
+    {
+      "filename" : "15.png"
+    },
+    {
+      "filename" : "16.png"
+    },
+    {
+      "filename" : "17.png"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "duration" : 30,
+    "duration-type" : "fps",
+    "repetitions" : 0
+  }
+}

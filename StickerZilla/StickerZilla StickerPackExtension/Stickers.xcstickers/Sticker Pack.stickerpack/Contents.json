@@ -36,6 +36,18 @@
     },
     {
       "filename" : "steamboat-marky.sticker"
+    },
+    {
+      "filename" : "car.stickersequence"
+    },
+    {
+      "filename" : "yellowcar.stickersequence"
+    },
+    {
+      "filename" : "coin.stickersequence"
+    },
+    {
+      "filename" : "character.stickersequence"
     }
   ]
 }
