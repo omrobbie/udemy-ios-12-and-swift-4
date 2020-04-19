@@ -23,6 +23,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             return
         }
 
+        DataService.instance.startWorkoutIntent = intent
+
         print("Scene: Start workout intent - True")
         print(intent)
     }
