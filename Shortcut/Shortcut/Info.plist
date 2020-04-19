@@ -69,8 +69,8 @@
 			<string>Mountains</string>
 			<key>UIApplicationShortcutItemSubtitle</key>
 			<string>So majestic</string>
-			<key>UIApplicationShortcutItemIconType</key>
-			<string>UIApplicationShortcutIconTypeLove</string>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>MountainShort</string>
 		</dict>
 	</array>
 </dict>
