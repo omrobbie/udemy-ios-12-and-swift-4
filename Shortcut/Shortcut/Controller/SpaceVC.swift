@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SpaceVC.swift
 //  Shortcut
 //
 //  Created by omrobbie on 19/04/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class SpaceVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

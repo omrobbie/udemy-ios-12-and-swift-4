@@ -10,7 +10,7 @@
         <!--Mountains-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Shortcut" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MountainsVC" id="BYZ-38-t0r" customClass="MountainsVC" customModule="Shortcut" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -62,7 +62,7 @@
         <!--Space-->
         <scene sceneID="K6r-gv-pwO">
             <objects>
-                <viewController id="WZl-TH-0AK" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SpaceVC" id="WZl-TH-0AK" customClass="SpaceVC" customModule="Shortcut" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YdZ-7i-9ol">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -96,7 +96,7 @@
         <!--Ocean-->
         <scene sceneID="yVT-8X-PiR">
             <objects>
-                <viewController id="v86-8H-VaU" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OceanVC" id="v86-8H-VaU" customClass="OceanVC" customModule="Shortcut" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wbr-TP-DH8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
