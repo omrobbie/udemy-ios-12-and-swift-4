@@ -100,3 +100,7 @@ Learn about Speech Recognizer using sample audio file<br>
 ### 18. Sticker Zilla
 Learn about creating amazing Sticker Pack<br>
 <img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/StickerZilla/screenshot/preview.png" width=256/>&nbsp;
+
+### 19. Shortcut
+Learn about Quick Action Shortcut using 3D Touch (force touch)<br>
+<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/Shortcut/screenshot/preview.png" width=256/>&nbsp;
