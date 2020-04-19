@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Intents
 
 class ViewController: UIViewController {
 
@@ -16,10 +17,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        setupSiri()
     }
 
     fileprivate func setupUI() {
         lblType.isHidden = true
         lblTimer.isHidden = true
+    }
+
+    fileprivate func setupSiri() {
+        INPreferences.requestSiriAuthorization { (status) in
+            if status == INSiriAuthorizationStatus.authorized {
+                print("SiriKit: Authorized")
+            } else {
+                print("SiriKit: Unauthorized")
+            }
+        }
     }
 }
