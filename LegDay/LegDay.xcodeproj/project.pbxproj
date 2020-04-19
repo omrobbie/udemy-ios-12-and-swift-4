@@ -13,7 +13,33 @@
 		FCB93B73244C5A6A003CEF1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCB93B71244C5A6A003CEF1F /* Main.storyboard */; };
 		FCB93B75244C5A6C003CEF1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCB93B74244C5A6C003CEF1F /* Assets.xcassets */; };
 		FCB93B78244C5A6C003CEF1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCB93B76244C5A6C003CEF1F /* LaunchScreen.storyboard */; };
+		FCB93B87244C5F8C003CEF1F /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCB93B86244C5F8C003CEF1F /* IntentHandler.swift */; };
+		FCB93B8B244C5F8C003CEF1F /* IntentHandler.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = FCB93B84244C5F8C003CEF1F /* IntentHandler.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FCB93B89244C5F8C003CEF1F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FCB93B60244C5A6A003CEF1F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FCB93B83244C5F8C003CEF1F;
+			remoteInfo = IntentHandler;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FCB93B8F244C5F8C003CEF1F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				FCB93B8B244C5F8C003CEF1F /* IntentHandler.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FCB93B68244C5A6A003CEF1F /* LegDay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LegDay.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -25,10 +51,20 @@
 		FCB93B77244C5A6C003CEF1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCB93B79244C5A6C003CEF1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCB93B7F244C5F00003CEF1F /* LegDay.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LegDay.entitlements; sourceTree = "<group>"; };
+		FCB93B84244C5F8C003CEF1F /* IntentHandler.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = IntentHandler.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCB93B86244C5F8C003CEF1F /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
+		FCB93B88244C5F8C003CEF1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		FCB93B65244C5A6A003CEF1F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCB93B81244C5F8C003CEF1F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -42,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				FCB93B6A244C5A6A003CEF1F /* LegDay */,
+				FCB93B85244C5F8C003CEF1F /* IntentHandler */,
 				FCB93B69244C5A6A003CEF1F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				FCB93B68244C5A6A003CEF1F /* LegDay.app */,
+				FCB93B84244C5F8C003CEF1F /* IntentHandler.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -69,6 +107,15 @@
 			path = LegDay;
 			sourceTree = "<group>";
 		};
+		FCB93B85244C5F8C003CEF1F /* IntentHandler */ = {
+			isa = PBXGroup;
+			children = (
+				FCB93B86244C5F8C003CEF1F /* IntentHandler.swift */,
+				FCB93B88244C5F8C003CEF1F /* Info.plist */,
+			);
+			path = IntentHandler;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -79,15 +126,34 @@
 				FCB93B64244C5A6A003CEF1F /* Sources */,
 				FCB93B65244C5A6A003CEF1F /* Frameworks */,
 				FCB93B66244C5A6A003CEF1F /* Resources */,
+				FCB93B8F244C5F8C003CEF1F /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FCB93B8A244C5F8C003CEF1F /* PBXTargetDependency */,
 			);
 			name = LegDay;
 			productName = LegDay;
 			productReference = FCB93B68244C5A6A003CEF1F /* LegDay.app */;
 			productType = "com.apple.product-type.application";
+		};
+		FCB93B83244C5F8C003CEF1F /* IntentHandler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FCB93B8C244C5F8C003CEF1F /* Build configuration list for PBXNativeTarget "IntentHandler" */;
+			buildPhases = (
+				FCB93B80244C5F8C003CEF1F /* Sources */,
+				FCB93B81244C5F8C003CEF1F /* Frameworks */,
+				FCB93B82244C5F8C003CEF1F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IntentHandler;
+			productName = IntentHandler;
+			productReference = FCB93B84244C5F8C003CEF1F /* IntentHandler.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -100,6 +166,9 @@
 				ORGANIZATIONNAME = omrobbie;
 				TargetAttributes = {
 					FCB93B67244C5A6A003CEF1F = {
+						CreatedOnToolsVersion = 11.4.1;
+					};
+					FCB93B83244C5F8C003CEF1F = {
 						CreatedOnToolsVersion = 11.4.1;
 					};
 				};
@@ -118,6 +187,7 @@
 			projectRoot = "";
 			targets = (
 				FCB93B67244C5A6A003CEF1F /* LegDay */,
+				FCB93B83244C5F8C003CEF1F /* IntentHandler */,
 			);
 		};
 /* End PBXProject section */
@@ -130,6 +200,13 @@
 				FCB93B78244C5A6C003CEF1F /* LaunchScreen.storyboard in Resources */,
 				FCB93B75244C5A6C003CEF1F /* Assets.xcassets in Resources */,
 				FCB93B73244C5A6A003CEF1F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FCB93B82244C5F8C003CEF1F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,7 +223,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FCB93B80244C5F8C003CEF1F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FCB93B87244C5F8C003CEF1F /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FCB93B8A244C5F8C003CEF1F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FCB93B83244C5F8C003CEF1F /* IntentHandler */;
+			targetProxy = FCB93B89244C5F8C003CEF1F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FCB93B71244C5A6A003CEF1F /* Main.storyboard */ = {
@@ -285,6 +378,7 @@
 		FCB93B7D244C5A6C003CEF1F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = LegDay/LegDay.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -303,6 +397,7 @@
 		FCB93B7E244C5A6C003CEF1F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = LegDay/LegDay.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -313,6 +408,42 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.omrobbie.LegDay;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FCB93B8D244C5F8C003CEF1F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = IntentHandler/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.omrobbie.LegDay.IntentHandler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FCB93B8E244C5F8C003CEF1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = IntentHandler/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.omrobbie.LegDay.IntentHandler;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -335,6 +466,15 @@
 			buildConfigurations = (
 				FCB93B7D244C5A6C003CEF1F /* Debug */,
 				FCB93B7E244C5A6C003CEF1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FCB93B8C244C5F8C003CEF1F /* Build configuration list for PBXNativeTarget "IntentHandler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FCB93B8D244C5F8C003CEF1F /* Debug */,
+				FCB93B8E244C5F8C003CEF1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
