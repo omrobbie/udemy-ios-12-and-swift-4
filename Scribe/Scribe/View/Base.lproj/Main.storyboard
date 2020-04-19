@@ -41,7 +41,6 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="recordingtape" catalog="system"/>
                                 <connections>
                                     <action selector="btnRecordTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="urM-TC-Ugh"/>
                                 </connections>
@@ -85,7 +84,6 @@
                     </view>
                     <connections>
                         <outlet property="activityRecord" destination="UL7-OA-Zce" id="zyx-N1-t6J"/>
-                        <outlet property="btnRecord" destination="IMF-Sv-hnd" id="cfg-bs-mw5"/>
                         <outlet property="txtTranscribe" destination="mlx-F6-V0z" id="pnX-MH-PuO"/>
                     </connections>
                 </viewController>
@@ -94,7 +92,4 @@
             <point key="canvasLocation" x="140.57971014492756" y="138.61607142857142"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="recordingtape" catalog="system" width="128" height="60"/>
-    </resources>
 </document>
