@@ -1,0 +1,31 @@
+{
+  "frames" : [
+    {
+      "filename" : "1.png"
+    },
+    {
+      "filename" : "2.png"
+    },
+    {
+      "filename" : "3.png"
+    },
+    {
+      "filename" : "4.png"
+    },
+    {
+      "filename" : "5.png"
+    },
+    {
+      "filename" : "6.png"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "duration" : 5,
+    "duration-type" : "fps",
+    "repetitions" : 0
+  }
+}
