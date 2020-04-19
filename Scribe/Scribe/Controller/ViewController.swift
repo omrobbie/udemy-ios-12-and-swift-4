@@ -29,6 +29,7 @@ class ViewController: UIViewController {
                     do {
                         let sound = try AVAudioPlayer(contentsOf: path)
                         self.audioPlayer = sound
+                        self.audioPlayer.delegate = self
                         sound.play()
                     } catch {
                         debugPrint("Error: \(error.localizedDescription)")
@@ -43,7 +44,7 @@ class ViewController: UIViewController {
                         }
 
                         if let result = result {
-                            print(result.bestTranscription.formattedString)
+                            self.txtTranscribe.text = result.bestTranscription.formattedString
                         }
                     })
                 } else {
@@ -65,5 +66,13 @@ class ViewController: UIViewController {
 
     @IBAction func btnRecordTapped(_ sender: Any) {
         requestSpeechAuth()
+    }
+}
+
+extension ViewController: AVAudioPlayerDelegate {
+
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        player.stop()
+        activityRecord.stopAnimating()
     }
 }
