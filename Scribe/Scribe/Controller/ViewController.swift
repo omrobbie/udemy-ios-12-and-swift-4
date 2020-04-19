@@ -10,9 +10,15 @@ import UIKit
 import Speech
 import AVFoundation
 
+enum PlayStatus {
+    case playing
+    case finished
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var txtTranscribe: UITextView!
+    @IBOutlet weak var btnPlay: CircleButton!
     @IBOutlet weak var activityRecord: UIActivityIndicatorView!
 
     fileprivate var audioPlayer: AVAudioPlayer!
@@ -22,7 +28,7 @@ class ViewController: UIViewController {
     }
 
     fileprivate func requestSpeechAuth() {
-        activityRecord.startAnimating()
+        play(status: .playing)
         SFSpeechRecognizer.requestAuthorization { (authStatus) in
             if authStatus == SFSpeechRecognizerAuthorizationStatus.authorized {
                 if let path = Bundle.main.url(forResource: "test", withExtension: "m4a") {
@@ -50,10 +56,21 @@ class ViewController: UIViewController {
                 } else {
                     DispatchQueue.main.async {
                         self.showAlert(message: "File  not found!")
-                        self.activityRecord.stopAnimating()
+                        self.play(status: .finished)
                     }
                 }
             }
+        }
+    }
+
+    fileprivate func play(status: PlayStatus) {
+        switch status {
+        case .playing:
+            btnPlay.setImage(nil, for: .normal)
+            activityRecord.startAnimating()
+        case .finished:
+            activityRecord.stopAnimating()
+            btnPlay.setImage(UIImage(systemName: "play.fill"), for: .normal)
         }
     }
 
@@ -64,7 +81,7 @@ class ViewController: UIViewController {
         present(alertVC, animated: true)
     }
 
-    @IBAction func btnRecordTapped(_ sender: Any) {
+    @IBAction func btnPlayTapped(_ sender: Any) {
         requestSpeechAuth()
     }
 }
@@ -73,6 +90,6 @@ extension ViewController: AVAudioPlayerDelegate {
 
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         player.stop()
-        activityRecord.stopAnimating()
+        play(status: .finished)
     }
 }
