@@ -96,3 +96,7 @@ Learn about authentication biometrics with Touch ID or Face ID using LocalAuthen
 Learn about Speech Recognizer using sample audio file<br>
 <img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/Scribe/screenshot/preview1.png" width=256/>&nbsp;
 <img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/Scribe/screenshot/preview2.png" width=256/>&nbsp;
+
+### 18. Sticker Zilla
+Learn about creating amazing Sticker Pack<br>
+<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/StickerZilla/screenshot/preview.png" width=256/>&nbsp;
