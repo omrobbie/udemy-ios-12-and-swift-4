@@ -18,6 +18,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         setupSiri()
+
+        NotificationCenter.default.addObserver(self, selector: #selector(handleSiriRequest), name: NSNotification.Name("workoutStartedNotification"), object: nil)
     }
 
     fileprivate func setupUI() {
@@ -33,5 +35,21 @@ class ViewController: UIViewController {
                 debugPrint("SiriKit: Unauthorized")
             }
         }
+    }
+
+    @objc func handleSiriRequest() {
+        guard let intent = DataService.instance.startWorkoutIntent,
+            let goalValue = intent.goalValue,
+            let workoutType = intent.workoutName?.spokenPhrase else {
+                lblType.isHidden = true
+                lblTimer.isHidden = true
+                return
+        }
+
+        lblType.isHidden = false
+        lblTimer.isHidden = false
+
+        lblType.text = "TYPE: \(workoutType.capitalized)"
+        lblTimer.text = "\(goalValue) LEFT"
     }
 }

@@ -24,6 +24,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         }
 
         DataService.instance.startWorkoutIntent = intent
+        NotificationCenter.default.post(name: NSNotification.Name("workoutStartedNotification"), object: nil)
 
         print("Scene: Start workout intent - True")
         print(intent)
