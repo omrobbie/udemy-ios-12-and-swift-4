@@ -95,11 +95,14 @@
 		FCB93B6A244C5A6A003CEF1F /* LegDay */ = {
 			isa = PBXGroup;
 			children = (
+				FCB93B94244C6867003CEF1F /* Extensions */,
+				FCB93B93244C6860003CEF1F /* Services */,
+				FCB93B92244C6859003CEF1F /* Model */,
+				FCB93B91244C6851003CEF1F /* View */,
+				FCB93B90244C683C003CEF1F /* Controller */,
 				FCB93B7F244C5F00003CEF1F /* LegDay.entitlements */,
 				FCB93B6B244C5A6A003CEF1F /* AppDelegate.swift */,
 				FCB93B6D244C5A6A003CEF1F /* SceneDelegate.swift */,
-				FCB93B6F244C5A6A003CEF1F /* ViewController.swift */,
-				FCB93B71244C5A6A003CEF1F /* Main.storyboard */,
 				FCB93B74244C5A6C003CEF1F /* Assets.xcassets */,
 				FCB93B76244C5A6C003CEF1F /* LaunchScreen.storyboard */,
 				FCB93B79244C5A6C003CEF1F /* Info.plist */,
@@ -114,6 +117,43 @@
 				FCB93B88244C5F8C003CEF1F /* Info.plist */,
 			);
 			path = IntentHandler;
+			sourceTree = "<group>";
+		};
+		FCB93B90244C683C003CEF1F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FCB93B6F244C5A6A003CEF1F /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FCB93B91244C6851003CEF1F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FCB93B71244C5A6A003CEF1F /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FCB93B92244C6859003CEF1F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FCB93B93244C6860003CEF1F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		FCB93B94244C6867003CEF1F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
