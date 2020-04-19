@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Intents
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -14,5 +15,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let _ = (scene as? UIWindowScene) else { return }
+    }
+
+    func scene(_ scene: UIScene, continue userActivity: NSUserActivity) {
+        guard let intent = userActivity.interaction?.intent as? INStartWorkoutIntent else {
+            debugPrint("Scene: Start workout intent - False")
+            return
+        }
+
+        print("Scene: Start workout intent - True")
+        print(intent)
     }
 }

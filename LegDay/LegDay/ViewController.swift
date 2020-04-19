@@ -28,9 +28,9 @@ class ViewController: UIViewController {
     fileprivate func setupSiri() {
         INPreferences.requestSiriAuthorization { (status) in
             if status == INSiriAuthorizationStatus.authorized {
-                print("SiriKit: Authorized")
+                debugPrint("SiriKit: Authorized")
             } else {
-                print("SiriKit: Unauthorized")
+                debugPrint("SiriKit: Unauthorized")
             }
         }
     }
