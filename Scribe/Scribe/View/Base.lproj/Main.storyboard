@@ -42,6 +42,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" image="recordingtape" catalog="system"/>
+                                <connections>
+                                    <action selector="btnRecordTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="urM-TC-Ugh"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLAY &amp; TRANSCRIBE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9k-G2-1ht">
                                 <rect key="frame" x="20" y="834" width="374" height="28"/>
@@ -80,6 +83,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="activityRecord" destination="UL7-OA-Zce" id="zyx-N1-t6J"/>
+                        <outlet property="btnRecord" destination="IMF-Sv-hnd" id="cfg-bs-mw5"/>
+                        <outlet property="txtTranscribe" destination="mlx-F6-V0z" id="pnX-MH-PuO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
