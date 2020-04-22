@@ -9,7 +9,7 @@
 import UIKit
 import ReplayKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, RPPreviewViewControllerDelegate {
 
     @IBOutlet weak var lblStatus: UILabel!
     @IBOutlet weak var segPicker: UISegmentedControl!
@@ -49,12 +49,41 @@ class ViewController: UIViewController {
     }
 
     fileprivate func stopRecording() {
-        self.swtMic.isEnabled = true
-        self.btnRecord.setTitle("Record", for: .normal)
-        self.btnRecord.setTitleColor(.systemGreen, for: .normal)
-        self.lblStatus.text = "Ready to Record"
-        self.lblStatus.textColor = .label
-        self.isRecording = false
+        recorder.stopRecording { (preview, error) in
+            if let error = error {
+                debugPrint("Error: \(error.localizedDescription)")
+                return
+            }
+
+            guard preview != nil else {
+                debugPrint("Preview is not available!")
+                return
+            }
+
+            let alertVC = UIAlertController(title: "Recording Finished!", message: "Would yo like to edit or delete your recording?", preferredStyle: .alert)
+            let actionDelete = UIAlertAction(title: "Delete", style: .destructive) { (_) in
+                self.recorder.discardRecording {
+                    debugPrint("Recording successfully deleted!")
+                }
+            }
+            let actionEdit = UIAlertAction(title: "Edit", style: .default) { (_) in
+                preview!.previewControllerDelegate = self
+                self.present(preview!, animated: true)
+            }
+
+            alertVC.addAction(actionDelete)
+            alertVC.addAction(actionEdit)
+
+            alertVC.modalPresentationStyle = .fullScreen
+            self.present(alertVC, animated: true)
+
+            self.swtMic.isEnabled = true
+            self.btnRecord.setTitle("Record", for: .normal)
+            self.btnRecord.setTitleColor(.systemGreen, for: .normal)
+            self.lblStatus.text = "Ready to Record"
+            self.lblStatus.textColor = .label
+            self.isRecording = false
+        }
     }
 
     @IBAction func segPickerTapped(_ sender: UISegmentedControl) {
