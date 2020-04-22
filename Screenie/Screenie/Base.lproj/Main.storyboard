@@ -90,7 +90,7 @@
                         <outlet property="imgSelected" destination="i34-h2-0X5" id="l5v-96-07S"/>
                         <outlet property="lblStatus" destination="zlt-E8-OBN" id="i3d-hQ-Vqt"/>
                         <outlet property="segPicker" destination="t8c-FT-HfO" id="mLU-K0-PRC"/>
-                        <outlet property="swtToggle" destination="c9w-my-M0p" id="D5o-5F-wxC"/>
+                        <outlet property="swtMic" destination="c9w-my-M0p" id="D5o-5F-wxC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -13,11 +13,31 @@ class ViewController: UIViewController {
     @IBOutlet weak var lblStatus: UILabel!
     @IBOutlet weak var segPicker: UISegmentedControl!
     @IBOutlet weak var imgSelected: UIImageView!
-    @IBOutlet weak var swtToggle: UISwitch!
+    @IBOutlet weak var swtMic: UISwitch!
     @IBOutlet weak var btnRecord: UIButton!
+
+    fileprivate var isRecording = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+
+    fileprivate func startRecording() {
+        self.swtMic.isEnabled = false
+        self.btnRecord.setTitle("Stop", for: .normal)
+        self.btnRecord.setTitleColor(.systemRed, for: .normal)
+        self.lblStatus.text = "Recording..."
+        self.lblStatus.textColor = .systemRed
+        self.isRecording = true
+    }
+
+    fileprivate func stopRecording() {
+        self.swtMic.isEnabled = true
+        self.btnRecord.setTitle("Record", for: .normal)
+        self.btnRecord.setTitleColor(.systemGreen, for: .normal)
+        self.lblStatus.text = "Ready to Record"
+        self.lblStatus.textColor = .label
+        self.isRecording = false
     }
 
     @IBAction func segPickerTapped(_ sender: UISegmentedControl) {
@@ -35,5 +55,10 @@ class ViewController: UIViewController {
     }
 
     @IBAction func btnRecord(_ sender: Any) {
+        if isRecording {
+            stopRecording()
+        } else {
+            startRecording()
+        }
     }
 }
