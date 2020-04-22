@@ -10,7 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var lblStatus: UILabel!
+    @IBOutlet weak var segPicker: UISegmentedControl!
+    @IBOutlet weak var imgSelected: UIImageView!
+    @IBOutlet weak var swtToggle: UISwitch!
+    @IBOutlet weak var btnRecord: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+
+    @IBAction func segPickerTapped(_ sender: Any) {
+    }
+
+    @IBAction func btnRecord(_ sender: Any) {
     }
 }
