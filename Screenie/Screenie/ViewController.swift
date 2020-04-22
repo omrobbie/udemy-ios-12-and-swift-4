@@ -20,7 +20,18 @@ class ViewController: UIViewController {
         super.viewDidLoad()
     }
 
-    @IBAction func segPickerTapped(_ sender: Any) {
+    @IBAction func segPickerTapped(_ sender: UISegmentedControl) {
+        var imgName = ""
+
+        switch sender.selectedSegmentIndex {
+        case 0: imgName = "skate"
+        case 1: imgName = "food"
+        case 2: imgName = "cat"
+        case 3: imgName = "nature"
+        default: break
+        }
+
+        imgSelected.image = UIImage(named: imgName)
     }
 
     @IBAction func btnRecord(_ sender: Any) {
