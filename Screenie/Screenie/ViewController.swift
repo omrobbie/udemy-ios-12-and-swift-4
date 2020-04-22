@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ReplayKit
 
 class ViewController: UIViewController {
 
@@ -16,6 +17,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var swtMic: UISwitch!
     @IBOutlet weak var btnRecord: UIButton!
 
+    fileprivate var recorder = RPScreenRecorder.shared()
     fileprivate var isRecording = false
 
     override func viewDidLoad() {
@@ -23,12 +25,27 @@ class ViewController: UIViewController {
     }
 
     fileprivate func startRecording() {
-        self.swtMic.isEnabled = false
-        self.btnRecord.setTitle("Stop", for: .normal)
-        self.btnRecord.setTitleColor(.systemRed, for: .normal)
-        self.lblStatus.text = "Recording..."
-        self.lblStatus.textColor = .systemRed
-        self.isRecording = true
+        guard recorder.isAvailable else {
+            debugPrint("Recording is not available at this time!")
+            return
+        }
+
+        recorder.isMicrophoneEnabled = swtMic.isOn
+        recorder.startRecording { (error) in
+            if let error = error {
+                debugPrint("Error: \(error.localizedDescription)")
+                return
+            }
+
+            DispatchQueue.main.async {
+                self.swtMic.isEnabled = false
+                self.btnRecord.setTitle("Stop", for: .normal)
+                self.btnRecord.setTitleColor(.systemRed, for: .normal)
+                self.lblStatus.text = "Recording..."
+                self.lblStatus.textColor = .systemRed
+                self.isRecording = true
+            }
+        }
     }
 
     fileprivate func stopRecording() {
