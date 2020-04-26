@@ -33,6 +33,10 @@ class RampPickerVC: UIViewController {
         let scene = SCNScene(named: "art.scnassets/ramps.scn")!
         sceneView.scene = scene
 
+        let camera = SCNCamera()
+        camera.usesOrthographicProjection = true
+        scene.rootNode.camera = camera
+
         let obj = SCNScene(named: "art.scnassets/pipe/pipe.dae")
         let node = obj?.rootNode.childNode(withName: "pipe", recursively: true)!
         scene.rootNode.addChildNode(node!)
