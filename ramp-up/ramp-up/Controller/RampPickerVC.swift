@@ -53,6 +53,7 @@ class RampPickerVC: UIViewController {
     }
 
     fileprivate func addRampNode() {
+
         for scn in RampScene.allCases {
             let obj = SCNScene(named: "art.scnassets/\(scn.rawValue).dae")
             let node = obj?.rootNode.childNode(withName: scn.rawValue, recursively: true)!
@@ -70,6 +71,16 @@ class RampPickerVC: UIViewController {
                 x = 1.1; y = -2.5; z = -1
             }
 
+            let rotate = SCNAction.repeatForever(
+                SCNAction.rotateBy(
+                    x: 0,
+                    y: CGFloat(0.01 * Double.pi),
+                    z: 0,
+                    duration: TimeInterval.random(in: 0.05..<0.1)
+                )
+            )
+
+            node?.runAction(rotate)
             node?.scale = SCNVector3Make(scale, scale, scale)
             node?.position = SCNVector3Make(x, y, z)
             scene.rootNode.addChildNode(node!)
