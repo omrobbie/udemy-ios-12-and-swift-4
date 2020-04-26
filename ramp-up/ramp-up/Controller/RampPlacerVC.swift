@@ -13,11 +13,17 @@ import ARKit
 class RampPlacerVC: UIViewController, ARSCNViewDelegate, UIPopoverPresentationControllerDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
+    @IBOutlet weak var controls: UIStackView!
+    @IBOutlet weak var btnRotate: UIButton!
+    @IBOutlet weak var btnUp: UIButton!
+    @IBOutlet weak var btnDown: UIButton!
 
     var selectedRamp: String?
-    
+    var selectedNode : SCNNode?
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupGestureRecognizer()
         sceneView.delegate = self
         sceneView.showsStatistics = true
     }
@@ -50,12 +56,56 @@ class RampPlacerVC: UIViewController, ARSCNViewDelegate, UIPopoverPresentationCo
         selectedRamp = rampName
     }
 
+    fileprivate func setupGestureRecognizer() {
+        let gesture1 = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
+        let gesture2 = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
+        let gesture3 = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress(_:)))
+
+        gesture1.minimumPressDuration = 0.1
+        gesture2.minimumPressDuration = 0.1
+        gesture3.minimumPressDuration = 0.1
+
+        btnRotate.addGestureRecognizer(gesture1)
+        btnUp.addGestureRecognizer(gesture2)
+        btnDown.addGestureRecognizer(gesture3)
+    }
+
     fileprivate func placeRamp(position: SCNVector3) {
         guard let rampName = selectedRamp else {return}
         let scene = SCNScene(named: "art.scnassets/\(rampName).dae")!
         let node = scene.rootNode.childNode(withName: rampName, recursively: true)!
         node.position = position
+        selectedNode = node
         sceneView.scene.rootNode.addChildNode(node)
+        controls.isHidden = false
+    }
+
+    @objc fileprivate func handleLongPress(_ gestureRecognizer: UIGestureRecognizer) {
+        if let node = selectedNode {
+            switch gestureRecognizer.state {
+            case .ended: node.removeAllActions()
+            case .began:
+                switch gestureRecognizer.view {
+                case btnRotate:
+                    let rotate = SCNAction.repeatForever(
+                        SCNAction.rotateBy(x: 0, y: CGFloat(0.08 * Double.pi), z: 0, duration: 0.1)
+                    )
+                    node.runAction(rotate)
+                case btnUp:
+                    let moveUp = SCNAction.repeatForever(
+                        SCNAction.moveBy(x: 0, y: 0.08, z: 0, duration: 0.1)
+                    )
+                    node.runAction(moveUp)
+                case btnDown:
+                    let moveDown = SCNAction.repeatForever(
+                        SCNAction.moveBy(x: 0, y: -0.08, z: 0, duration: 0.1)
+                    )
+                    node.runAction(moveDown)
+                default: break
+                }
+            default: break
+            }
+        }
     }
 
     @IBAction func btnAddTapped(_ sender: UIButton) {
@@ -66,5 +116,12 @@ class RampPlacerVC: UIViewController, ARSCNViewDelegate, UIPopoverPresentationCo
         present(vc, animated: true)
         vc.popoverPresentationController?.sourceView = sender
         vc.popoverPresentationController?.sourceRect = sender.bounds
+        controls.isHidden = true
+    }
+
+    @IBAction func btnRemoveTapped(_ sender: Any) {
+        if let node = selectedNode {
+            node.removeFromParentNode()
+        }
     }
 }
