@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		FCA1AF9C245506D2002032AD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA1AF9B245506D2002032AD /* AppDelegate.swift */; };
 		FCA1AF9E245506D2002032AD /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = FCA1AF9D245506D2002032AD /* art.scnassets */; };
-		FCA1AFA0245506D2002032AD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA1AF9F245506D2002032AD /* ViewController.swift */; };
+		FCA1AFA0245506D2002032AD /* RampPlacerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA1AF9F245506D2002032AD /* RampPlacerVC.swift */; };
 		FCA1AFA3245506D2002032AD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCA1AFA1245506D2002032AD /* Main.storyboard */; };
 		FCA1AFA5245506D4002032AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCA1AFA4245506D4002032AD /* Assets.xcassets */; };
 		FCA1AFA8245506D4002032AD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCA1AFA6245506D4002032AD /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		FCA1AF98245506D2002032AD /* ramp-up.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ramp-up.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCA1AF9B245506D2002032AD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCA1AF9D245506D2002032AD /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
-		FCA1AF9F245506D2002032AD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FCA1AF9F245506D2002032AD /* RampPlacerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RampPlacerVC.swift; sourceTree = "<group>"; };
 		FCA1AFA2245506D2002032AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FCA1AFA4245506D4002032AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCA1AFA7245506D4002032AD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,10 +57,10 @@
 			isa = PBXGroup;
 			children = (
 				FCA1AF9B245506D2002032AD /* AppDelegate.swift */,
-				FCA1AF9D245506D2002032AD /* art.scnassets */,
-				FCA1AF9F245506D2002032AD /* ViewController.swift */,
+				FCA1AF9F245506D2002032AD /* RampPlacerVC.swift */,
 				FCA1AFA1245506D2002032AD /* Main.storyboard */,
 				FCA1AFA4245506D4002032AD /* Assets.xcassets */,
+				FCA1AF9D245506D2002032AD /* art.scnassets */,
 				FCA1AFA6245506D4002032AD /* LaunchScreen.storyboard */,
 				FCA1AFA9245506D4002032AD /* Info.plist */,
 			);
@@ -139,7 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCA1AFA0245506D2002032AD /* ViewController.swift in Sources */,
+				FCA1AFA0245506D2002032AD /* RampPlacerVC.swift in Sources */,
 				FCA1AF9C245506D2002032AD /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +285,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3SMXMP42NY;
 				INFOPLIST_FILE = "ramp-up/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -293,7 +294,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.omrobbie.ramp-up";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -302,6 +303,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3SMXMP42NY;
 				INFOPLIST_FILE = "ramp-up/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -310,7 +312,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.omrobbie.ramp-up";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
