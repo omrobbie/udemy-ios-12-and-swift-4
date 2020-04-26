@@ -16,7 +16,7 @@ class RampPlacerVC: UIViewController, ARSCNViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
+        let scene = SCNScene(named: "art.scnassets/pipe/pipe.dae")!
         sceneView.delegate = self
         sceneView.showsStatistics = true
         sceneView.scene = scene
