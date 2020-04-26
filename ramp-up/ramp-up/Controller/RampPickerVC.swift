@@ -20,6 +20,8 @@ class RampPickerVC: UIViewController {
     var sceneView: SCNView!
     var size: CGSize!
 
+    weak var rampPlacerVC: RampPlacerVC!
+
     let scene = SCNScene(named: "art.scnassets/ramps.scn")!
 
     init(size: CGSize) {
@@ -35,6 +37,7 @@ class RampPickerVC: UIViewController {
         super.viewDidLoad()
         setupScene()
         setupCamera()
+        setupGestureRecognizer()
         addRampNode()
     }
 
@@ -50,6 +53,11 @@ class RampPickerVC: UIViewController {
         let camera = SCNCamera()
         camera.usesOrthographicProjection = true
         scene.rootNode.camera = camera
+    }
+
+    fileprivate func setupGestureRecognizer() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+        sceneView.addGestureRecognizer(tap)
     }
 
     fileprivate func addRampNode() {
@@ -84,6 +92,16 @@ class RampPickerVC: UIViewController {
             node?.scale = SCNVector3Make(scale, scale, scale)
             node?.position = SCNVector3Make(x, y, z)
             scene.rootNode.addChildNode(node!)
+        }
+    }
+
+    @objc fileprivate func handleTap(_ gestureRecognizer: UIGestureRecognizer) {
+        let p = gestureRecognizer.location(in: sceneView)
+        let hitResult = sceneView.hitTest(p, options: [:])
+
+        if hitResult.count > 0 {
+            let node = hitResult[0].node
+            rampPlacerVC.onRampSelected(node.name!)
         }
     }
 }
