@@ -9,10 +9,18 @@
 import UIKit
 import SceneKit
 
+enum RampScene: String, CaseIterable {
+    case pipe
+    case pyramid
+    case quarter
+}
+
 class RampPickerVC: UIViewController {
 
     var sceneView: SCNView!
     var size: CGSize!
+
+    let scene = SCNScene(named: "art.scnassets/ramps.scn")!
 
     init(size: CGSize) {
         super.init(nibName: nil, bundle: nil)
@@ -25,25 +33,46 @@ class RampPickerVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupScene()
+        setupCamera()
+        addRampNode()
+    }
 
+    fileprivate func setupScene() {
         view.frame = CGRect(origin: CGPoint.zero, size: size)
         sceneView = SCNView(frame: CGRect(x: 0, y: 0, width: size.width, height: size.height))
         view.insertSubview(sceneView, at: 0)
-
-        let scene = SCNScene(named: "art.scnassets/ramps.scn")!
         sceneView.scene = scene
+        preferredContentSize = size
+    }
 
+    fileprivate func setupCamera() {
         let camera = SCNCamera()
         camera.usesOrthographicProjection = true
         scene.rootNode.camera = camera
+    }
 
-        let obj = SCNScene(named: "art.scnassets/pipe/pipe.dae")
-        let node = obj?.rootNode.childNode(withName: "pipe", recursively: true)!
-        let scale: Float = 0.0022
-        node?.scale = SCNVector3Make(scale, scale, scale)
-        node?.position = SCNVector3Make(1.1, 0.7, -1)
-        scene.rootNode.addChildNode(node!)
+    fileprivate func addRampNode() {
+        for scn in RampScene.allCases {
+            let obj = SCNScene(named: "art.scnassets/\(scn.rawValue).dae")
+            let node = obj?.rootNode.childNode(withName: scn.rawValue, recursively: true)!
+            var scale, x, y, z: Float
 
-        preferredContentSize = size
+            switch scn {
+            case .pipe:
+                scale = 0.0022
+                x = 1.1; y = 0.5; z = -1
+            case .pyramid:
+                scale = 0.0072
+                x = 1.1; y = -0.6; z = -1
+            case .quarter:
+                scale = 0.0082
+                x = 1.1; y = -2.5; z = -1
+            }
+
+            node?.scale = SCNVector3Make(scale, scale, scale)
+            node?.position = SCNVector3Make(x, y, z)
+            scene.rootNode.addChildNode(node!)
+        }
     }
 }

@@ -4,8 +4,8 @@
   <contributor>
    <authoring_tool>SceneKit Collada Exporter v1.0</authoring_tool>
   </contributor>
-  <created>2020-04-26T01:43:18Z</created>
-  <modified>2020-04-26T01:43:18Z</modified>
+  <created>2020-04-26T02:35:24Z</created>
+  <modified>2020-04-26T02:35:24Z</modified>
   <unit meter="1.000000"/>
   <up_axis>Y_UP</up_axis>
  </asset>
@@ -44,7 +44,7 @@
  </library_lights>
  <library_images>
   <image id="image1">
-   <init_from>skate_pipe.jpg</init_from>
+   <init_from>textures/skate_pipe.jpg</init_from>
   </image>
  </library_images>
  <library_materials>
