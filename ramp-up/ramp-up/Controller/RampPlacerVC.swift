@@ -10,7 +10,7 @@ import UIKit
 import SceneKit
 import ARKit
 
-class RampPlacerVC: UIViewController, ARSCNViewDelegate {
+class RampPlacerVC: UIViewController, ARSCNViewDelegate, UIPopoverPresentationControllerDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
     
@@ -31,5 +31,18 @@ class RampPlacerVC: UIViewController, ARSCNViewDelegate {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         sceneView.session.pause()
+    }
+
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        .none
+    }
+
+    @IBAction func btnAddTapped(_ sender: UIButton) {
+        let vc = RampPickerVC(size: CGSize(width: 250, height: 500))
+        vc.modalPresentationStyle = .popover
+        vc.popoverPresentationController?.delegate = self
+        present(vc, animated: true)
+        vc.popoverPresentationController?.sourceView = sender
+        vc.popoverPresentationController?.sourceRect = sender.bounds
     }
 }

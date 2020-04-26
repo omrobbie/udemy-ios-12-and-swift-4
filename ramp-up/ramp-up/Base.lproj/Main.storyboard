@@ -18,6 +18,13 @@
                             <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tfA-Ew-7mt">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cy5-3M-djI">
+                                <rect key="frame" x="287" y="771" width="107" height="71"/>
+                                <state key="normal" image="rampIcon"/>
+                                <connections>
+                                    <action selector="btnAddTapped:" destination="BV1-FR-VrT" eventType="touchUpInside" id="LWM-wA-0tp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -25,6 +32,8 @@
                             <constraint firstAttribute="bottom" secondItem="tfA-Ew-7mt" secondAttribute="bottom" id="9Oj-WO-FKg"/>
                             <constraint firstItem="tfA-Ew-7mt" firstAttribute="leading" secondItem="rhU-gc-vL6" secondAttribute="leading" id="AZK-OC-5Ad"/>
                             <constraint firstAttribute="trailing" secondItem="tfA-Ew-7mt" secondAttribute="trailing" id="L1x-yv-eac"/>
+                            <constraint firstItem="QHC-HS-4V3" firstAttribute="trailing" secondItem="cy5-3M-djI" secondAttribute="trailing" constant="20" id="MKk-rU-iCe"/>
+                            <constraint firstItem="QHC-HS-4V3" firstAttribute="bottom" secondItem="cy5-3M-djI" secondAttribute="bottom" constant="20" id="PxV-lo-tkT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QHC-HS-4V3"/>
                     </view>
@@ -37,4 +46,7 @@
             <point key="canvasLocation" x="141" y="133"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="rampIcon" width="107" height="71"/>
+    </resources>
 </document>
