@@ -18,7 +18,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G4f-0r-scZ">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qTm-te-bNr">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qTm-te-bNr" customClass="RoundedShadowView" customModule="vision_app_dev" customModuleProvider="target">
                                         <rect key="frame" x="20" y="60" width="374" height="60"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZgN-rd-QFF">
@@ -48,7 +48,7 @@
                                             <constraint firstAttribute="trailing" secondItem="ZgN-rd-QFF" secondAttribute="trailing" constant="8" id="oma-pa-FYT"/>
                                         </constraints>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QT2-Q9-G0p">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QT2-Q9-G0p" customClass="RoundedShadowButton" customModule="vision_app_dev" customModuleProvider="target">
                                         <rect key="frame" x="20" y="834" width="85" height="32"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -59,7 +59,7 @@
                                             <color key="titleColor" red="0.84705882352941175" green="0.27843137254901962" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                     </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cdl-JK-DMR">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="cdl-JK-DMR" customClass="RoundedShadowImageView" customModule="vision_app_dev" customModuleProvider="target">
                                         <rect key="frame" x="319" y="740" width="75" height="125.5"/>
                                         <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -90,11 +90,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="btnFlash" destination="QT2-Q9-G0p" id="x01-mX-KhO"/>
-                        <outlet property="imgCaptured" destination="cdl-JK-DMR" id="P3N-0d-SIc"/>
+                        <outlet property="btnFlash" destination="QT2-Q9-G0p" id="hJR-vf-xMN"/>
+                        <outlet property="imgCaptured" destination="cdl-JK-DMR" id="T95-jx-Vir"/>
                         <outlet property="lblConfidence" destination="3KK-Zi-QwN" id="iaM-rM-qup"/>
                         <outlet property="lblIdentification" destination="Ysl-hV-JHB" id="gO0-90-w81"/>
-                        <outlet property="viewCamera" destination="G4f-0r-scZ" id="ebz-hl-zQS"/>
+                        <outlet property="viewCamera" destination="qTm-te-bNr" id="EYo-Qw-EVD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

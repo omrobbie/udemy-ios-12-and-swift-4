@@ -10,11 +10,11 @@ import UIKit
 
 class CameraVC: UIViewController {
 
-    @IBOutlet weak var imgCaptured: UIImageView!
-    @IBOutlet weak var btnFlash: UIButton!
+    @IBOutlet weak var imgCaptured: RoundedShadowImageView!
+    @IBOutlet weak var btnFlash: RoundedShadowButton!
     @IBOutlet weak var lblIdentification: UILabel!
     @IBOutlet weak var lblConfidence: UILabel!
-    @IBOutlet weak var viewCamera: UIView!
+    @IBOutlet weak var viewCamera: RoundedShadowView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
