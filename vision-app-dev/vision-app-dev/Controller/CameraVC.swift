@@ -8,6 +8,8 @@
 
 import UIKit
 import AVFoundation
+import CoreML
+import Vision
 
 class CameraVC: UIViewController {
 
@@ -72,6 +74,23 @@ class CameraVC: UIViewController {
         }
     }
 
+    func resultMethod(request: VNRequest, error: Error?) {
+        guard let result = request.results as? [VNClassificationObservation] else {return}
+
+        for classification in result {
+            if classification.confidence < 0.5 {
+                lblIdentification.text = "I'm not sure what this is. Please try again!"
+                lblConfidence.text = ""
+                break
+            } else {
+                lblIdentification.text = classification.identifier
+                lblConfidence.text = "CONFIDENCE: \(Int(classification.confidence * 100))%"
+                break
+            }
+        }
+
+    }
+
     @objc func didTapCameraView(sender: UITapGestureRecognizer) {
         viewCamera.isUserInteractionEnabled = false
 
@@ -100,6 +119,17 @@ extension CameraVC: AVCapturePhotoCaptureDelegate {
             debugPrint("Error: \(error.localizedDescription)")
         } else {
             photoData = photo.fileDataRepresentation()
+
+            do {
+                let model = try VNCoreMLModel(for: SqueezeNet().model)
+                let request = VNCoreMLRequest(model: model, completionHandler: resultMethod)
+                let handler = VNImageRequestHandler(data: photoData!)
+
+                try handler.perform([request])
+            } catch {
+                debugPrint("Error: \(error.localizedDescription)")
+            }
+
             imgCaptured.image = UIImage(data: photoData!)
             viewCamera.isUserInteractionEnabled = true
         }
