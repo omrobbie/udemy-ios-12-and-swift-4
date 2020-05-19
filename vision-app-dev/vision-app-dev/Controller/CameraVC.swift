@@ -15,7 +15,7 @@ class CameraVC: UIViewController {
     @IBOutlet weak var btnFlash: RoundedShadowButton!
     @IBOutlet weak var lblIdentification: UILabel!
     @IBOutlet weak var lblConfidence: UILabel!
-    @IBOutlet weak var viewCamera: RoundedShadowView!
+    @IBOutlet weak var viewCamera: UIView!
 
     var captureSession: AVCaptureSession!
     var cameraOutput: AVCapturePhotoOutput!
@@ -27,6 +27,8 @@ class CameraVC: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+
+        guard let previewLayer = previewLayer else {return}
         previewLayer.frame = viewCamera.bounds
     }
 
@@ -35,10 +37,13 @@ class CameraVC: UIViewController {
         captureSession = AVCaptureSession()
         captureSession.sessionPreset = AVCaptureSession.Preset.hd1920x1080
 
-        let backCamera = AVCaptureDevice.default(for: AVMediaType.video)
+        guard let backCamera = AVCaptureDevice.default(for: AVMediaType.video) else {
+            print("You don't have camera!")
+            return
+        }
 
         do {
-            let input = try AVCaptureDeviceInput(device: backCamera!)
+            let input = try AVCaptureDeviceInput(device: backCamera)
             if captureSession.canAddInput(input) {
                 captureSession.addInput(input)
             }
@@ -46,6 +51,13 @@ class CameraVC: UIViewController {
             cameraOutput = AVCapturePhotoOutput()
             if captureSession.canAddOutput(cameraOutput) {
                 captureSession.addOutput(cameraOutput)
+
+                previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+                previewLayer.videoGravity = AVLayerVideoGravity.resizeAspect
+                previewLayer.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
+
+                viewCamera.layer.addSublayer(previewLayer)
+                captureSession.startRunning()
             }
         } catch {
             debugPrint("Error: \(error.localizedDescription)")
