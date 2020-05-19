@@ -23,6 +23,7 @@ class CameraVC: UIViewController {
     var cameraOutput: AVCapturePhotoOutput!
     var previewLayer: AVCaptureVideoPreviewLayer!
     var flashControlState: AVCaptureDevice.FlashMode = .off
+    var speechSynthesizer = AVSpeechSynthesizer()
 
     var photoData: Data?
 
@@ -35,6 +36,7 @@ class CameraVC: UIViewController {
 
         guard let previewLayer = previewLayer else {return}
         previewLayer.frame = viewCamera.bounds
+        speechSynthesizer.delegate = self
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -79,16 +81,27 @@ class CameraVC: UIViewController {
 
         for classification in result {
             if classification.confidence < 0.5 {
-                lblIdentification.text = "I'm not sure what this is. Please try again!"
+                let unknownObjectMessage = "I'm not sure what this is. Please try again!"
+                lblIdentification.text = unknownObjectMessage
                 lblConfidence.text = ""
+                synthesizeSpeech(fromString: unknownObjectMessage)
                 break
             } else {
-                lblIdentification.text = classification.identifier
-                lblConfidence.text = "CONFIDENCE: \(Int(classification.confidence * 100))%"
+                let identificationMessage = classification.identifier
+                let confidenceLevel = Int(classification.confidence * 100)
+                lblIdentification.text = identificationMessage
+                lblConfidence.text = "CONFIDENCE: \(confidenceLevel)%"
+                let completeSentence = "This looks like a \(identificationMessage) and I'm \(confidenceLevel) percent sure!"
+                synthesizeSpeech(fromString: completeSentence)
                 break
             }
         }
 
+    }
+
+    func synthesizeSpeech(fromString string: String) {
+        let speechUtterance = AVSpeechUtterance(string: string)
+        speechSynthesizer.speak(speechUtterance)
     }
 
     @objc func didTapCameraView(sender: UITapGestureRecognizer) {
@@ -133,5 +146,12 @@ extension CameraVC: AVCapturePhotoCaptureDelegate {
             imgCaptured.image = UIImage(data: photoData!)
             viewCamera.isUserInteractionEnabled = true
         }
+    }
+}
+
+extension CameraVC: AVSpeechSynthesizerDelegate {
+
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
+
     }
 }
