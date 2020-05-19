@@ -20,6 +20,7 @@ class CameraVC: UIViewController {
     var captureSession: AVCaptureSession!
     var cameraOutput: AVCapturePhotoOutput!
     var previewLayer: AVCaptureVideoPreviewLayer!
+    var flashControlState: AVCaptureDevice.FlashMode = .off
 
     var photoData: Data?
 
@@ -81,7 +82,18 @@ class CameraVC: UIViewController {
         ]
 
         settings.previewPhotoFormat = previewFormat
+        settings.flashMode = flashControlState
         cameraOutput.capturePhoto(with: settings, delegate: self)
+    }
+
+    @IBAction func btnFlashTapped(_ sender: Any) {
+        if flashControlState == .off {
+            btnFlash.setTitle("FLASH ON", for: .normal)
+            flashControlState = .on
+        } else {
+            btnFlash.setTitle("FLASH OFF", for: .normal)
+            flashControlState = .off
+        }
     }
 }
 
