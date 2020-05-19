@@ -18,6 +18,7 @@ class CameraVC: UIViewController {
     @IBOutlet weak var lblIdentification: UILabel!
     @IBOutlet weak var lblConfidence: UILabel!
     @IBOutlet weak var viewCamera: UIView!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
 
     var captureSession: AVCaptureSession!
     var cameraOutput: AVCapturePhotoOutput!
@@ -106,6 +107,7 @@ class CameraVC: UIViewController {
 
     @objc func didTapCameraView(sender: UITapGestureRecognizer) {
         viewCamera.isUserInteractionEnabled = false
+        spinner.startAnimating()
 
         let settings = AVCapturePhotoSettings()
 
@@ -144,7 +146,6 @@ extension CameraVC: AVCapturePhotoCaptureDelegate {
             }
 
             imgCaptured.image = UIImage(data: photoData!)
-            viewCamera.isUserInteractionEnabled = true
         }
     }
 }
@@ -152,6 +153,7 @@ extension CameraVC: AVCapturePhotoCaptureDelegate {
 extension CameraVC: AVSpeechSynthesizerDelegate {
 
     func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
-
+        viewCamera.isUserInteractionEnabled = true
+        spinner.stopAnimating()
     }
 }

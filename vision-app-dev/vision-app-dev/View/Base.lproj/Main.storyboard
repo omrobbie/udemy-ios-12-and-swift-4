@@ -71,6 +71,9 @@
                                     <constraint firstAttribute="height" constant="128" id="yZi-Kr-3AB"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="ZoV-R1-rGT">
+                                <rect key="frame" x="346" y="768" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -80,10 +83,12 @@
                             <constraint firstItem="qTm-te-bNr" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Q8T-iJ-HLD"/>
                             <constraint firstItem="G4f-0r-scZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="StK-pb-CoC"/>
                             <constraint firstItem="G4f-0r-scZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ZcU-Lg-xhI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZoV-R1-rGT" secondAttribute="bottom" constant="74" id="kV1-kc-obl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QT2-Q9-G0p" secondAttribute="bottom" constant="20" id="luZ-8R-0qB"/>
                             <constraint firstItem="QT2-Q9-G0p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qO4-0b-5B4"/>
                             <constraint firstItem="qTm-te-bNr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="vnC-iO-cQ6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qTm-te-bNr" secondAttribute="trailing" constant="20" id="w8v-x3-81a"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZoV-R1-rGT" secondAttribute="trailing" constant="48" id="wpX-uN-u1l"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cdl-JK-DMR" secondAttribute="bottom" constant="20" id="zrM-b5-zsU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -93,6 +98,7 @@
                         <outlet property="imgCaptured" destination="cdl-JK-DMR" id="T95-jx-Vir"/>
                         <outlet property="lblConfidence" destination="3KK-Zi-QwN" id="iaM-rM-qup"/>
                         <outlet property="lblIdentification" destination="Ysl-hV-JHB" id="gO0-90-w81"/>
+                        <outlet property="spinner" destination="ZoV-R1-rGT" id="g9v-lO-d4b"/>
                         <outlet property="viewCamera" destination="G4f-0r-scZ" id="vfH-by-OWJ"/>
                     </connections>
                 </viewController>
