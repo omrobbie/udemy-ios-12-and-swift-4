@@ -72,16 +72,12 @@ class CameraVC: UIViewController {
         }
     }
 
-    @objc func didTapCameraView() {
-        let settings = AVCapturePhotoSettings()
-        let previewPixelType = settings.availablePreviewPhotoPixelFormatTypes.first!
-        let previewFormat = [
-            kCVPixelBufferPixelFormatTypeKey as String: previewPixelType,
-            kCVPixelBufferWidthKey as String: 160,
-            kCVPixelBufferHeightKey as String: 160,
-        ]
+    @objc func didTapCameraView(sender: UITapGestureRecognizer) {
+        viewCamera.isUserInteractionEnabled = false
 
-        settings.previewPhotoFormat = previewFormat
+        let settings = AVCapturePhotoSettings()
+
+        settings.previewPhotoFormat = settings.embeddedThumbnailPhotoFormat
         settings.flashMode = flashControlState
         cameraOutput.capturePhoto(with: settings, delegate: self)
     }
@@ -105,6 +101,7 @@ extension CameraVC: AVCapturePhotoCaptureDelegate {
         } else {
             photoData = photo.fileDataRepresentation()
             imgCaptured.image = UIImage(data: photoData!)
+            viewCamera.isUserInteractionEnabled = true
         }
     }
 }
