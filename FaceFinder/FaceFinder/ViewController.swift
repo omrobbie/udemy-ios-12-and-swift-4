@@ -21,15 +21,11 @@ class ViewController: UIViewController {
 
     func setupImageView() {
         guard let image = UIImage(named: "face") else {return}
+        let scaleHeight = (view.frame.width / image.size.width) * image.size.height
 
         let imageView = UIImageView(image: image)
         imageView.contentMode = .scaleAspectFit
-
-        let scaleHeight = (view.frame.width / image.size.width) * image.size.height
-
         imageView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: scaleHeight)
-        imageView.layer.borderColor = UIColor.white.cgColor
-        imageView.layer.borderWidth = 2
         view.addSubview(imageView)
     }
 }
