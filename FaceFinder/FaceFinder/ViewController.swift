@@ -37,6 +37,23 @@ class ViewController: UIViewController {
         performVisionRequest(for: cgImage)
     }
 
+    func createFaceOutline(for rectangle: CGRect) {
+        let yellowView = UIView()
+        yellowView.backgroundColor = .clear
+        yellowView.layer.borderColor = UIColor.yellow.cgColor
+        yellowView.layer.borderWidth = 3
+        yellowView.layer.cornerRadius = 5
+        yellowView.alpha = 0.0
+        yellowView.frame = rectangle
+        view.addSubview(yellowView)
+
+        UIView.animate(withDuration: 0.3) {
+            yellowView.alpha = 0.75
+            self.spinner.alpha = 0.0
+            self.lblMessage.alpha = 0.0
+        }
+    }
+
     func performVisionRequest(for image: CGImage) {
         let faceDetectionRequest = VNDetectFaceRectanglesRequest { (request, error) in
             if let error = error {
@@ -47,8 +64,12 @@ class ViewController: UIViewController {
             request.results?.forEach({ (result) in
                 guard let faceObservation = result as? VNFaceObservation else {return}
                 print("Bounding Box:\n", faceObservation.boundingBox)
+
+                let faceRectangle = CGRect(x: 0, y: 0, width: 100, height: 100)
+
                 self.spinner.stopAnimating()
                 self.lblMessage.text = "Face found!"
+                self.createFaceOutline(for: faceRectangle)
             })
         }
 
