@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Vision
 
 class ViewController: UIViewController {
 
@@ -15,7 +16,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        spinner.startAnimating()
         setupImageView()
     }
 
@@ -27,5 +27,28 @@ class ViewController: UIViewController {
         imageView.contentMode = .scaleAspectFit
         imageView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: scaleHeight)
         view.addSubview(imageView)
+        spinner.startAnimating()
+    }
+
+    func performVisionRequest(for image: CGImage) {
+        let faceDetectionRequest = VNDetectFaceRectanglesRequest { (request, error) in
+            if let error = error {
+                print("Failed to detect face: \(error.localizedDescription)")
+                return
+            }
+
+            request.results?.forEach({ (result) in
+                guard let faceObservation = result as? VNFaceObservation else {return}
+                print("Bounding Box:\n", faceObservation.boundingBox)
+            })
+        }
+
+        let imageRequestHandler = VNImageRequestHandler(cgImage: image, options: [:])
+        do {
+            try imageRequestHandler.perform([faceDetectionRequest])
+        } catch {
+            print("Failed to perform image request: \(error.localizedDescription)")
+            return
+        }
     }
 }
