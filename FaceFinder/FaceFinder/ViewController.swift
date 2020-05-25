@@ -34,7 +34,10 @@ class ViewController: UIViewController {
         view.addSubview(imageView)
 
         spinner.startAnimating()
-        performVisionRequest(for: cgImage)
+
+        DispatchQueue.global(qos: .background).async {
+            self.performVisionRequest(for: cgImage)
+        }
     }
 
     func createFaceOutline(for rectangle: CGRect) {
@@ -67,9 +70,11 @@ class ViewController: UIViewController {
 
                 let faceRectangle = CGRect(x: 0, y: 0, width: 100, height: 100)
 
-                self.spinner.stopAnimating()
-                self.lblMessage.text = "Face found!"
-                self.createFaceOutline(for: faceRectangle)
+                DispatchQueue.main.async {
+                    self.spinner.stopAnimating()
+                    self.lblMessage.text = "Face found!"
+                    self.createFaceOutline(for: faceRectangle)
+                }
             })
         }
 
