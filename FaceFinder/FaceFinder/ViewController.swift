@@ -36,7 +36,7 @@ class ViewController: UIViewController {
         spinner.startAnimating()
 
         DispatchQueue.global(qos: .background).async {
-            self.performVisionRequest(for: cgImage)
+            self.performVisionRequest(for: cgImage, with: scaleHeight)
         }
     }
 
@@ -57,7 +57,7 @@ class ViewController: UIViewController {
         }
     }
 
-    func performVisionRequest(for image: CGImage) {
+    func performVisionRequest(for image: CGImage, with scaledHeight: CGFloat) {
         let faceDetectionRequest = VNDetectFaceRectanglesRequest { (request, error) in
             if let error = error {
                 print("Failed to detect face: \(error.localizedDescription)")
@@ -68,9 +68,13 @@ class ViewController: UIViewController {
                 guard let faceObservation = result as? VNFaceObservation else {return}
                 print("Bounding Box:\n", faceObservation.boundingBox)
 
-                let faceRectangle = CGRect(x: 0, y: 0, width: 100, height: 100)
-
                 DispatchQueue.main.async {
+                    let width = self.view.frame.width * faceObservation.boundingBox.width
+                    let height = scaledHeight * faceObservation.boundingBox.height
+                    let x = self.view.frame.width * faceObservation.boundingBox.origin.x
+                    let y = scaledHeight * (1 - faceObservation.boundingBox.origin.y) - height
+                    let faceRectangle = CGRect(x: x, y: y, width: width, height: height)
+
                     self.spinner.stopAnimating()
                     self.lblMessage.text = "Face found!"
                     self.createFaceOutline(for: faceRectangle)
