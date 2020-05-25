@@ -125,6 +125,6 @@ Learn about CoreML and models, machine learning, AVFoundation and AVCaptureSessi
 ### 24. Face Finder
 Learn about Vision, Vision Request, Face Observation to detect how many faces is in a picture<br>
 <img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/FaceFinder/screenshot/preview1.png" width=256/>&nbsp;
-<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/FaceFinder/screenshot/preview1.png" width=256/><br>
-<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/FaceFinder/screenshot/preview1.png" width=256/>&nbsp;
-<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/FaceFinder/screenshot/preview1.png" width=256/>&nbsp;
+<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/FaceFinder/screenshot/preview2.png" width=256/><br>
+<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/FaceFinder/screenshot/preview3.png" width=256/>&nbsp;
+<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/FaceFinder/screenshot/preview4.png" width=256/>&nbsp;
