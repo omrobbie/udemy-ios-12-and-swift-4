@@ -21,13 +21,20 @@ class ViewController: UIViewController {
 
     func setupImageView() {
         guard let image = UIImage(named: "face") else {return}
+        guard let cgImage = image.cgImage else {
+            print("Could not find CGImage")
+            return
+        }
+
         let scaleHeight = (view.frame.width / image.size.width) * image.size.height
 
         let imageView = UIImageView(image: image)
         imageView.contentMode = .scaleAspectFit
         imageView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: scaleHeight)
         view.addSubview(imageView)
+
         spinner.startAnimating()
+        performVisionRequest(for: cgImage)
     }
 
     func performVisionRequest(for image: CGImage) {
@@ -40,6 +47,8 @@ class ViewController: UIViewController {
             request.results?.forEach({ (result) in
                 guard let faceObservation = result as? VNFaceObservation else {return}
                 print("Bounding Box:\n", faceObservation.boundingBox)
+                self.spinner.stopAnimating()
+                self.lblMessage.text = "Face found!"
             })
         }
 
