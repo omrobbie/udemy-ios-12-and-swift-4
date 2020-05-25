@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     }
 
     func setupImageView() {
-        guard let image = UIImage(named: "face") else {return}
+        guard let image = UIImage(named: "faces") else {return}
         guard let cgImage = image.cgImage else {
             print("Could not find CGImage")
             return
@@ -52,8 +52,6 @@ class ViewController: UIViewController {
 
         UIView.animate(withDuration: 0.3) {
             yellowView.alpha = 0.75
-            self.spinner.alpha = 0.0
-            self.lblMessage.alpha = 0.0
         }
     }
 
@@ -64,9 +62,12 @@ class ViewController: UIViewController {
                 return
             }
 
+            var count = 0
+
             request.results?.forEach({ (result) in
                 guard let faceObservation = result as? VNFaceObservation else {return}
                 print("Bounding Box:\n", faceObservation.boundingBox)
+                count += 1
 
                 DispatchQueue.main.async {
                     let width = self.view.frame.width * faceObservation.boundingBox.width
@@ -76,7 +77,7 @@ class ViewController: UIViewController {
                     let faceRectangle = CGRect(x: x, y: y, width: width, height: height)
 
                     self.spinner.stopAnimating()
-                    self.lblMessage.text = "Face found!"
+                    self.lblMessage.text = "\(count) face found!"
                     self.createFaceOutline(for: faceRectangle)
                 }
             })
