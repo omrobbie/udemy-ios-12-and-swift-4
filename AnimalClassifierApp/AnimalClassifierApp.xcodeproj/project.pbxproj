@@ -14,6 +14,7 @@
 		FCFC9C8E247CA9860052F241 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCFC9C8D247CA9860052F241 /* Assets.xcassets */; };
 		FCFC9C91247CA9860052F241 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCFC9C8F247CA9860052F241 /* LaunchScreen.storyboard */; };
 		FCFC9C99247CAD9D0052F241 /* RoundedVisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFC9C98247CAD9D0052F241 /* RoundedVisualEffectView.swift */; };
+		FCFC9C9E247CB20D0052F241 /* AnimalClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = FCFC9C9D247CB20D0052F241 /* AnimalClassifier.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		FCFC9C90247CA9860052F241 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCFC9C92247CA9860052F241 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCFC9C98247CAD9D0052F241 /* RoundedVisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedVisualEffectView.swift; sourceTree = "<group>"; };
+		FCFC9C9D247CB20D0052F241 /* AnimalClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AnimalClassifier.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		FCFC9C83247CA9840052F241 /* AnimalClassifierApp */ = {
 			isa = PBXGroup;
 			children = (
+				FCFC9C9C247CB1FE0052F241 /* Model */,
 				FCFC9C9B247CAE8D0052F241 /* View */,
 				FCFC9C9A247CAE830052F241 /* Controller */,
 				FCFC9C84247CA9840052F241 /* AppDelegate.swift */,
@@ -84,6 +87,14 @@
 				FCFC9C98247CAD9D0052F241 /* RoundedVisualEffectView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		FCFC9C9C247CB1FE0052F241 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FCFC9C9D247CB20D0052F241 /* AnimalClassifier.mlmodel */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +171,7 @@
 				FCFC9C89247CA9840052F241 /* ClassifierViewController.swift in Sources */,
 				FCFC9C99247CAD9D0052F241 /* RoundedVisualEffectView.swift in Sources */,
 				FCFC9C85247CA9840052F241 /* AppDelegate.swift in Sources */,
+				FCFC9C9E247CB20D0052F241 /* AnimalClassifier.mlmodel in Sources */,
 				FCFC9C87247CA9840052F241 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
