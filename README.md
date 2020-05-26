@@ -128,3 +128,7 @@ Learn about Vision, Vision Request, Face Observation to detect how many faces is
 <img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/FaceFinder/screenshot/preview2.png" width=256/><br>
 <img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/FaceFinder/screenshot/preview3.png" width=256/>&nbsp;
 <img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/FaceFinder/screenshot/preview4.png" width=256/>&nbsp;
+
+### 25. Animal Classifier App
+Learn about CoreML, VNClassificationObservation to detect animal by trained CoreML Model<br>
+<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/AnimalClassifierApp/screenshot/preview.png" width=256/>&nbsp;
