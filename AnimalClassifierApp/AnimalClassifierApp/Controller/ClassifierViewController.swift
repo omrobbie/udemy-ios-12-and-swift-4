@@ -7,14 +7,52 @@
 //
 
 import UIKit
+import CoreML
+import Vision
 
 class ClassifierViewController: UIViewController {
 
     @IBOutlet weak var imgSelected: UIImageView!
     @IBOutlet weak var lblClassification: UILabel!
 
+    lazy var classificationRequest: VNCoreMLRequest = {
+        do {
+            let model = try VNCoreMLModel(for: AnimalClassifier().model)
+            let request = VNCoreMLRequest(model: model) { (request, error) in
+                if let error = error {
+                    print("Error: \(error)")
+                }
+
+                self.processClassifications(for: request, error: error)
+            }
+
+            request.imageCropAndScaleOption = .centerCrop
+            return request
+        } catch {
+            fatalError("Failed to load vision ML model: \(error)")
+        }
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+
+    func processClassifications(for request: VNRequest, error: Error?) {
+        guard let classifications = request.results as? [VNClassificationObservation] else {
+            lblClassification.text = "Unable to classify image.\n\(error?.localizedDescription ?? "Error")"
+            return
+        }
+
+        if classifications.isEmpty {
+            lblClassification.text = "Nothing recognized!"
+        } else {
+            let topClassification = classifications.prefix(2)
+            let descriptions = topClassification.map { (classification) in
+                return String(format: "%.2f", classification.confidence * 100) + "% - " + classification.identifier
+            }
+
+            lblClassification.text = "Classifications: " + descriptions.joined(separator: "\n")
+        }
     }
 
     @IBAction func btnCameraTapped(_ sender: Any) {
