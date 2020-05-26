@@ -10,7 +10,13 @@ import UIKit
 
 class ClassifierViewController: UIViewController {
 
+    @IBOutlet weak var imgSelected: UIImageView!
+    @IBOutlet weak var lblClassification: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+
+    @IBAction func btnCameraTapped(_ sender: Any) {
     }
 }

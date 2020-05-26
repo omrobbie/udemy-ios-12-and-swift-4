@@ -13,6 +13,7 @@
 		FCFC9C8C247CA9840052F241 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCFC9C8A247CA9840052F241 /* Main.storyboard */; };
 		FCFC9C8E247CA9860052F241 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCFC9C8D247CA9860052F241 /* Assets.xcassets */; };
 		FCFC9C91247CA9860052F241 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCFC9C8F247CA9860052F241 /* LaunchScreen.storyboard */; };
+		FCFC9C99247CAD9D0052F241 /* RoundedVisualEffectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFC9C98247CAD9D0052F241 /* RoundedVisualEffectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		FCFC9C8D247CA9860052F241 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCFC9C90247CA9860052F241 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCFC9C92247CA9860052F241 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCFC9C98247CAD9D0052F241 /* RoundedVisualEffectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedVisualEffectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				FCFC9C84247CA9840052F241 /* AppDelegate.swift */,
 				FCFC9C86247CA9840052F241 /* SceneDelegate.swift */,
 				FCFC9C88247CA9840052F241 /* ClassifierViewController.swift */,
+				FCFC9C98247CAD9D0052F241 /* RoundedVisualEffectView.swift */,
 				FCFC9C8A247CA9840052F241 /* Main.storyboard */,
 				FCFC9C8D247CA9860052F241 /* Assets.xcassets */,
 				FCFC9C8F247CA9860052F241 /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCFC9C89247CA9840052F241 /* ClassifierViewController.swift in Sources */,
+				FCFC9C99247CAD9D0052F241 /* RoundedVisualEffectView.swift in Sources */,
 				FCFC9C85247CA9840052F241 /* AppDelegate.swift in Sources */,
 				FCFC9C87247CA9840052F241 /* SceneDelegate.swift in Sources */,
 			);
