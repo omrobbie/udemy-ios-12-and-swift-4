@@ -18,5 +18,25 @@ class ClassifierViewController: UIViewController {
     }
 
     @IBAction func btnCameraTapped(_ sender: Any) {
+        guard UIImagePickerController.isSourceTypeAvailable(.camera) else {
+            print("You don't have a camera!")
+            return
+        }
+
+        let photoSourcePicker = UIAlertController()
+
+        let takePhotoAction = UIAlertAction(title: "Take Photo", style: .default) { (_) in
+
+        }
+
+        let choosePhotoAction = UIAlertAction(title: "Choose Photo", style: .default) { (_) in
+
+        }
+
+        photoSourcePicker.addAction(takePhotoAction)
+        photoSourcePicker.addAction(choosePhotoAction)
+        photoSourcePicker.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+
+        present(photoSourcePicker, animated: true)
     }
 }
