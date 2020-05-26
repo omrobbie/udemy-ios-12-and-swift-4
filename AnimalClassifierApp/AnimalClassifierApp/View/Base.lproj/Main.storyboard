@@ -32,13 +32,13 @@
                                 <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </toolbar>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VnI-yB-EsK" customClass="RoundedVisualEffectView" customModule="AnimalClassifierApp" customModuleProvider="target">
-                                <rect key="frame" x="20" y="713" width="374" height="80"/>
+                                <rect key="frame" x="20" y="693" width="374" height="100"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9pv-Qd-xPy">
-                                    <rect key="frame" x="0.0" y="0.0" width="374" height="80"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="100"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Press the camera button to choose an image" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DQy-q7-g8V">
-                                            <rect key="frame" x="8" y="8" width="358" height="64"/>
+                                            <rect key="frame" x="8" y="8" width="358" height="84"/>
                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -52,7 +52,7 @@
                                     </constraints>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="80" id="aTG-EO-Ozu"/>
+                                    <constraint firstAttribute="height" constant="100" id="aTG-EO-Ozu"/>
                                 </constraints>
                                 <blurEffect style="regular"/>
                             </visualEffectView>

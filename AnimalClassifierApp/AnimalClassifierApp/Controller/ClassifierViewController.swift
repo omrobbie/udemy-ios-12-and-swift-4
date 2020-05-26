@@ -38,21 +38,47 @@ class ClassifierViewController: UIViewController {
     }
 
     func processClassifications(for request: VNRequest, error: Error?) {
-        guard let classifications = request.results as? [VNClassificationObservation] else {
-            lblClassification.text = "Unable to classify image.\n\(error?.localizedDescription ?? "Error")"
-            return
-        }
-
-        if classifications.isEmpty {
-            lblClassification.text = "Nothing recognized!"
-        } else {
-            let topClassification = classifications.prefix(2)
-            let descriptions = topClassification.map { (classification) in
-                return String(format: "%.2f", classification.confidence * 100) + "% - " + classification.identifier
+        DispatchQueue.main.async {
+            guard let classifications = request.results as? [VNClassificationObservation] else {
+                self.lblClassification.text = "Unable to classify image.\n\(error?.localizedDescription ?? "Error")"
+                return
             }
 
-            lblClassification.text = "Classifications: " + descriptions.joined(separator: "\n")
+            if classifications.isEmpty {
+                self.lblClassification.text = "Nothing recognized!"
+            } else {
+                let topClassification = classifications.prefix(2)
+                let descriptions = topClassification.map { (classification) in
+                    return String(format: "%.2f", classification.confidence * 100) + "% - " + classification.identifier
+                }
+
+                self.lblClassification.text = "Classifications:\n" + descriptions.joined(separator: "\n")
+            }
         }
+    }
+
+    func updateClassification(for image: UIImage) {
+        lblClassification.text = "Classifying..."
+
+        guard let orientation = CGImagePropertyOrientation(rawValue: UInt32(image.imageOrientation.rawValue)),
+            let ciImage = CIImage(image: image) else {
+                displayError()
+                return
+        }
+
+        DispatchQueue.global(qos: .userInteractive).async {
+            let handler = VNImageRequestHandler(ciImage: ciImage, orientation: orientation)
+
+            do {
+                try handler.perform([self.classificationRequest])
+            } catch {
+                print("Failed to perform classification.\n\(error.localizedDescription)")
+            }
+        }
+    }
+
+    func displayError() {
+        lblClassification.text = "Something went wrong, please try again!"
     }
 
     @IBAction func btnCameraTapped(_ sender: Any) {
@@ -97,5 +123,6 @@ extension ClassifierViewController: UIImagePickerControllerDelegate, UINavigatio
         }
 
         imgSelected.image = image
+        updateClassification(for: image)
     }
 }
