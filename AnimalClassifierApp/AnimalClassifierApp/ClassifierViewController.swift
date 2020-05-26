@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ClassifierViewController.swift
 //  AnimalClassifierApp
 //
 //  Created by omrobbie on 26/05/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ClassifierViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
