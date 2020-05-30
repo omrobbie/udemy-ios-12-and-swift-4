@@ -18,9 +18,6 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         textFieldDidChange()
         txtValue.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
-
-        let binDigit = BinaryDecimal(145)
-        print(binDigit.calculateBinaryValueForInt())
     }
 
     @objc func textFieldDidChange() {
@@ -32,6 +29,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func btnBinaryTapped(_ sender: Any) {
+        guard let value = txtValue.text else {return}
+        let binDigit = BinaryDecimal(Int(value) ?? 0)
+        txtValue.text = binDigit.calculateBinaryValueForInt()
     }
 
     @IBAction func btnDecimalTapped(_ sender: Any) {
