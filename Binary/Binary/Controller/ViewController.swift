@@ -35,5 +35,14 @@ class ViewController: UIViewController {
     }
 
     @IBAction func btnDecimalTapped(_ sender: Any) {
+        guard let text = txtValue.text else {return}
+        var binDigit: [Int] = []
+
+        text.forEach {
+            binDigit.append(Int(String($0)) ?? 0)
+        }
+
+        let int = BinaryDecimal(binDigit)
+        txtValue.text = int.calculateIntValueForBinary()
     }
 }
