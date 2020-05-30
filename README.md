@@ -156,3 +156,7 @@ Learn about UI and UX perception, what is the most important thing from User eye
 <img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/UI-UX/exported/Savr/Savr%20-%20Confirmation.png" width=256 />&nbsp;
 <img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/UI-UX/exported/Audio%20Tangle/Feed%20-%20Producer.png" width=256 />&nbsp;
 <img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/UI-UX/exported/Savr/Savr%20-%20Reward.png" width=256 />&nbsp;
+
+### 27. Working with binary
+Learn how to convert decimal string int correct binary number.
+<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/Binary/screenshot/preview.png" width=256 />
