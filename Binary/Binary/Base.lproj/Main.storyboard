@@ -14,13 +14,80 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="binary." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oto-Bq-gP1">
+                                <rect key="frame" x="88.5" y="76" width="237" height="87.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="64"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter a value" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="arV-lR-1re">
+                                <rect key="frame" x="20" y="183.5" width="374" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="FSi-Wm-icn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="convert to:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AL3-Ty-ZP3">
+                                <rect key="frame" x="144" y="353.5" width="126.5" height="33"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Rq2-sJ-OFL">
+                                <rect key="frame" x="20" y="402.5" width="374" height="48"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHq-Od-Lzs">
+                                        <rect key="frame" x="0.0" y="0.0" width="183" height="48"/>
+                                        <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" title="BINARY">
+                                            <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnBinaryTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JVM-Ul-hhN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vap-oQ-jah">
+                                        <rect key="frame" x="191" y="0.0" width="183" height="48"/>
+                                        <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <state key="normal" title="DECIMAL">
+                                            <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnDecimalTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="62y-64-ASQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="EI4-cO-XCT"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="AL3-Ty-ZP3" firstAttribute="top" secondItem="arV-lR-1re" secondAttribute="bottom" constant="20" id="86a-MV-FxW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="arV-lR-1re" secondAttribute="trailing" constant="20" id="8Ex-6a-Tdk"/>
+                            <constraint firstItem="AL3-Ty-ZP3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KwC-K5-tCC"/>
+                            <constraint firstItem="oto-Bq-gP1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QmJ-os-1gc"/>
+                            <constraint firstItem="Rq2-sJ-OFL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="g9U-Kd-iII"/>
+                            <constraint firstItem="arV-lR-1re" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="gf4-aZ-dsb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rq2-sJ-OFL" secondAttribute="trailing" constant="20" id="naK-jf-4x3"/>
+                            <constraint firstItem="oto-Bq-gP1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="sTK-Ix-BQE"/>
+                            <constraint firstItem="Rq2-sJ-OFL" firstAttribute="top" secondItem="AL3-Ty-ZP3" secondAttribute="bottom" constant="16" id="sti-jH-dRZ"/>
+                            <constraint firstItem="arV-lR-1re" firstAttribute="top" secondItem="oto-Bq-gP1" secondAttribute="bottom" constant="20" id="tXv-S4-G3L"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="btnBinary" destination="AHq-Od-Lzs" id="SLW-uo-a0T"/>
+                        <outlet property="btnDecimal" destination="Vap-oQ-jah" id="Opt-E9-Weo"/>
+                        <outlet property="txtValue" destination="arV-lR-1re" id="cEa-4M-m4q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-632" y="115"/>
+            <point key="canvasLocation" x="-633.33333333333337" y="114.50892857142857"/>
         </scene>
     </scenes>
 </document>
