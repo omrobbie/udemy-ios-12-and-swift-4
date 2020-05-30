@@ -32,7 +32,8 @@ class BinaryDecimal {
             if binaryDigit == 1 {newInt = newInt - $0}
         }
 
-        return String(describing: binaryRows)
+        let stringFromIntArray = binaryRows.map{String($0)}
+        return stringFromIntArray.joined()
     }
 
     func oneOrZero(forValue value: Int, withBitValue bitValue: Int) -> Int {
