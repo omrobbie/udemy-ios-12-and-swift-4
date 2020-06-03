@@ -22,6 +22,8 @@ class TrendingFeedVC: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        DownloadService.instance.downlaodTrendingRepoDictArray { (data) in
+        }
     }
 }
 
