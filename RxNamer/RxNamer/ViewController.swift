@@ -16,7 +16,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var txtName: UITextField!
     @IBOutlet weak var btnSubmit: UIButton!
     @IBOutlet weak var lblNames: UILabel!
-    
+    @IBOutlet weak var btnAddName: UIButton!
+
     let disposeBage = DisposeBag()
     var namesArray: Variable<[String]> = Variable([])
     

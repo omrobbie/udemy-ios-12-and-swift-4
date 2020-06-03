@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,7 @@
 		FC05C2E424876E02004685E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC05C2E224876E02004685E2 /* Main.storyboard */; };
 		FC05C2E624876E03004685E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC05C2E524876E03004685E2 /* Assets.xcassets */; };
 		FC05C2E924876E03004685E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC05C2E724876E03004685E2 /* LaunchScreen.storyboard */; };
+		FCF6712224877A4A0060E36D /* AddNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6712124877A4A0060E36D /* AddNameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		FC05C2E524876E03004685E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC05C2E824876E03004685E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC05C2EA24876E03004685E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCF6712124877A4A0060E36D /* AddNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +50,6 @@
 				C69DAA23BD32C2A8EE61258B /* Pods-RxNamer.debug.xcconfig */,
 				EC46096669CDD6A8DCF92139 /* Pods-RxNamer.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -84,6 +85,7 @@
 				FC05C2DC24876E02004685E2 /* AppDelegate.swift */,
 				FC05C2DE24876E02004685E2 /* SceneDelegate.swift */,
 				FC05C2E024876E02004685E2 /* ViewController.swift */,
+				FCF6712124877A4A0060E36D /* AddNameViewController.swift */,
 				FC05C2E224876E02004685E2 /* Main.storyboard */,
 				FC05C2E524876E03004685E2 /* Assets.xcassets */,
 				FC05C2E724876E03004685E2 /* LaunchScreen.storyboard */,
@@ -210,6 +212,7 @@
 				FC05C2E124876E02004685E2 /* ViewController.swift in Sources */,
 				FC05C2DD24876E02004685E2 /* AppDelegate.swift in Sources */,
 				FC05C2DF24876E02004685E2 /* SceneDelegate.swift in Sources */,
+				FCF6712224877A4A0060E36D /* AddNameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
