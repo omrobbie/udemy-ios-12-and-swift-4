@@ -18,6 +18,14 @@ class TrendingRepoCell: UITableViewCell {
     @IBOutlet weak var lblLanguage: UILabel!
     @IBOutlet weak var lblContributors: UILabel!
 
+    override func layoutSubviews() {
+        viewRepo.layer.cornerRadius = 15
+        viewRepo.layer.shadowColor = UIColor.black.cgColor
+        viewRepo.layer.shadowOpacity = 0.25
+        viewRepo.layer.shadowRadius = 5
+        viewRepo.layer.shadowOffset = CGSize(width: 0, height: 0)
+    }
+
     func parseData(item: Repo) {
         self.lblName.text = item.name
         self.lblDescriptions.text = item.description

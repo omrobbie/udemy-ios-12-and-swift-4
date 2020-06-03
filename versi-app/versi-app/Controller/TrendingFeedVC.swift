@@ -13,9 +13,9 @@ class TrendingFeedVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
 
     var data: [Repo] = [
-        Repo(image: #imageLiteral(resourceName: "cancelBtn"), name: "Repo 1", description: "Deskripsi", numberOfForks: 1, language: "C", numberOfContributors: 1, repoUrl: "url"),
-        Repo(image: #imageLiteral(resourceName: "cancelBtn"), name: "Repo 2", description: "Deskripsi", numberOfForks: 1, language: "C", numberOfContributors: 1, repoUrl: "url"),
-        Repo(image: #imageLiteral(resourceName: "cancelBtn"), name: "Repo 3", description: "Deskripsi", numberOfForks: 1, language: "C", numberOfContributors: 1, repoUrl: "url"),
+        Repo(image: #imageLiteral(resourceName: "searchIconLarge"), name: "Repo 1", description: "Deskripsi", numberOfForks: 1, language: "C", numberOfContributors: 1, repoUrl: "url"),
+        Repo(image: #imageLiteral(resourceName: "searchIconLarge"), name: "Repo 2", description: "Deskripsi", numberOfForks: 1, language: "C", numberOfContributors: 1, repoUrl: "url"),
+        Repo(image: #imageLiteral(resourceName: "searchIconLarge"), name: "Repo 3", description: "Deskripsi", numberOfForks: 1, language: "C", numberOfContributors: 1, repoUrl: "url"),
     ]
 
     override func viewDidLoad() {
