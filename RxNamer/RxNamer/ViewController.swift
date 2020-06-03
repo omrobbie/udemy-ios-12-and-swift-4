@@ -26,7 +26,11 @@ class ViewController: UIViewController {
     
     func bind() {
         txtName.rx.text.map {
-            "Hello, \($0!)"
+            if $0 == "" {
+                return "Type your name below"
+            } else {
+                return "Hello, \($0!)"
+            }
         }
         .bind(to: lblHello.rx.text)
         .disposed(by: disposeBage)
