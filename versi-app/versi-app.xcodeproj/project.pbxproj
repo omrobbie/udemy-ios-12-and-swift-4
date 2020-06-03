@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FCF6712C248784950060E36D /* versi-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "versi-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCF6712C248784950060E36D /* Versi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Versi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCF6712F248784950060E36D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCF67131248784950060E36D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FCF67133248784950060E36D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		FCF6712D248784950060E36D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FCF6712C248784950060E36D /* versi-app.app */,
+				FCF6712C248784950060E36D /* Versi.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,15 +56,39 @@
 		FCF6712E248784950060E36D /* versi-app */ = {
 			isa = PBXGroup;
 			children = (
+				FCF67145248785280060E36D /* Model */,
+				FCF67144248785220060E36D /* View */,
+				FCF671432487851A0060E36D /* Controller */,
 				FCF6712F248784950060E36D /* AppDelegate.swift */,
 				FCF67131248784950060E36D /* SceneDelegate.swift */,
-				FCF67133248784950060E36D /* ViewController.swift */,
-				FCF67135248784950060E36D /* Main.storyboard */,
 				FCF67138248784960060E36D /* Assets.xcassets */,
 				FCF6713A248784960060E36D /* LaunchScreen.storyboard */,
 				FCF6713D248784960060E36D /* Info.plist */,
 			);
 			path = "versi-app";
+			sourceTree = "<group>";
+		};
+		FCF671432487851A0060E36D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FCF67133248784950060E36D /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FCF67144248785220060E36D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FCF67135248784950060E36D /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FCF67145248785280060E36D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,7 +108,7 @@
 			);
 			name = "versi-app";
 			productName = "versi-app";
-			productReference = FCF6712C248784950060E36D /* versi-app.app */;
+			productReference = FCF6712C248784950060E36D /* Versi.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -291,7 +315,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.omrobbie.versi-app";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Versi;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -308,7 +332,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.omrobbie.versi-app";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Versi;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
