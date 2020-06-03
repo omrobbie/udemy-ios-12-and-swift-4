@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0ADDDF4A3F1CBE4310EB52FD /* Pods_versi_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 474763A40500B70953AEA548 /* Pods_versi_app.framework */; };
 		FCF67130248784950060E36D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6712F248784950060E36D /* AppDelegate.swift */; };
 		FCF67132248784950060E36D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF67131248784950060E36D /* SceneDelegate.swift */; };
 		FCF67134248784950060E36D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF67133248784950060E36D /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		474763A40500B70953AEA548 /* Pods_versi_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_versi_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88C2ED4BC1A9F3FC12429BDF /* Pods-versi-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-versi-app.release.xcconfig"; path = "Target Support Files/Pods-versi-app/Pods-versi-app.release.xcconfig"; sourceTree = "<group>"; };
+		91B73D465EB43655B579FC97 /* Pods-versi-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-versi-app.debug.xcconfig"; path = "Target Support Files/Pods-versi-app/Pods-versi-app.debug.xcconfig"; sourceTree = "<group>"; };
 		FCF6712C248784950060E36D /* Versi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Versi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCF6712F248784950060E36D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCF67131248784950060E36D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ADDDF4A3F1CBE4310EB52FD /* Pods_versi_app.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77EB789F328C994A9CB16F2B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				474763A40500B70953AEA548 /* Pods_versi_app.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CCF18208EE67862430BAC6E2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				91B73D465EB43655B579FC97 /* Pods-versi-app.debug.xcconfig */,
+				88C2ED4BC1A9F3FC12429BDF /* Pods-versi-app.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		FCF67123248784950060E36D = {
 			isa = PBXGroup;
 			children = (
 				FCF6712E248784950060E36D /* versi-app */,
 				FCF6712D248784950060E36D /* Products */,
+				CCF18208EE67862430BAC6E2 /* Pods */,
+				77EB789F328C994A9CB16F2B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,9 +123,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FCF67140248784960060E36D /* Build configuration list for PBXNativeTarget "versi-app" */;
 			buildPhases = (
+				15B241FD2BF60F7769411896 /* [CP] Check Pods Manifest.lock */,
 				FCF67128248784950060E36D /* Sources */,
 				FCF67129248784950060E36D /* Frameworks */,
 				FCF6712A248784950060E36D /* Resources */,
+				7474F803DF8E01D60461ECE7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -156,6 +183,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15B241FD2BF60F7769411896 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-versi-app-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7474F803DF8E01D60461ECE7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-versi-app/Pods-versi-app-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-versi-app/Pods-versi-app-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-versi-app/Pods-versi-app-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FCF67128248784950060E36D /* Sources */ = {
@@ -306,6 +375,7 @@
 		};
 		FCF67141248784960060E36D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91B73D465EB43655B579FC97 /* Pods-versi-app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -323,6 +393,7 @@
 		};
 		FCF67142248784960060E36D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88C2ED4BC1A9F3FC12429BDF /* Pods-versi-app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
