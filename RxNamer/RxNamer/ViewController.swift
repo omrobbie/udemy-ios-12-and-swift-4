@@ -18,13 +18,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var lblNames: UILabel!
     
     let disposeBage = DisposeBag()
+    var namesArray: Variable<[String]> = Variable([])
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        bind()
+        bindTextField()
+        bindButton()
     }
     
-    func bind() {
+    func bindTextField() {
         txtName.rx.text.map {
             if $0 == "" {
                 return "Type your name below"
@@ -34,6 +36,18 @@ class ViewController: UIViewController {
         }
         .debounce(RxTimeInterval.milliseconds(500), scheduler: MainScheduler.instance)
         .bind(to: lblHello.rx.text)
+        .disposed(by: disposeBage)
+    }
+
+    func bindButton() {
+        btnSubmit.rx.tap.subscribe(onNext: {
+            if self.txtName.text != "" {
+                self.namesArray.value.append(self.txtName.text!)
+                self.lblNames.rx.text.onNext(self.namesArray.value.joined(separator: ", "))
+                self.txtName.rx.text.onNext("")
+                self.lblHello.rx.text.onNext("Type your name below")
+            }
+        })
         .disposed(by: disposeBage)
     }
 }
