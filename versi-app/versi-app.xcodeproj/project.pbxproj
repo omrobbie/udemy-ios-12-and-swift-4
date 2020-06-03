@@ -18,6 +18,7 @@
 		FCF6714B248791110060E36D /* RoundedBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6714A248791110060E36D /* RoundedBorderButton.swift */; };
 		FCF6714D248796F20060E36D /* RoundedBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6714C248796F20060E36D /* RoundedBorderTextField.swift */; };
 		FCF6714F24879BF00060E36D /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6714E24879BF00060E36D /* Repo.swift */; };
+		FCF6715124879E250060E36D /* TrendingRepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6715024879E250060E36D /* TrendingRepoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		FCF6714A248791110060E36D /* RoundedBorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBorderButton.swift; sourceTree = "<group>"; };
 		FCF6714C248796F20060E36D /* RoundedBorderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBorderTextField.swift; sourceTree = "<group>"; };
 		FCF6714E24879BF00060E36D /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		FCF6715024879E250060E36D /* TrendingRepoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingRepoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				FCF67135248784950060E36D /* Main.storyboard */,
 				FCF6714A248791110060E36D /* RoundedBorderButton.swift */,
 				FCF6714C248796F20060E36D /* RoundedBorderTextField.swift */,
+				FCF6715024879E250060E36D /* TrendingRepoCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 			files = (
 				FCF6714F24879BF00060E36D /* Repo.swift in Sources */,
 				FCF67147248787950060E36D /* SearchVC.swift in Sources */,
+				FCF6715124879E250060E36D /* TrendingRepoCell.swift in Sources */,
 				FCF6714D248796F20060E36D /* RoundedBorderTextField.swift in Sources */,
 				FCF67134248784950060E36D /* TrendingFeedVC.swift in Sources */,
 				FCF67130248784950060E36D /* AppDelegate.swift in Sources */,

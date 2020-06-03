@@ -12,6 +12,12 @@ class TrendingFeedVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
+    var data: [Repo] = [
+        Repo(image: #imageLiteral(resourceName: "cancelBtn"), name: "Repo 1", description: "Deskripsi", numberOfForks: 1, language: "C", numberOfContributors: 1, repoUrl: "url"),
+        Repo(image: #imageLiteral(resourceName: "cancelBtn"), name: "Repo 2", description: "Deskripsi", numberOfForks: 1, language: "C", numberOfContributors: 1, repoUrl: "url"),
+        Repo(image: #imageLiteral(resourceName: "cancelBtn"), name: "Repo 3", description: "Deskripsi", numberOfForks: 1, language: "C", numberOfContributors: 1, repoUrl: "url"),
+    ]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
@@ -22,11 +28,13 @@ class TrendingFeedVC: UIViewController {
 extension TrendingFeedVC: UITableViewDelegate, UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return data.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") else {return UITableViewCell()}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? TrendingRepoCell else {return UITableViewCell()}
+        let item = data[indexPath.row]
+        cell.parseData(item: item)
         return cell
     }
 }

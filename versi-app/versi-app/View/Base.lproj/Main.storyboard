@@ -66,7 +66,7 @@
                                 <rect key="frame" x="0.0" y="94.5" width="414" height="718.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="400" id="5kb-3T-zNr">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="400" id="5kb-3T-zNr" customClass="TrendingRepoCell" customModule="Versi" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="400"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5kb-3T-zNr" id="Jhd-vc-HOz">
@@ -201,6 +201,15 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="6cK-aL-LXi" secondAttribute="trailing" constant="12" id="o7o-nW-SlY"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imgRepo" destination="rPP-XY-XT5" id="pju-Ws-9Gt"/>
+                                            <outlet property="lblContributors" destination="WTJ-Og-NeR" id="oOy-u9-gvR"/>
+                                            <outlet property="lblDescriptions" destination="0Bx-fh-0r9" id="0I2-QP-Ytw"/>
+                                            <outlet property="lblForks" destination="9eQ-ae-sm9" id="qpE-wl-h7R"/>
+                                            <outlet property="lblLanguage" destination="y6V-yy-xww" id="XAt-oJ-Vbg"/>
+                                            <outlet property="lblName" destination="99F-PG-i41" id="Avv-vg-2Si"/>
+                                            <outlet property="viewRepo" destination="6cK-aL-LXi" id="K9u-c1-Dka"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
