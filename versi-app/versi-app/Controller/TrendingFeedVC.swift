@@ -22,8 +22,10 @@ class TrendingFeedVC: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        DownloadService.instance.downlaodTrendingRepoDictArray { (data) in
-            print(data)
+        DownloadService.instance.downloadTrendingRepos { (data) in
+            data.forEach {
+                print($0.name)
+            }
         }
     }
 }
