@@ -24,7 +24,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bindTextField()
-        bindButton()
+        bindSubmitButton()
+        bindAddNameButton()
     }
     
     func bindTextField() {
@@ -40,15 +41,30 @@ class ViewController: UIViewController {
         .disposed(by: disposeBage)
     }
 
-    func bindButton() {
-        btnSubmit.rx.tap.subscribe(onNext: {
-            if self.txtName.text != "" {
-                self.namesArray.value.append(self.txtName.text!)
-                self.lblNames.rx.text.onNext(self.namesArray.value.joined(separator: ", "))
-                self.txtName.rx.text.onNext("")
-                self.lblHello.rx.text.onNext("Type your name below")
-            }
-        })
-        .disposed(by: disposeBage)
+    func bindSubmitButton() {
+        btnSubmit.rx.tap
+            .subscribe(onNext: {
+                if self.txtName.text != "" {
+                    self.namesArray.value.append(self.txtName.text!)
+                    self.lblNames.rx.text.onNext(self.namesArray.value.joined(separator: ", "))
+                    self.txtName.rx.text.onNext("")
+                    self.lblHello.rx.text.onNext("Type your name below")
+                }
+            })
+            .disposed(by: disposeBage)
+    }
+
+    func bindAddNameButton() {
+        btnAddName.rx.tap
+            .throttle(RxTimeInterval.milliseconds(500), scheduler: MainScheduler.instance)
+            .subscribe(onNext: {
+                guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddNameViewController") as? AddNameViewController else {
+                    print("Could not create AddNameViewController")
+                    return
+                }
+
+                self.present(vc, animated: true)
+            })
+            .disposed(by: disposeBage)
     }
 }
