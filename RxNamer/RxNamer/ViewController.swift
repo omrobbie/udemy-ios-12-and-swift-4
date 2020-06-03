@@ -32,6 +32,7 @@ class ViewController: UIViewController {
                 return "Hello, \($0!)"
             }
         }
+        .debounce(RxTimeInterval.milliseconds(500), scheduler: MainScheduler.instance)
         .bind(to: lblHello.rx.text)
         .disposed(by: disposeBage)
     }
