@@ -16,6 +16,7 @@
 		FCF6713C248784960060E36D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCF6713A248784960060E36D /* LaunchScreen.storyboard */; };
 		FCF67147248787950060E36D /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF67146248787950060E36D /* SearchVC.swift */; };
 		FCF6714B248791110060E36D /* RoundedBorderButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6714A248791110060E36D /* RoundedBorderButton.swift */; };
+		FCF6714D248796F20060E36D /* RoundedBorderTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6714C248796F20060E36D /* RoundedBorderTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		FCF6713D248784960060E36D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCF67146248787950060E36D /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		FCF6714A248791110060E36D /* RoundedBorderButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBorderButton.swift; sourceTree = "<group>"; };
+		FCF6714C248796F20060E36D /* RoundedBorderTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBorderTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			children = (
 				FCF67135248784950060E36D /* Main.storyboard */,
 				FCF6714A248791110060E36D /* RoundedBorderButton.swift */,
+				FCF6714C248796F20060E36D /* RoundedBorderTextField.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCF67147248787950060E36D /* SearchVC.swift in Sources */,
+				FCF6714D248796F20060E36D /* RoundedBorderTextField.swift in Sources */,
 				FCF67134248784950060E36D /* TrendingFeedVC.swift in Sources */,
 				FCF67130248784950060E36D /* AppDelegate.swift in Sources */,
 				FCF6714B248791110060E36D /* RoundedBorderButton.swift in Sources */,
