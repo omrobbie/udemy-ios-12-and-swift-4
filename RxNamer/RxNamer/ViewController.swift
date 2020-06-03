@@ -10,6 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var lblHello: UILabel!
+    @IBOutlet weak var txtName: UITextField!
+    @IBOutlet weak var btnSubmit: UIButton!
+    @IBOutlet weak var lblNames: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
