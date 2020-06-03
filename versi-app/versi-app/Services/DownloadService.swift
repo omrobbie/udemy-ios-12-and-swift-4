@@ -18,7 +18,16 @@ class DownloadService {
         Alamofire.request(trendingRepoUrl).responseJSON { (response) in
             guard let json = response.result.value as? Dictionary<String, Any> else {return}
             guard let repoDictionary = json["items"] as? [Dictionary<String, Any>] else {return}
-            print(repoDictionary)
+
+            for repoDict in repoDictionary {
+                if trendingRepoArray.count <= 10 {
+                    trendingRepoArray.append(repoDict)
+                } else {
+                    break
+                }
+            }
+
+            completion(trendingRepoArray)
         }
     }
 }
