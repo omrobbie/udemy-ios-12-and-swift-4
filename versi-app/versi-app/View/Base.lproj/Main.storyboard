@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Search-->
         <scene sceneID="dVG-Ua-PUL">
             <objects>
                 <viewController id="H3t-xL-Dtf" customClass="SearchVC" customModule="Versi" customModuleProvider="target" sceneMemberID="viewController">
@@ -17,13 +17,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Yse-MF-uHZ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="1Yy-mI-LYP"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="searchIconSmall" id="1Yy-mI-LYP"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UNN-cJ-a6F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="816" y="556"/>
         </scene>
-        <!--Item-->
+        <!--Trending-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="TrendingFeedVC" customModule="Versi" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,7 +33,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="Yml-sP-E29"/>
+                    <tabBarItem key="tabBarItem" title="Trending" image="trendingIcon" id="Yml-sP-E29"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -58,4 +58,8 @@
             <point key="canvasLocation" x="34.782608695652179" y="197.54464285714286"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="searchIconSmall" width="40" height="40"/>
+        <image name="trendingIcon" width="38" height="35"/>
+    </resources>
 </document>
