@@ -20,5 +20,16 @@ class AddNameViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        bindSubmitButton()
+    }
+
+    func bindSubmitButton() {
+        btnSubmit.rx.tap
+            .subscribe(onNext: {
+                if let name = self.txtName.text {
+                    self.nameSubject.onNext(name)
+                }
+            })
+            .disposed(by: disposeBag)
     }
 }

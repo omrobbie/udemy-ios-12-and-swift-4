@@ -26,6 +26,12 @@ class ViewController: UIViewController {
         bindTextField()
         bindSubmitButton()
         bindAddNameButton()
+
+        namesArray.asObservable()
+            .subscribe(onNext: {
+                self.lblNames.text = $0.joined(separator: ", ")
+            })
+            .disposed(by: disposeBage)
     }
     
     func bindTextField() {
