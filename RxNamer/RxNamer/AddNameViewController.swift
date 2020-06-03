@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class AddNameViewController: UIViewController {
 
     @IBOutlet weak var txtName: UITextField!
     @IBOutlet weak var btnSubmit: UIButton!
+
+    let disposeBag = DisposeBag()
+    let nameSubject = PublishSubject<String>()
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -63,6 +63,13 @@ class ViewController: UIViewController {
                     return
                 }
 
+                vc.nameSubject
+                    .subscribe(onNext: {
+                        self.namesArray.value.append($0)
+                        vc.dismiss(animated: true)
+                    })
+                    .disposed(by: self.disposeBage)
+
                 self.present(vc, animated: true)
             })
             .disposed(by: disposeBage)
