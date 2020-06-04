@@ -60,11 +60,20 @@ class DownloadService {
         downlaodTrendingReposDictArray { (trendingRepoDictArray) in
             for dict in trendingRepoDictArray {
                 self.downloadTrendingRepo(fromDictionary: dict) { (repo) in
-                    reposArray.append(repo)
+                    if reposArray.count < 10 {
+                        reposArray.append(repo)
+                    } else {
+                        let sortedArray = reposArray.sorted { (repoA, repoB) -> Bool in
+                            if repoA.numberOfForks > repoB.numberOfForks {
+                                return true
+                            } else {
+                                return false
+                            }
+                        }
+                        completion(sortedArray)
+                    }
                 }
             }
-
-            completion(reposArray)
         }
     }
 
