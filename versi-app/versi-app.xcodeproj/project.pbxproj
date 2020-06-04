@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0ADDDF4A3F1CBE4310EB52FD /* Pods_versi_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 474763A40500B70953AEA548 /* Pods_versi_app.framework */; };
 		FCA2B3E32488ACE800DF96E4 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA2B3E22488ACE800DF96E4 /* SearchCell.swift */; };
+		FCA2B3E62488CB3100DF96E4 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA2B3E52488CB3100DF96E4 /* UIViewControllerExt.swift */; };
 		FCF67130248784950060E36D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6712F248784950060E36D /* AppDelegate.swift */; };
 		FCF67132248784950060E36D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF67131248784950060E36D /* SceneDelegate.swift */; };
 		FCF67134248784950060E36D /* TrendingFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF67133248784950060E36D /* TrendingFeedVC.swift */; };
@@ -29,6 +30,7 @@
 		88C2ED4BC1A9F3FC12429BDF /* Pods-versi-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-versi-app.release.xcconfig"; path = "Target Support Files/Pods-versi-app/Pods-versi-app.release.xcconfig"; sourceTree = "<group>"; };
 		91B73D465EB43655B579FC97 /* Pods-versi-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-versi-app.debug.xcconfig"; path = "Target Support Files/Pods-versi-app/Pods-versi-app.debug.xcconfig"; sourceTree = "<group>"; };
 		FCA2B3E22488ACE800DF96E4 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		FCA2B3E52488CB3100DF96E4 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 		FCF6712C248784950060E36D /* Versi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Versi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCF6712F248784950060E36D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCF67131248784950060E36D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		FCA2B3E42488CB1100DF96E4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FCA2B3E52488CB3100DF96E4 /* UIViewControllerExt.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		FCF67123248784950060E36D = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +106,7 @@
 		FCF6712E248784950060E36D /* versi-app */ = {
 			isa = PBXGroup;
 			children = (
+				FCA2B3E42488CB1100DF96E4 /* Extensions */,
 				FCF671532487A3340060E36D /* Utilities */,
 				FCF671522487A3200060E36D /* Services */,
 				FCF67145248785280060E36D /* Model */,
@@ -272,6 +283,7 @@
 			files = (
 				FCF6714F24879BF00060E36D /* Repo.swift in Sources */,
 				FCA2B3E32488ACE800DF96E4 /* SearchCell.swift in Sources */,
+				FCA2B3E62488CB3100DF96E4 /* UIViewControllerExt.swift in Sources */,
 				FCF67147248787950060E36D /* SearchVC.swift in Sources */,
 				FCF6715124879E250060E36D /* TrendingRepoCell.swift in Sources */,
 				FCF6714D248796F20060E36D /* RoundedBorderTextField.swift in Sources */,

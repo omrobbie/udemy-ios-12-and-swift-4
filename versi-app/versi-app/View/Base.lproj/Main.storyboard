@@ -337,6 +337,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="btnReadme" destination="TXV-7X-Qpr" id="J8w-0L-LgS"/>
                                             <outlet property="imgRepo" destination="rPP-XY-XT5" id="pju-Ws-9Gt"/>
                                             <outlet property="lblContributors" destination="WTJ-Og-NeR" id="oOy-u9-gvR"/>
                                             <outlet property="lblDescriptions" destination="0Bx-fh-0r9" id="0I2-QP-Ytw"/>

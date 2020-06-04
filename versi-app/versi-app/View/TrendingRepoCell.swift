@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class TrendingRepoCell: UITableViewCell {
 
@@ -17,7 +19,10 @@ class TrendingRepoCell: UITableViewCell {
     @IBOutlet weak var lblForks: UILabel!
     @IBOutlet weak var lblLanguage: UILabel!
     @IBOutlet weak var lblContributors: UILabel!
+    @IBOutlet weak var btnReadme: RoundedBorderButton!
 
+    var disposeBag = DisposeBag()
+    
     override func layoutSubviews() {
         viewRepo.layer.cornerRadius = 15
         viewRepo.layer.shadowColor = UIColor.black.cgColor
@@ -33,5 +38,11 @@ class TrendingRepoCell: UITableViewCell {
         self.lblForks.text = "\(item.numberOfForks)"
         self.lblLanguage.text = item.language
         self.lblContributors.text = "\(item.numberOfContributors)"
+
+        btnReadme.rx.tap
+            .subscribe(onNext: {
+                self.window?.rootViewController?.presentSFSafariVCFor(url: item.repoUrl)
+            })
+            .disposed(by: self.disposeBag)
     }
 }
