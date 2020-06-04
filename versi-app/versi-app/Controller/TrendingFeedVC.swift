@@ -12,20 +12,16 @@ class TrendingFeedVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-    var data: [Repo] = [
-        Repo(image: #imageLiteral(resourceName: "searchIconLarge"), name: "Repo 1", description: "Deskripsi", numberOfForks: 1, language: "C", numberOfContributors: 1, repoUrl: "url"),
-        Repo(image: #imageLiteral(resourceName: "searchIconLarge"), name: "Repo 2", description: "Deskripsi", numberOfForks: 1, language: "C", numberOfContributors: 1, repoUrl: "url"),
-        Repo(image: #imageLiteral(resourceName: "searchIconLarge"), name: "Repo 3", description: "Deskripsi", numberOfForks: 1, language: "C", numberOfContributors: 1, repoUrl: "url"),
-    ]
+    var data: [Repo] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+
         DownloadService.instance.downloadTrendingRepos { (data) in
-            data.forEach {
-                print($0.name)
-            }
+            self.data = data
+            self.tableView.reloadData()
         }
     }
 }
@@ -39,6 +35,7 @@ extension TrendingFeedVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? TrendingRepoCell else {return UITableViewCell()}
         let item = data[indexPath.row]
+        print(item.name)
         cell.parseData(item: item)
         return cell
     }

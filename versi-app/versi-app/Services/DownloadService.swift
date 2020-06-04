@@ -22,11 +22,9 @@ class DownloadService {
 
             for repoDict in repoDictionaryArray {
                 if trendingRepoArray.count < 10 {
-                    guard let avatarUrl = repoDict["avatar_url"] as? String,
-                        let name = repoDict["name"] as? String,
+                    guard let name = repoDict["name"] as? String,
                         let description = repoDict["description"] as? String,
                         let numberOfForks = repoDict["forks_count"] as? Int,
-                        let language = repoDict["language"] as? String,
                         let contributorsUrl = repoDict["contributors_url"] as? String,
                         let ownerDict = repoDict["owner"] as? Dictionary<String, Any>,
                         let repoUrl = repoDict["html_url"] as? String
@@ -35,13 +33,13 @@ class DownloadService {
                     }
 
                     let repoDictionary: Dictionary<String, Any> = [
-                        "avatarUrl": avatarUrl,
                         "name": name,
                         "description": description,
                         "numberOfForks": numberOfForks,
-                        "language": language,
+                        "language": repoDict["language"] ?? "",
                         "contributorsUrl": contributorsUrl,
                         "ownerDict": ownerDict,
+                        "avatarUrl": ownerDict["avatar_url"] ?? "",
                         "repoUrl": repoUrl,
                     ]
 
@@ -60,7 +58,7 @@ class DownloadService {
         downlaodTrendingReposDictArray { (trendingRepoDictArray) in
             for dict in trendingRepoDictArray {
                 self.downloadTrendingRepo(fromDictionary: dict) { (repo) in
-                    if reposArray.count < 10 {
+                    if reposArray.count < 9 {
                         reposArray.append(repo)
                     } else {
                         let sortedArray = reposArray.sorted { (repoA, repoB) -> Bool in
@@ -78,18 +76,17 @@ class DownloadService {
     }
 
     func downloadTrendingRepo(fromDictionary dict: Dictionary<String, Any>, completion: @escaping (_ repo: Repo) -> ()) {
-        let avatarUrl = dict["avatar_url"] as! String
-        let contributorsUrl = dict["contributorsUrl"] as! String
-        let name = dict["name"] as! String
-        let description = dict["description"] as! String
-        let numberOfForks = dict["forks_count"] as! Int
-        let language = dict["language"] as! String
-        let repoUrl = dict["html_url"] as! String
+        let avatarUrl = dict["avatarUrl"] as? String ?? ""
+        let contributorsUrl = dict["contributorsUrl"] as? String ?? ""
+        let name = dict["name"] as? String ?? ""
+        let description = dict["description"] as? String ?? ""
+        let numberOfForks = dict["numberOfForks"] as? Int ?? 0
+        let language = dict["language"] as? String ?? ""
+        let repoUrl = dict["repoUrl"] as? String ?? ""
 
         downloadImageFor(avatarUrl: avatarUrl) { (returnedImage) in
             self.downloadContributorsDataFor(contributorsUrl: contributorsUrl) { (returnedContributions) in
                 let repo = Repo(image: returnedImage, name: name, description: description, numberOfForks: numberOfForks, language: language, numberOfContributors: returnedContributions, repoUrl: repoUrl)
-
                 completion(repo)
             }
         }
@@ -104,12 +101,10 @@ class DownloadService {
 
     func downloadContributorsDataFor(contributorsUrl: String, completion: @escaping (_ contributors: Int) -> ()) {
         Alamofire.request(contributorsUrl).responseJSON { (response) in
-            guard let json = response.result.value as? [Dictionary<String, Any>] else {return}
-
-            if !json.isEmpty {
-                let contributors = json.count
-                completion(contributors)
-            }
+            guard let json = response.result.value else {return}
+            let contributors = 0
+//            print(json) // API rate limit exceeded
+            completion(contributors)
         }
     }
 }
