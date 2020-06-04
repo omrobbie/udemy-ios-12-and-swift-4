@@ -165,3 +165,8 @@ Learn how to convert decimal string int correct binary number.<br>
 Learn how to use RxSwift and RxCocoa to binding label, text field, and button. And learn to passing data between view controllers.<br>
 <img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/RxNamer/screenshot/preview1.png" width=256 />
 <img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/RxNamer/screenshot/preview2.png" width=256 />
+
+### 29. Versi App
+Learn how to use RxSwift and RxCocoa, Alamofire and Alamofire Images to table view.<br>
+<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/versi-app/screenshot/preview1.png" width=256 />
+<img src="https://github.com/omrobbie/udemy-ios-12-and-swift-4/blob/master/versi-app/screenshot/preview2.png" width=256 />
