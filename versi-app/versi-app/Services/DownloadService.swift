@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import AlamofireImage
 
 class DownloadService {
 
@@ -56,28 +57,50 @@ class DownloadService {
 
     func downloadTrendingRepos(completion: @escaping (_ repoArray: [Repo]) -> ()) {
         var reposArray = [Repo]()
-
         downlaodTrendingReposDictArray { (trendingRepoDictArray) in
             for dict in trendingRepoDictArray {
-                let repo = self.downloadTrendingRepo(fromDictionary: dict)
-                reposArray.append(repo)
+                self.downloadTrendingRepo(fromDictionary: dict) { (repo) in
+                    reposArray.append(repo)
+                }
             }
 
             completion(reposArray)
         }
     }
 
-    func downloadTrendingRepo(fromDictionary dict: Dictionary<String, Any>) -> Repo {
-        //        let avatarUrl = dict["avatar_url"] as! String
+    func downloadTrendingRepo(fromDictionary dict: Dictionary<String, Any>, completion: @escaping (_ repo: Repo) -> ()) {
+        let avatarUrl = dict["avatar_url"] as! String
+        let contributorsUrl = dict["contributorsUrl"] as! String
         let name = dict["name"] as! String
         let description = dict["description"] as! String
         let numberOfForks = dict["forks_count"] as! Int
-        //        let language = dict["language"] as! String
-        //        let numberOfContributors = dict[""]
+        let language = dict["language"] as! String
         let repoUrl = dict["html_url"] as! String
 
-        let repo = Repo(image: UIImage(named: "searchIconLarge")!, name: name, description: description, numberOfForks: numberOfForks, language: "language", numberOfContributors: 123, repoUrl: repoUrl)
+        downloadImageFor(avatarUrl: avatarUrl) { (returnedImage) in
+            self.downloadContributorsDataFor(contributorsUrl: contributorsUrl) { (returnedContributions) in
+                let repo = Repo(image: returnedImage, name: name, description: description, numberOfForks: numberOfForks, language: language, numberOfContributors: returnedContributions, repoUrl: repoUrl)
 
-        return repo
+                completion(repo)
+            }
+        }
+    }
+
+    func downloadImageFor(avatarUrl: String, completion: @escaping (_ image: UIImage) -> ()) {
+        Alamofire.request(avatarUrl).responseImage { (imageResponse) in
+            guard let image = imageResponse.result.value else {return}
+            completion(image)
+        }
+    }
+
+    func downloadContributorsDataFor(contributorsUrl: String, completion: @escaping (_ contributors: Int) -> ()) {
+        Alamofire.request(contributorsUrl).responseJSON { (response) in
+            guard let json = response.result.value as? [Dictionary<String, Any>] else {return}
+
+            if !json.isEmpty {
+                let contributors = json.count
+                completion(contributors)
+            }
+        }
     }
 }
