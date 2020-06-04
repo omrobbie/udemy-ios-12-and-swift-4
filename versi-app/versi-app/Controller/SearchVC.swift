@@ -10,6 +10,9 @@ import UIKit
 
 class SearchVC: UIViewController {
 
+    @IBOutlet weak var txtSearch: RoundedBorderTextField!
+    @IBOutlet weak var tableView: UITableView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }

@@ -30,12 +30,30 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VCq-KP-QF5">
+                                <rect key="frame" x="0.0" y="170.5" width="414" height="642.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="80" id="Hny-3h-w9i">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Hny-3h-w9i" id="aFg-7o-nrf">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="09Y-FL-zPo" firstAttribute="leading" secondItem="Yse-MF-uHZ" secondAttribute="leading" constant="20" id="2UF-4W-pxC"/>
+                            <constraint firstItem="Yse-MF-uHZ" firstAttribute="trailing" secondItem="VCq-KP-QF5" secondAttribute="trailing" id="6Wy-2n-wdU"/>
+                            <constraint firstItem="Yse-MF-uHZ" firstAttribute="bottom" secondItem="VCq-KP-QF5" secondAttribute="bottom" id="Ca4-09-g6c"/>
                             <constraint firstItem="09Y-FL-zPo" firstAttribute="top" secondItem="Yse-MF-uHZ" secondAttribute="top" constant="20" id="IsN-5o-Qey"/>
                             <constraint firstItem="Yse-MF-uHZ" firstAttribute="trailing" secondItem="clk-pQ-lcC" secondAttribute="trailing" constant="20" id="TiD-8Z-ZTy"/>
+                            <constraint firstItem="VCq-KP-QF5" firstAttribute="leading" secondItem="Yse-MF-uHZ" secondAttribute="leading" id="Y4q-EH-fsI"/>
+                            <constraint firstItem="VCq-KP-QF5" firstAttribute="top" secondItem="clk-pQ-lcC" secondAttribute="bottom" constant="8" id="kcP-eF-NfX"/>
                             <constraint firstItem="clk-pQ-lcC" firstAttribute="top" secondItem="09Y-FL-zPo" secondAttribute="bottom" constant="20" id="prS-p0-yJk"/>
                             <constraint firstItem="clk-pQ-lcC" firstAttribute="leading" secondItem="Yse-MF-uHZ" secondAttribute="leading" constant="20" id="qKr-nm-ge3"/>
                             <constraint firstItem="Yse-MF-uHZ" firstAttribute="trailing" secondItem="09Y-FL-zPo" secondAttribute="trailing" constant="20" id="z14-SK-bjN"/>
@@ -43,6 +61,10 @@
                         <viewLayoutGuide key="safeArea" id="Yse-MF-uHZ"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Search" image="searchIconSmall" id="1Yy-mI-LYP"/>
+                    <connections>
+                        <outlet property="tableView" destination="VCq-KP-QF5" id="SRK-ry-gHU"/>
+                        <outlet property="txtSearch" destination="clk-pQ-lcC" id="HAd-Y4-DQe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UNN-cJ-a6F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
