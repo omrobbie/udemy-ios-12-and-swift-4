@@ -16,7 +16,7 @@ class SearchCell: UITableViewCell {
     @IBOutlet weak var lblForks: UILabel!
     @IBOutlet weak var lblLanguage: UILabel!
 
-    private var repoUrl: String?
+    var repoUrl: String?
 
     override func awakeFromNib() {
         viewCell.layer.cornerRadius = 15

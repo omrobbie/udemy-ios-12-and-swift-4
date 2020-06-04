@@ -21,6 +21,9 @@ class SearchVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         bindElements()
+        tableView.rx
+            .setDelegate(self)
+            .disposed(by: disposeBag)
     }
     
     func bindElements() {
@@ -63,5 +66,17 @@ class SearchVC: UIViewController {
             (row, repo: Repo, cell: SearchCell) in
             cell.parseData(item: repo)
         }.disposed(by: disposeBag)
+    }
+}
+
+extension SearchVC: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? SearchCell else {return}
+        print(cell.repoUrl)
+    }
+
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        view.endEditing(true)
     }
 }
