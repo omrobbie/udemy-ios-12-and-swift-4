@@ -80,3 +80,11 @@ extension SearchVC: UITableViewDelegate {
         view.endEditing(true)
     }
 }
+
+extension SearchVC: UITextFieldDelegate {
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return true
+    }
+}
