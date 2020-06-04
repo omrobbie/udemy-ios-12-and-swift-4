@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0ADDDF4A3F1CBE4310EB52FD /* Pods_versi_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 474763A40500B70953AEA548 /* Pods_versi_app.framework */; };
+		FCA2B3E32488ACE800DF96E4 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA2B3E22488ACE800DF96E4 /* SearchCell.swift */; };
 		FCF67130248784950060E36D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF6712F248784950060E36D /* AppDelegate.swift */; };
 		FCF67132248784950060E36D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF67131248784950060E36D /* SceneDelegate.swift */; };
 		FCF67134248784950060E36D /* TrendingFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF67133248784950060E36D /* TrendingFeedVC.swift */; };
@@ -27,6 +28,7 @@
 		474763A40500B70953AEA548 /* Pods_versi_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_versi_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		88C2ED4BC1A9F3FC12429BDF /* Pods-versi-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-versi-app.release.xcconfig"; path = "Target Support Files/Pods-versi-app/Pods-versi-app.release.xcconfig"; sourceTree = "<group>"; };
 		91B73D465EB43655B579FC97 /* Pods-versi-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-versi-app.debug.xcconfig"; path = "Target Support Files/Pods-versi-app/Pods-versi-app.debug.xcconfig"; sourceTree = "<group>"; };
+		FCA2B3E22488ACE800DF96E4 /* SearchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		FCF6712C248784950060E36D /* Versi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Versi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCF6712F248784950060E36D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCF67131248784950060E36D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				FCF6714A248791110060E36D /* RoundedBorderButton.swift */,
 				FCF6714C248796F20060E36D /* RoundedBorderTextField.swift */,
 				FCF6715024879E250060E36D /* TrendingRepoCell.swift */,
+				FCA2B3E22488ACE800DF96E4 /* SearchCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCF6714F24879BF00060E36D /* Repo.swift in Sources */,
+				FCA2B3E32488ACE800DF96E4 /* SearchCell.swift in Sources */,
 				FCF67147248787950060E36D /* SearchVC.swift in Sources */,
 				FCF6715124879E250060E36D /* TrendingRepoCell.swift in Sources */,
 				FCF6714D248796F20060E36D /* RoundedBorderTextField.swift in Sources */,
