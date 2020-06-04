@@ -7,36 +7,27 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class TrendingFeedVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-    var data: [Repo] = []
+    let dataSource = PublishSubject<[Repo]>()
+    let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
+        fetchData()
+        dataSource.bind(to: tableView.rx.items(cellIdentifier: "cell")) { (row, repo: Repo, cell: TrendingRepoCell) in
+            cell.parseData(item: repo)
+        }.disposed(by: disposeBag)
+    }
 
-        DownloadService.instance.downloadTrendingRepos { (data) in
-            self.data = data
-            self.tableView.reloadData()
+    func fetchData() {
+        DownloadService.instance.downloadTrendingRepos { (trendingRepoArray) in
+            self.dataSource.onNext(trendingRepoArray)
         }
-    }
-}
-
-extension TrendingFeedVC: UITableViewDelegate, UITableViewDataSource {
-
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as? TrendingRepoCell else {return UITableViewCell()}
-        let item = data[indexPath.row]
-        print(item.name)
-        cell.parseData(item: item)
-        return cell
     }
 }
